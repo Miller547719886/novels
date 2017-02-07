@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第十一章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_11">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-10.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-12.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        jiz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "记者"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        meinz: {
+            side: "left",
+            avatar: "./img/novel-01/character/meinz",
+            card: "./img/novel-01/character/card_meinz",
+            name: "美奈子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            card: "./img/novel-01/character/card_longq",
+            name: "龙琪"
+        },
+        hanls: {
+            side: "left",
+            avatar: "./img/novel-01/character/hanls",
+            card: "./img/novel-01/character/card_hanls",
+            name: "寒离殇"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        },
+        longy: {
+            side: "left",
+            avatar: "./img/novel-01/character/longy",
+            card: "./img/novel-01/character/card_longy",
+            name: "龙烨"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第11章 | 恐怖的回忆",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text", //-对话
+                fill: "这回她算是真真切切听的一清二楚了，再看看男人此时的神情……"
+            },
+            {
+                type: "text", //-对话
+                fill: "完……完了，他根本就不是什么好好先生，只是一个披着优雅外衣的饿狼罢了，在这种密闭空间，他终于露出了本性了是吧？"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶惊慌失措地想要逃跑，可刚一站起来就被御傲天一把拉住。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "宝贝，这里可是封闭空间呢，你能跑到哪去呢？",
+                audio: "./audio/yuat0056.mp3"
+            },
+            {
+                type: "text",
+                fill: "用力一拉，她就跟个风筝似的面对面的坐入了御傲天怀中。"
+            },
+            {
+                type: "text",
+                fill: "好大的力气！"
+            },
+            {
+                type: "text",
+                fill: "近距离的看着这张毫无瑕疵的脸，以及男人身上那阵阵蛊惑人心的古龙水味，她无法沉醉其中，反而因恐惧，微微颤抖着。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "不说话就代表你同意了？你果然是个开放的小姑娘呢。",
+                audio: "./audio/yuat0057.mp3"
+            },
+            {
+                type: "text",
+                fill: "阴森的神态、魅惑的言语，男人此时的样子瑶瑶总觉得有些熟悉却又想不起在哪里见过了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "没，我才没有同意，你别乱来！"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "哼？还真是很好的反应。现在……就让我尝尝你的味道吧。",
+                audio: "./audio/yuat0058.mp3"
+            },
+            {
+                type: "text",
+                fill: "男人醉人的声音回荡在耳边。还不等她反应过来，下一秒，只觉得一片唇霸道地压在了自己的唇上。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "唔……"
+            },
+            {
+                type: "text",
+                fill: "小手抵在男人胸膛，努力想要将他推开却是那样无力，霸道的吻带着炽热仿佛要将她融化。"
+            },
+            {
+                type: "text",
+                fill: "吻着这如冰淇淋一般的小人，男人并不满足，硬是更深一步地侵略着……"
+            },
+            {
+                type: "text",
+                fill: "伴随着断断续续的抗拒声，瑶瑶扩张的瞳孔渐渐溢出一丝湿润。"
+            },
+            {
+                type: "text",
+                fill: "那略带颤抖的小身板努力抗拒着，不但无法中断男人的侵略，反而激发起了男人更霸道的占有欲。"
+            },
+            {
+                type: "text",
+                fill: "大手变得不安分起来……"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶惊慌的眸子再度覆上了一层恐惧，这个男人明明看起来是那样的优雅、高贵，怎么可以这么明目张胆，做出这种无耻的事情？最主要的是这里是公司啊，他就不怕被开除么？"
+            },
+            {
+                type: "text",
+                fill: "一滴泪水顺着眼角滑落，她不住的扭着，来抵御男人的侵袭，却还是被男人得逞。"
+            },
+            {
+                type: "text",
+                fill: "一丝冰凉感传来，瑶瑶猛得一个激灵。"
+            },
+            {
+                type: "text",
+                fill: "不……不要，她不想再重新感受两年前努力压抑下去的恐惧回忆了！"
+            },
+            {
+                type: "text",
+                fill: "意图求救的声音被男人全部吞下，抵达嘴角只留下一声声呜咽，仿佛一只小羔羊在‘咩咩’叫着，越发激着男人想欺负她……"
+            },
+            {
+                type: "text",
+                fill: "大手一寸寸划过她，瑶瑶的小心脏仿佛即将停滞，抵御的小手也渐渐失去了力气……"
+            },
+            {
+                type: "text",
+                fill: "这时，御傲天微微睁开了双眸，邪凛的眸光内带着一丝丝失望。他可是很享受这只小绵羊在自己怀中挣扎的感觉呢，如果她变成了一只死鱼，他宁愿去玩那些搔首弄姿的美人！"
+            },
+            {
+                type: "text",
+                fill: "铃……铃……铃……"
+            },
+            {
+                type: "text",
+                fill: "电话突然响起，瑶瑶整个人再度来了希望，可还不等她挣扎，御傲天便主动结束了这充满霸道的吻。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呼……你太过分了！无耻！"
+            },
+            {
+                type: "text",
+                fill: "她挥起手便向着他那张俊美的脸狠狠地打了过去……"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

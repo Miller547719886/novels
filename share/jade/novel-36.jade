@@ -1,0 +1,447 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第三十六章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_36'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-35",
+				next: "novel-37",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		//-默认独白空两行，人物画像4行，对话4行。
+		var character = {
+		luoyy: {
+		side: 'right', 
+		avatar: "./img/novel-01/character/luoyy", 
+		card: "./img/novel-01/character/card_luoyy", 
+		name: "洛瑶瑶" 
+		},  
+		yuatN: {
+		side: "left",
+		avatar: "./img/novel-01/character/yuat",
+		card: "./img/novel-01/character/card_yuat",
+		name: "御傲天"
+		},  
+		longq: {
+		side: "left",
+		avatar: "./img/novel-01/character/hanls",
+		card: "./img/novel-01/character/card_hanls",
+		name: "寒离殇"
+		},  
+		longq: {
+		side: "left",
+		avatar: "./img/novel-01/character/longq",
+		card: "./img/novel-01/character/card_longq",
+		name: "龙琪"
+		},
+		longy: {
+		side: "left",
+		avatar: "./img/novel-01/character/longy",
+		card: "./img/novel-01/character/card_longy",
+		name: "龙烨"
+		},
+		zhangjl: {
+		side: "left",
+		avatar: "./img/novel-01/character/zhangjl",
+		card: "./img/novel-01/character/card_zhangjl",
+		name: "张经理"
+		}
+		};
+		var playscript = {
+		background: [{ 
+		color: 'black' 
+		},
+		{
+		img: './img/novel-01/background/elevator' //1
+		},
+		{
+		img: './img/novel-01/background/manager_room' //2
+		}
+		],
+		cover: './img/novel-01/cover.jpg',
+		chapter: "第36章 | 他的身份！",
+		info: [ 
+		{
+		type: "bg",
+		target: 1 
+		},
+		{
+		type: "text",
+		fill: "瑶瑶被气的小脸通红、通红的。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你到底要干嘛啊，你不知道刚才那样很丢人么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "切。你那么平都不闲丢人，这还怕丢人啊？"
+		},
+		{
+		type: "dialogue",
+		setting: character.luoyy,
+		fill: "你！"
+		},
+		{
+		type: "text",
+		fill: "这个坏蛋，真是太过分了，总是喜欢攻击别人的软肋。她握起小拳头，眼看着就要挥过去了，却被轻松躲过。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "嘿嘿，没想到你不止是太平公主，反应能力也差的很呢。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你再说一次？！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "再说一百次都行啊。你就是个太平公主嘛！"
+		},
+		{
+		type: "text",
+		fill: "说完，他挑衅的做了个鬼脸，随后快速跑走了。"
+		},
+		{
+		type: "text",
+		fill: "瑶瑶气恼的追了上去。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你给我站住！混蛋！"
+		},
+		{
+		type: "text",
+		fill: "这俩个人此刻完全把一个大公司当成了你追我逐的学校走廊。他们的年龄也的确很适合留在校园。"
+		},
+		{
+		type: "text",
+		fill: "追逐间，龙琪拧开了一扇门的把手，快速跑了进去，瑶瑶也顺势跟了进去。可一进入，她……"
+		},
+		{
+		type: "bg",
+		target: 2 
+		},
+		{
+		type: "text",
+		fill: "望着里面的场景瑶瑶瞬间傻了，天！这里……是哪啊？"
+		},
+		{
+		type: "text",
+		fill: "站在偌大而华丽的办公室内，瑶瑶的额角不禁流下了一滴冷汗，扫了一眼坐在沙发上的龙琪，他此刻就跟刚才什么事都没发生过一样，表情无比严肃。"
+		},
+		{
+		type: "text",
+		fill: "目光再向远投去，一张办公椅上坐着一个俊美的男人，可以说他拥有着极美的五官，尤其是一双黑眸内荡漾的那迷人的色泽，仿佛一个不小心就会沦陷进去般。更加突出的，是他那柔情似水又极度威严的气场！冰火两重天的感受，叫人忍不住想要靠近他的温柔却又拘泥于他的威严而退缩。"
+		},
+		{
+		type: "text",
+		fill: "这个坐在办公椅上的男人，嘶……好像是公关部的经理龙烨吧？对！就是他，与第一次见面不同的是，此刻他的身上多了几分成熟男人的威严。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "你们俩在外面闹够了么？！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "跟我无关啊，是她一直在闹。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "什么啊？明明是你先一直在说我的好不好？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "喂，太平公主，讲话要凭良心，难道不是你先打我的吗？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "要不是你一直说我，我干什么打你？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "闭嘴！"
+		},
+		{
+		type: "text",
+		fill: "龙烨实在听不下去了，愤怒的拍了下桌子。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "你们俩是拿这当学校么？我可没功夫哄你们玩。龙琪你要是再跟她吵，就给我滚出去。"
+		},
+		{
+		type: "text",
+		fill: "被哥哥骂，龙琪不甘的翻起个白眼。"
+		},
+		{
+		type: "text",
+		fill: "站在门口的瑶瑶老实了下来。"
+		},
+		{
+		type: "text",
+		fill: "龙烨不禁暗暗吐了口气，他真不明白傲天，陪这么个小女孩玩不累么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "小萝莉，过来。"
+		},
+		{
+		type: "text",
+		fill: "龙烨突然温柔了下来，弄的瑶瑶一惊。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你，你要干什么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "呵呵，放心吧，我这次不需要你的‘特殊服务’。"
+		},
+		{
+		type: "text",
+		fill: "他说的是真的么？不过！现在自己已经不是博森的员工了，他没有任何理由欺负自己吧？瑶瑶缓步走到了办公桌前。"
+		},
+		{
+		type: "text",
+		fill: "龙烨上下打量了她一眼，呵，她真是越看越像小萝莉啊。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "我听说你被开除了是么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "嗯。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "那你愿意加入我们公关部么？"
+		},
+		{
+		type: "text",
+		fill: "还不等瑶瑶开口，坐在沙发上的龙琪捂嘴偷笑了起来。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "谢谢你的好意，龙经理，我不想加入公关部。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "为什么啊？该不会因为……你怕我这个淫棍经理吧？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "呃？"
+		},
+		{
+		type: "text",
+		fill: "龙琪还是跟他哥哥说了么？瑶瑶恶狠狠的瞪了不远处的龙琪一眼。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "不，龙经理，以前的事情不要提了。反正我没兴趣加入公关部。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "哦，我只是跟你开玩笑的……进来吧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "张经理？"
+		},
+		{
+		type: "text",
+		fill: "瑶瑶这一瞧进来的人，立马愣住了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "张经理，该说什么，不需要我交给你吧？"
+		},
+		{
+		type: "text",
+		fill: "龙烨冷眯了眯眼睛。"
+		},
+		{
+		type: "text",
+		fill: "张经理赶忙点了点头，勉强挤出个笑脸。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "对不起，洛瑶瑶。我……我知道之前都是我不对，请你原谅我。我保证以后不会在说那些无理的话了，是我该死！是我贱，是我不好，请你原谅我。"
+		},
+		{
+		type: "text",
+		fill: "这什么情况啊？她怎么感觉张经理好像很怕龙经理似的，他们应该是同等级的不是么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "好了，张经理你可以出去了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "是，总经理。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "总经理？！"
+		},
+		{
+		type: "text",
+		fill: "她没听错吧？刚刚张经理是这么称呼龙烨的吧？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你是博森的总经理？你不是公关部的经理吗？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "小萝莉，我是谁并不重要，反正你以后别在叫我淫棍就是了，我对你这种小女孩……没兴趣的。好了，你继续留在博森工作吧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "等等，可我已经被开除了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "呵，我觉得我还是有能力保一个电梯小姐的。"
+		},
+		{
+		type: "text",
+		fill: "瑶瑶眼珠一转……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "我要是不同意回来工作呢？"
+		},
+		{
+		type: "text",
+		fill: "她好不容易逃离了御傲天的魔爪，干嘛又要自投罗网呢，她又不是傻子。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "不同意回来工作？"
+		},
+		{
+		type: "text",
+		fill: "龙烨微微一笑，单手支撑着下颚。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "那你猜傲天会不会杀去你家呢？"
+		},
+		{
+		type: "text",
+		fill: "这个总经理是笑面虎么？为什么他的语气是那么温柔，却带着一股杀气？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "可他当时说的是，我辞职他才会杀我全家，我现在是被开除的，他没有理由杀我全家的啊。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "哟？我刚发现，你这个小萝莉嘴巴倒是蛮厉害的嘛。"
+		},
+		{
+		type: "text",
+		fill: "那是当然，他们也不看看她是干什么的。"
+		},
+		{
+		type: "text",
+		fill: "……电话铃声响起……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "稍等，龙总经理，我接个电话。"
+		},
+		{
+		type: "text",
+		fill: "还不等龙烨答应，她便已经接起了电话，估计敢把正在谈话的总经理丢在一旁自顾自接电话的就只有她了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "喂？"
+		},
+		{
+		type: "text",
+		fill: "随着电话那边的声音传来，瑶瑶眉头一拧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "什么？我知道了，先挂吧。总经理，我要回来工作。但是，是从明天开始，可以么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "嗯？可以。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "那好，我先走了。"
+		},
+		{
+		type: "text",
+		fill: "还没给龙烨、龙琪兄弟二人反应的机会，她便已经离开了办公室。"
+		},
+		{
+		type: "text",
+		fill: "临走时，她余光瞟了眼门上挂着的牌子……"
+		},
+		{
+		type: "text",
+		fill: "总经理室四个字赫然映入她的眼帘，这个龙烨真的是总经理，看来她又被御傲天给耍了……"
+		}
+		]
+		};

@@ -1,0 +1,15 @@
+//- 公用页脚
+mixin footer
+	//- -
+	//- 	var item = {
+	//- 		prev: "",
+	//- 		next: "",
+	//- 		cata: ""
+	//- 	};
+	footer.foot-toolbar
+		a.toolbar-btn(href=(item.prev == "") ? "javascript:;" : (item.prev + '.html'), class=item.prev ? "" : "disabled")
+			i.icons.icon-arrowLeft
+		a.toolbar-btn.back-to-top(href="javascript:;") 顶部
+		a.toolbar-btn(href=item.cata + '.html') 目录
+		a.toolbar-btn(href=(item.next == "") ? "javascript:;" : (item.next + '.html'), class=item.next ? "" : "disabled")
+			i.icons.icon-arrowRight

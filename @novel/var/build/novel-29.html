@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第二十九章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_29">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-cover"></div>
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-28.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-30.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        nvzb: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "白玲"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        meinz: {
+            side: "left",
+            avatar: "./img/novel-01/character/meinz",
+            card: "./img/novel-01/character/card_meinz",
+            name: "美奈子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            card: "./img/novel-01/character/card_longq",
+            name: "龙琪"
+        },
+        hanls: {
+            side: "left",
+            avatar: "./img/novel-01/character/hanls",
+            card: "./img/novel-01/character/card_hanls",
+            name: "寒离殇"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        },
+        longy: {
+            side: "left",
+            avatar: "./img/novel-01/character/longy",
+            card: "./img/novel-01/character/card_longy",
+            name: "龙烨"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/elevator' //1
+            },
+            {
+                img: './img/novel-01/background/canteen' //2
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第29章 | 她，乱了方寸",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "她明显已经失了方寸了，御傲天深邃的眸子一闪，起手缓缓向她伸了过去……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御老大，您这是……不要啊！"
+            },
+            {
+                type: "text",
+                fill: "抱住头，她下意识的蹲下。谁知电梯‘咣当’一声突然静止。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "发生什么事了？"
+            },
+            {
+                type: "text",
+                fill: "抬起头这一瞧，御傲天的手指正放在电梯的强制关闭钮上。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御老大，你这是干什么啊？怎么又把电梯给强制关闭了？完蛋了、完蛋了，要是被张经理知道她又该骂我了，快！快！御老大，把手拿开，赶紧开启电梯还能弥补，快啊！"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶现在简直如同热锅上的蚂蚁一般，一旁的御傲天却暗自笑了起来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "原来是这么回事。"
+            },
+            {
+                type: "text",
+                fill: "难怪这小东西今天那么不对劲，感情是被上司给骂了。他冷眯了眯眼睛……"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "想开启电梯？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "嗯！嗯！"
+            },
+            {
+                type: "text",
+                fill: "邪邪的一笑，他单手圈住她的小蛮腰。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "求我。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御老大，我求求……呃……"
+            },
+            {
+                type: "text",
+                fill: "不对啊……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "凭什么我求你啊？你只是公关部的，有什么资格关闭电梯？赶紧给我开开！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "呵，小东西，看来我平时对你的教得还是不够呢。"
+            },
+            {
+                type: "text",
+                fill: "圈在她腰肢上的手向上……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "呀。"
+            },
+            {
+                type: "text",
+                fill: "一声惊呼，他冰冷的手掌，她滚热背脊，冰火两重天的碰撞。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "把你的手拿出来！"
+            },
+            {
+                type: "text",
+                fill: "她不安分的挣扎着。"
+            },
+            {
+                type: "text",
+                fill: "可霸道的御傲天又怎能接受她这带有命令的哀求呢？手掌缓缓绕到了前方。"
+            },
+            {
+                type: "text",
+                fill: "她明显感觉到男人的手正努力突破着。白皙的小脸覆上了一层难耐的红霞。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御！御傲天，你不是说我把你吻得……有感觉，你就会放过我吗？"
+            },
+            {
+                type: "text",
+                fill: "再看看她粉扑扑的小脸，宛若醉人的晚霞，荡漾着春情很是迷人。"
+            },
+            {
+                type: "text",
+                fill: "她不想这样的，可不争气的身体就是抵御不了这个坏心男人。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御，御老大，这是我人生第一份工作，我很珍惜的。现在你已经害的我被经理骂了。难道你非要把我逼到辞职才开心吗？"
+            },
+            {
+                type: "text",
+                fill: "垂下头，她那双纯洁的双眸漾着哀求的光泽，口气也不像刚才那般强硬了。如果她早摆出这副小白兔的模样不就没有这一遭了？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "小东西……"
+            },
+            {
+                type: "text",
+                fill: "御傲天缓缓抽回了手，覆在了她白皙的脸颊上。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "如果你敢辞职，我一定……找人杀了你全家！"
+            },
+            {
+                type: "text",
+                fill: "手掌用力，她小脸瞬间被捏的变了形。"
+            },
+            {
+                type: "text",
+                fill: "御傲天在日本干的那些心狠手辣的事情她不是没听过，这个男人要想杀她全家那简直是轻而易举的事情。自己2年前怎么就那么不长眼招惹了这个魔鬼？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御，御老大，你老是这样、老是这样，我就算不主动辞职也会被开除的。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "呵，放心吧，这个公司谁被开除，你都不会被开除的！"
+            },
+            {
+                type: "text",
+                fill: "松开手的一瞬间，瑶瑶快速揉着自己的下巴。真是疼死了。"
+            },
+            {
+                type: "text",
+                fill: "偷瞄了眼御傲天自信的笑容，她就不信，有那个张经理在，自己在犯错的话能不被开除？他御傲天就算在厉害，不也就是公关部的而已么？她可是服务科的好不好。"
+            },
+            {
+                type: "text",
+                fill: "算了，要是这话说出来，这个霸道的男人又该折磨她一番了吧？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御老大，你现在可以把电梯打开了吗？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "可以，但……你要先回答我一个问题。"
+            },
+            {
+                type: "text",
+                fill: "御傲天弯下大半个身体，与瑶瑶保持着一样的高度。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "你一口一个御老大、御老大的叫，怎么今天早上却叫我御先生？"
+            }, {
+                type: "text",
+                fill: "其实她也是纠结了很久才那么称呼他的。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "因为电梯里除了龙烨、龙琪两兄弟外，还有我不认识的一男一女，我不想……给你惹麻烦。"
+            },
+            {
+                type: "text",
+                fill: "果然是这样！看来他是真的不能被这小东西的外表骗了，她……很聪明！"
+            },
+            {
+                type: "text",
+                fill: "御傲天勾唇一笑，终于启动了电梯。"
+            },
+            {
+                type: "text",
+                fill: "当他刚一下电梯，只听……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御傲天！昨天的打车费……谢谢。"
+            },
+            {
+                type: "text",
+                fill: "电梯关闭。"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶看不到此刻停留在电梯外御傲天脸上的表情，反倒是她……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "呼……虽然这么说谢谢很不礼貌，但也没办法了。"
+            },
+            {
+                type: "text",
+                fill: "她实在不想与那个黑道老大有太多的交集……"
+            },
+            {
+                type: "bg",
+                target: 2
+            },
+            {
+                type: "text",
+                fill: "终于到了午饭的时间，不得不说，博森的午餐简直堪比五星级酒店的自助餐一样豪华。饭堂的装修更是不亚于那些高级餐厅的装潢。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "唉，第一企业就是第一企业，午餐连鲍鱼都有，简直太有钱了。"
+            },
+            {
+                type: "text",
+                fill: "端着餐盘，瑶瑶边赞叹着每道菜，边夹着自己喜欢吃的食物。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "瑶瑶！瑶瑶！"
+            },
+            {
+                type: "text",
+                fill: "身后传来了白玲的声音，她礼貌的笑了笑。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "瑶瑶，今天上午的事情你没往心里去吧？"
+            },
+            {
+                type: "text",
+                fill: "上午的事情？白玲指的是……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "哦，没事。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "还说没事？女魔头骂你的声音全科室的人都听到了。"
+            },
+            {
+                type: "text",
+                fill: "不知道为什么，她每次见到白玲都会想起高中最好的朋友宫小曼，或许因为她们的性格有些接近吧都那么热心。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "我真的没事。白玲，谢谢你的关心。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "真没事就好，你是不知道啊，那个女魔头……"
+            },
+            {
+                type: "text",
+                fill: "白玲神秘的看了眼左右，确定没有熟悉的同事后……"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "她已经逼走很多漂亮的电梯小姐了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "啊？她为什么要逼走电梯小姐？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "唉，还不是因为嫉妒你们的职位。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "不可能吧？她可是经理级别的，我只是最底层的员工有什么好嫉妒的？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "呵呵，这你就不知道了吧？"
+            },
+            {
+                type: "text",
+                fill: "她们边聊着、边选择了餐厅一个靠窗的四人桌坐了下来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "你刚来博森面试的时候难道没发现面试电梯小姐的人最多么？"
+            },
+            {
+                type: "text",
+                fill: "这点，她到是有注意到，可……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "那不是因为电梯小姐的福利好么？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvzb,
+                fill: "什么啊，也就你那么想罢了，咱们博森上下几千名员工，唯一最好接近高层的办法就是你那部电梯了，毕竟近水楼台嘛，又是共处一室的，一个弄不好就会找到长期饭票，当然所有人打破脑袋都要抢到这个职位啊。"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

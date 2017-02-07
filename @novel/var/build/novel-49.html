@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第四十九章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_49">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-cover"></div>
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-48.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-50.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "司机"
+        },
+        nvs: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "秘书"
+        },
+        nvs1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            name: "龙琪"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nanz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nanr: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男人"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/street' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第49章 | 你有了？！",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "听瑶瑶这么一说，司机立马被吓得脸色煞白。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz,
+                fill: "Lisa小姐，怎么办？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs,
+                fill: "无所谓啊，老张，你损失了多少，我们风总会加倍赔偿给你的。开车走你的！",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz,
+                fill: "可是，Lisa小姐？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs,
+                fill: "老张，我叫你开车走！",
+            },
+            {
+                type: "text",
+                fill: "Lisa的态度依旧很是果决。见此，瑶瑶故作无奈的耸了耸肩。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "走吧，走吧。遇见肇事不报者，被视为同等罪名；怂恿肇事逃逸者罪加一等，我相信，你以及你车里那位大人物，可能都会被拘留的哦。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs,
+                fill: "你！",
+            },
+            {
+                type: "text",
+                fill: "很显然，Lisa根本是说不过瑶瑶的。坐在车内的风辰逸简直快笑的抽过去了。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "就知道你这个笨蛋会跟我对着干！不过，这样的你的确是最有魅力的。"
+            },
+            {
+                type: "text",
+                fill: "拉开车门……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs,
+                fill: "风总",
+            },
+            {
+                type: "text",
+                fill: "Lisa赶忙俯身。周围围观的群众见此，顿时倒抽了口冷气。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs1,
+                fill: "那男的……好帅啊。好像是……是……风氏的二公子吧？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz1,
+                fill: "好像是吧？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "这位小姐，我很认同你的观点。",
+            },
+            {
+                type: "text",
+                fill: "风辰逸微笑的走到了瑶瑶面前，若有所思的皱起眉头。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "不过，我记得以前某人跟我说过法律这种东西不能乱用，它是维护正义的武器。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呃……"
+            },
+            {
+                type: "text",
+                fill: "原本还处于雄风的瑶瑶顿时就萎了，这句话的的确确是她以前跟风辰逸说的。这个混蛋竟然掐中她的软肋了。握了握拳头，低头看向了坐在地上的中年男子。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "先生，你还是走吧。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "嗯？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs1,
+                fill: "什么情况？这女孩到底帮谁的？",
+            },
+            {
+                type: "text",
+                fill: "现场的观众有些茫然，不刚刚这女孩还处于胜利的么？怎么一下子就？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "你，你在说什么？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "先生，有些话我不想说得太明白，我奉劝你还是赶紧离开。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "那我的手怎么办？你看，我的手指已经折断了！",
+            },
+            {
+                type: "text",
+                fill: "瑶瑶望着男人被折断的小拇指，冷冷道。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "你的手指真的是被这辆车撞断的么？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "废话，大家都看见了，不是吗？",
+            },
+            {
+                type: "text",
+                fill: "待男人这话落下，周围人肯定的点了点头。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "好。你有目击证人是吧？正好，我有物证！"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶指了指车头，再指了指男人倒下的身体。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "首先，车子从左向右行驶，撞到了你的左半边身体，按理说你的着落点应该是右半边身体，可你却迎面坐在地上。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "第二点，你受伤的是左手，根据车头的高度是无法撞击到你手的位置的，那么只有一种可能，是你身体倒地时，手指撑地才导致骨折的，然而关联到第一点，你的左手根本不可能去撑地，更加谈不上撑到骨折了。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "最后一点，从刚才的车速看来，车子行驶速度不超过40迈，而当你出现的时候车子急速减缓，最多10迈的速率。这点可以从地上的刹车痕迹看出来。也就是说，依据你倒地的位置，车速至少达到20迈才有可能撞到你。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "至于你说的人证。我相信，这些人都是在听到你的声音后，才注意到这边的车祸的，然而在法律上并不构成直接目击证人，所以无效！",
+            },
+            {
+                type: "text",
+                fill: "啪啪啪……"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶那一脸职业又滔滔不绝的言论引来周围群众们自发的掌声，此刻这车水马龙的街头完全成了一副法庭的样子，而看起来年纪轻轻的瑶瑶就是法庭上那滔滔雄辩的大律师！"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvs1,
+                fill: "这女孩好厉害啊，怎么什么都懂？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz1,
+                fill: "是啊，她是什么人啊？",
+            },
+            {
+                type: "text",
+                fill: "听着周围人络绎不绝的赞叹声，风辰逸浅淡的笑了笑，从以前他就坚信洛瑶瑶有着化腐朽为神奇的能力。"
+            },
+            {
+                type: "text",
+                fill: "只要是她想站在谁的一方，不论对方是有力立场还是无力立场，凭借她的头脑最终的结果一定会是胜利的！她的能力到底有多强，或者连洛瑶瑶自己都不曾发现！此刻就是一个绝佳的例子……"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanr,
+                fill: "你这个该死的小女孩，这里有你什么事？！",
+            },
+            {
+                type: "text",
+                fill: "敲诈的男人见自己功败垂成，气氛的咒骂着。瑶瑶无奈摇了摇脑袋，蹲下。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "你最好收起你的话，否则我有本事让车主告你，你会赔得倾家荡产，你信不信？！",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "你什么意思？你刚不也是说了么？他是逆行！",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "对，按照交通法来说，他是逆行，他是全责任方；然而……你可是敲诈。你就变成了全责任方了，并且还要加上一条敲诈的罪名！",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "你……你有什么证据证明我是敲诈？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呵，先生，我们用去医院验伤么？被折断的手指短时间内应有红肿迹象，可你的断指一看就是半个月前的老伤了。在加上这辆莱斯莱斯的车头被你故意碰撞，已经凹陷进去了，修理费最少在300万以上。你真的想倾家荡产么？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "你、你……",
+            },
+            {
+                type: "text",
+                fill: "这男人服了，怎么这个小女孩什么都懂？什么都知道？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanr,
+                fill: "妈的！",
+            },
+            {
+                type: "text",
+                fill: "男人愤恨的磨了磨后糟牙，猛地推了下瑶瑶，便跑走了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "瑶瑶？！",
+            },
+            {
+                type: "text",
+                fill: "见她被推倒在地，风辰逸的脸色立马沉了下来。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "老张，马上给我把那个男人追回来！",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz,
+                fill: "是！少爷。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "不用了。",
+            },
+            {
+                type: "text",
+                fill: "她还懂得什么叫得饶人处且饶人，如果不是那个人生活窘迫肯定不会出来敲诈的吧？在加上他的断指？唉……钱真的很重要啊。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "呵，你可真行，一到某些时候就跟变了个人似的，可是挨欺负了吧，却总是忍气吞声的。",
+            },
+            {
+                type: "text",
+                fill: "关于这点，风辰逸也很无奈，他跟瑶瑶差不多交往了两年多的时间，对于瑶瑶的能力他十分认可，可奇怪的是，这丫头一到自己的事情或者一些小事总是笨得要死。这或许正印证了那句，有些人就是智商高可情商却是零蛋。"
+            },
+            {
+                type: "text",
+                fill: "风辰逸缓缓将她搀扶了起来，瑶瑶不爽的翻起个白眼。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "你没事逆行干什么？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "我有事要办。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "有事要办就可以逆行了么？刚才那个人之所以会敲诈你，就是抓住了你也违法法律这点漏洞。笨蛋！",
+            },
+            {
+                type: "text",
+                fill: "她俯身，逐一捡着散落在地的东西。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "哟？我被笨蛋说成笨蛋？那岂不是一种耻辱。",
+            },
+            {
+                type: "text",
+                fill: "风辰逸讽刺的笑了笑，也帮着她捡着地上的东西。可这时……"
+            },
+            {
+                type: "text",
+                fill: "不远处一个刺眼的物体闯入他的视线内。风辰逸快步走了过去，猛地捡起。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "这是……你的？！",
+            },
+            {
+                type: "text",
+                fill: "当看到他手中那支验孕棒的时候，瑶瑶的心头一紧。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "还给我！",
+            },
+            {
+                type: "text",
+                fill: "飞快的从他手中抢了过来塞进包里。"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

@@ -1,0 +1,20 @@
+//- 样式脚手架集合
+i.icons {
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+i.icon-arrowLeft {
+	background-image: url(./img/arrow_left.png);
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+}
+
+i.icon-arrowRight {
+	background-image: url(./img/arrow_right.png);
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+}

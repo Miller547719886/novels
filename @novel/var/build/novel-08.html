@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第八章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_08">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-cover"></div>
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-07.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-09.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        jiz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "记者"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        meinz: {
+            side: "left",
+            avatar: "./img/novel-01/character/meinz",
+            card: "./img/novel-01/character/card_meinz",
+            name: "美奈子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            card: "./img/novel-01/character/card_longq",
+            name: "龙琪"
+        },
+        hanls: {
+            side: "left",
+            avatar: "./img/novel-01/character/hanls",
+            card: "./img/novel-01/character/card_hanls",
+            name: "寒离殇"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/reception'
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第8章 | 男人，你好眼熟",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text", //-对话
+                fill: "两年后，博森集团……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.zhangjl,
+                fill: "洛瑶瑶，这部只准公司高层乘坐的电梯以后就由你来操作了，不能有任何怠慢！懂么？"
+            },
+            {
+                type: "img", //-对话
+                fill: character.zhangjl.card
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "是，张经理。"
+            },
+            {
+                type: "text",
+                fill: "身着一身电梯小姐服的瑶瑶走入电梯内，微笑地送走了自己的部门经理。"
+            },
+            {
+                type: "text",
+                fill: "终于在日本完成了高中学业的她，一回国第一时间在求职报纸找到了这份月薪5000的电梯小姐工作。对于如此丰厚的报酬也就中国排名第一的博森给得起了，当然与他并驾齐驱的风氏集团出手也很阔绰，只可惜……"
+            },
+            {
+                type: "text",
+                fill: "她才不会去给前男友的公司卖命呢！"
+            },
+            {
+                type: "text",
+                fill: "2年前，自他们分手后，风辰逸便被父亲召回中国接管风氏企业去了，从此他们也没了交集。这样正好，也省得看见那个花心男触景伤情了。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呼……这份工作可真不容易啊。"
+            },
+            {
+                type: "text",
+                fill: "虽说不是很累，却要打起十二分精神，并且要牢牢记住公司每一位高管的样子，才能在第一时间替他们按好了要去的楼层。这对向来不善于记人脸的瑶瑶来说无疑是一种挑战。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呼……这份工作可真不容易啊。"
+            },
+            {
+                type: "text",
+                fill: "已经过了上班点了，应该没人来了吧？"
+            },
+            {
+                type: "text",
+                fill: "长吐一口气，她全身松软，依靠在了电梯铁壁上。"
+            },
+            {
+                type: "text",
+                fill: "可就在这时……"
+            },
+            {
+                type: "text",
+                fill: "电梯再次启动。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "都10点了，还有人上班吗？会是谁？这么大胆竟敢迟到？"
+            },
+            {
+                type: "text",
+                fill: "一辆劳斯莱斯幻影缓缓开向博森集团门口，此时门口已经恭敬地站了两排人。见车子停下，所有人微垂下头，屏住呼吸，好似在迎接着某位大人物的降临。"
+            },
+            {
+                type: "text",
+                fill: "车门打开，只见一着西装打领带的男人率先走了下来。他身上带着君王般的霸气，一下车，似乎周围的空气都被压得稀薄。"
+            },
+            {
+                type: "text",
+                fill: "所有人整齐迎接，纷纷施以90度鞠躬礼。"
+            },
+            {
+                type: "text",
+                fill: "御傲天面无表情，带着几个手下径直朝博森大厅走去，直到他拐入电梯间，那些出来迎接的人这才敢抬起头。"
+            },
+            {
+                type: "text",
+                fill: "电梯抵达一楼，瑶瑶偷瞄着等候在电梯外的四男一女顿时一惊……"
+            },
+            {
+                type: "text",
+                fill: "怎么世界上还有长得这么好看的男人？那个女的也好漂亮啊。尤其是第一个上电梯的男人，那气场就跟男主角出场似的。不过……"
+            },
+            {
+                type: "text",
+                fill: "嘶……他看起来好眼熟啊，是不是自己在哪里见过他？算了，管他呢。伸出手，刚要按电梯按钮，瑶瑶的脸色瞬间就沉了下来。"
+            },
+            {
+                type: "text",
+                fill: "完，完蛋了……"
+            },
+            {
+                type: "text",
+                fill: "在记忆里她好像没从公司的组织结构图上见过这几个人，怎么办？才第一天上班，她可不想挨骂。"
+            },
+            {
+                type: "text",
+                fill: "一滴汗水顺着额角流下，她去按电梯的手都有些颤抖了。希望，自己猜测的对吧！"
+            },
+            {
+                type: "dialogue",
+                setting: character.longq,
+                fill: "话说，今天下班后我们去哪happy一下呢？",
+                audio: "./audio/longq0002.mp3"
+            },
+            {
+                type: "text",
+                fill: "随着电梯缓缓上升，耐不住寂寞的龙琪终于开了口，他坏笑着挤了挤身旁的御傲天。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "随便。",
+                audio: "./audio/yuat0038.mp3"
+            },
+            {
+                type: "dialogue",
+                setting: character.longq,
+                fill: "这种事情向来都是你拿主意的嘛，怎么可以随便呢，是天上人间呢？还是……",
+                audio: "./audio/longq0003.mp3"
+            },
+            {
+                type: "text",
+                fill: "叮咚！电梯嘎然而止，被打断话的龙琪不禁皱起眉头。"
+            },
+            {
+                type: "dialogue",
+                setting: character.longq,
+                fill: "怎么这么快就到了？",
+                audio: "./audio/longq0004.mp3"
+            },
+            {
+                type: "text",
+                fill: "电梯内的几人一同抬头看向了电梯所显示的楼层……"
+            },
+            {
+                type: "text",
+                fill: "41层，电梯怎么在41层就停了？只见，御傲天的脸色唰的一下子就沉了下来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.longq,
+                fill: "喂，电梯小姐，怎么电梯在41层就停了？",
+                audio: "./audio/longq0005.mp3"
+            },
+            {
+                type: "text",
+                fill: "搞错了么？他们不在41层办公？完蛋了！"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "对不起……对不起……各位领导。我今天是第一天上班，所以才会……对不起，对不起。"
+            },
+            {
+                type: "text",
+                fill: "她边不断鞠躬道歉，边转过了头。"
+            },
+            {
+                type: "text",
+                fill: "在这一刹那，御傲天俊美的面庞霎时一紧，深邃的眸也划过一抹厉光……"
+            }
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

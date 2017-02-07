@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第五章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_05">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-04.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-06.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/nightclub_room' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/campus' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第5章 | 误惹霸道总裁",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "御傲天，日本第一地下势力御龙社的当家，名震整个日本，政、商两届无人敢惹，他跺一跺脚只怕整个日本都会地震。"
+            },
+            {
+                type: "text",
+                fill: "他的狠辣与霸道不是一般人可以想象到的。但凡有人敢得罪他，最终的下场不是死亡，而是一点点、一点点被他折磨致死。至于女人，对于他来说就如同玩具一般，玩过一次马上丢掉；尽管如此，还是有大批的女人如同飞蛾扑火。"
+            },
+            {
+                type: "text",
+                fill: "现在，洛瑶瑶也算是前来敬献的么？呵……呵呵……她怎么会愚蠢到错把这个黑道帝王认成男侍呢？这不是自掘坟墓么？"
+            },
+            {
+                type: "text",
+                fill: "御傲天回头望了眼进来的手下，双眸一暗，一个箭步冲到手下面前，上去就是一记狠辣的耳光……"
+            },
+            {
+                type: "text",
+                fill: "不等那手下回过神，御傲天接连又是一脚……"
+            },
+            {
+                type: "text",
+                fill: "天呐……御，御傲天对待自己的手下好……好残忍，瑶瑶被这场面吓得全身不住地颤抖着。"
+            },
+            {
+                type: "text",
+                fill: "只见，手下被踹出几米远，身体重重的撞击在了墙壁上，嘴角缓缓流下一丝刺目的血迹，可眼神中却含着疑惑……"
+            },
+            {
+                type: "text",
+                fill: "他不明白御老大为什么要发火？就因为他打断了御老大的好事么？但，明明以前御老大是不会因为这种事情发火的……"
+            },
+            {
+                type: "text",
+                fill: "手下发出了恐惧的哀求声。御傲天沉默不语，揪住那手下的头发，便将他拖出了房间。"
+            },
+            {
+                type: "text",
+                fill: "在关上门的那一刻，他冷凝的眸子投向了床上已经呆住的瑶瑶，阴骜的眼神中霎时被一抹说不清的光泽所覆盖……"
+            },
+            {
+                type: "bg", //- 背景
+                target: 2 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "天明、日本第一学府……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz1,
+                fill: "看，快看，那不是那个中国来的留学生么，怎么那么灰头土脸的，真给他们中人丢脸哟。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz2,
+                fill: "是啊。"
+            },
+            {
+                type: "text",
+                fill: "步入校园的洛瑶瑶听着周围的讽刺声，不禁难堪地垂下头，虽然知道现在自己这幅模样真的很丢人，可总比死掉的强啊。"
+            },
+            {
+                type: "text",
+                fill: "原本在女性会所的她，等御傲天走后便跳窗而逃。谁知，裹在身上的被子却挂在了二楼阳台。"
+            },
+            {
+                type: "text",
+                fill: "还以为完蛋了，幸好路过一个好心人给了她一件外衣，才让她不至于赤着回学校。"
+            },
+            {
+                type: "text", //-对话
+                fill: "只可惜那个好心人走得太快，她连人家的样貌都没看清，也没来得及说上一声谢谢。算了，有缘的话，以后会见面的吧，到那时候再好好道谢吧。"
+            },
+            {
+                type: "text",
+                fill: "加紧脚步，向着女生宿舍走去。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.gongxm,
+                fill: "瑶瑶！"
+            },
+            {
+                type: "text",
+                fill: "等待在女生宿舍门口的宫小曼一见她回来，飞快地跑了过来。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.gongxm,
+                fill: "都是我不好，非拉着你去会所发泄，才会……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "小曼，别内疚，我没事的。"
+            },
+            {
+                type: "text",
+                fill: "截断了宫小曼的话，她勉强挤出一抹甜美的笑容。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.gongxm,
+                fill: "你真的没事么？可把你带走的那个人是……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "瑶酱！"
+            },
+            {
+                type: "text",
+                fill: "不等宫小曼把话说完，一个日本女性的声音打断了她们的对话。"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶下意识地回过头……"
+            },
+            {
+                type: "text",
+                fill: "只见，不远处一对男女挽着手嬉笑着向她走来。瞬间，瑶瑶的表情一冷，眸中更是充满了浓浓的恨意……"
+            }
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

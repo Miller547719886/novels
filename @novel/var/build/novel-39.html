@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第三十九章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_39">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-cover"></div>
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-38.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-40.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        zongs: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "宗少"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        jiz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "记者"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        meinz: {
+            side: "left",
+            avatar: "./img/novel-01/character/meinz",
+            card: "./img/novel-01/character/card_meinz",
+            name: "美奈子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            card: "./img/novel-01/character/card_longq",
+            name: "龙琪"
+        },
+        hanls: {
+            side: "left",
+            avatar: "./img/novel-01/character/hanls",
+            card: "./img/novel-01/character/card_hanls",
+            name: "寒离殇"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        },
+        longy: {
+            side: "left",
+            avatar: "./img/novel-01/character/longy",
+            card: "./img/novel-01/character/card_longy",
+            name: "龙烨"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/nightclub' //1
+            },
+            {
+                img: './img/novel-01/background/street_night' //2
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第39章 | 在夜店被坏蛋占便宜",
+        info: [ //-台本
+            {
+                type: "bg", //- 
+                target: 1 //- 
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "那就要看你的表现了。"
+            },
+            {
+                type: "text",
+                fill: "宗少打开一瓶洋酒，倒满了整个杯子。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "全喝了，你走；喝不完，你今天别想走。"
+            },
+            {
+                type: "text",
+                fill: "紧了紧眉头，她咬着后糟牙，拿起酒杯大口、大口的喝了起来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "哟吼，看到了吗？这个小妹妹真能喝啊。"
+            },
+            {
+                type: "text",
+                fill: "才片刻的功夫，一杯酒全部下肚，瑶瑶只觉得胃部阵阵翻搅的难受，头也晕晕的。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "我，我喝完了，可以，可以走了吧？"
+            },
+            {
+                type: "text",
+                fill: "晃悠悠的刚迈出两步，男人一把抓住她胳膊，将她拉入了怀中。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "唉，妹妹既然那么能喝，就留下来多陪陪我嘛。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "放开我，你放开！"
+            },
+            {
+                type: "text",
+                fill: "头晕的厉害，全身都是软软的仿佛天都在旋转。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "哟，还是个小辣椒呢？我喜欢。哈哈哈。"
+            },
+            {
+                type: "text",
+                fill: "宗少淫威的笑着，那双肥厚的嘴向着她的小口就压了过去……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "不！"
+            },
+            {
+                type: "text",
+                fill: "慌乱间，她随手抄起个酒瓶猛地一砸……"
+            },
+            {
+                type: "text",
+                fill: "顿时，男人额头血液四溅，震耳欲聋的音乐声也消失不见，周围那些玩乐的男女恐慌的看向了他们的方向。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "靠！你个小贱人敢打老子？"
+            },
+            {
+                type: "text",
+                fill: "男人摸了把额头的血迹，眼睛瞪的像个铜铃，抡起手愤怒的给了她一个巴掌。似乎还不解气，接连又是一计狠辣的耳光。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "唔！"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶只觉得一股血腥味顺着嘴角弥漫开来，双颊也火辣辣的疼。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "小贱人，你不是给脸不要么？那好，老子今天就当着所有人的面把你扒光，叫他们一个个排队上！"
+            },
+            {
+                type: "text",
+                fill: "说着，宗少挥了下手。两个手下一左一右将已经瘫软在沙发上的瑶瑶拉了起来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "不……求求您，放过我。"
+            },
+            {
+                type: "text",
+                fill: "微弱的抗拒声、无力的抵抗，也不知是酒精的作用还是男人那两巴掌已经把她打蒙了。在这个纸醉金迷的世界里，这个娇小的身影看起来是那样孤独无助，然而她的目的仅仅是想替爷爷赚取医疗费而已……"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "你们还楞着干嘛？赶紧给老子扒了！"
+            },
+            {
+                type: "text",
+                fill: "男人一声令下，左右驾着瑶瑶的两人伸手就要拉扯她的衣服。在看看围观的其他客人不但没人上前阻拦，反而像是看好戏似的充满了期待。看来她今天是在劫难逃了！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "小宗。"
+            },
+            {
+                type: "text",
+                fill: "就在这千钧一发之计，一道熟悉的声音闯入了她朦胧的世界之中，这个声音是……"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "呀？这不是御老大吗？！"
+            },
+            {
+                type: "text",
+                fill: "所有人原本的注意力全部转移到了向这边走来的御傲天身上，安静的大厅内也着实因为他的出现引起了不小的骚动。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvz,
+                fill: "喂，喂，那个就是御龙社的老大御傲天吗？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "不对，错了，他现在是博森的总裁。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvz,
+                fill: "反正都一样啦。都传言他爱在这里玩，可一次没有见过他，没想到今天能看到他风采，简直是不虚此行啊。"
+            },
+            {
+                type: "text",
+                fill: "窃窃私语声从四面八方传来。不得不说，御傲天无论到哪永远都是万众瞩目的焦点，主要围绕着他的传奇故事太多、太多了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "怎么，被开瓢了？"
+            },
+            {
+                type: "text",
+                fill: "御傲天双手插袋走到了宗少面前，玩味的笑了起来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "唉，别提了，都是那个小娘们干的。我好心请她喝酒，她打我，您说，是不是该死？"
+            },
+            {
+                type: "text",
+                fill: "目光下意识的扫向了不远处已经处于半晕迷状态的瑶瑶，他又是一笑。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "跟个小妹妹瞎闹什么？不如陪我玩会吧。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "哟？御老大，您今天真是有兴致啊。要玩什么您说，小宗我一定奉陪到底！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "是么，有你这句话我就放心了！"
+            },
+            {
+                type: "text",
+                fill: "他转身坐在了沙发上，细细思考了半晌后……"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "那不如就玩……剁手的游戏吧！"
+            },
+            {
+                type: "text",
+                fill: "话罢，扬在脸上的邪美笑容消失，他那深邃的双眸不禁掠过一抹阴森的叫人战栗的光泽！所有人倒吸了口凉气，下一秒……"
+            },
+            {
+                type: "text",
+                fill: "只见随同他一起来的龙琪一个跨步冲到宗少面前，还不等他反应……"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "啊！"
+            },
+            {
+                type: "text",
+                fill: "手起刀落，龙琪瞬间砍断了男人曾打过瑶瑶的那只手！再看看宗少的那些手下，刚要抄家伙，却早已被御傲天带来的人团团围住，谁也不敢再动弹一下了。"
+            },
+            {
+                type: "text",
+                fill: "顿时、整个夜总会内陷入了一片死寂之中，所有大眼瞪小眼的屏住呼吸，就连他们看待御傲天的眼神都慢慢从敬仰变成了惊恐，那是一种对王者的畏惧，从心而出的畏惧！"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "御……御老大，我爸爸好歹也是中国四大帮派之一赤龙帮的龙头，您就算不看僧面也得看佛面啊？你竟然……竟然说砍我的手就砍我的手？！"
+            },
+            {
+                type: "text",
+                fill: "宗少万万也想不到，御傲天会干出这种事来！都说御傲天冷酷无情、翻脸不认人，却不想他能狠到这种地步，竟然谁的面子都不给？！"
+            },
+            {
+                type: "dialogue",
+                setting: character.longq,
+                fill: "喂，小子，傲天只是要了你一只手，都没直接弄死你就已经是给你老子面子了，你应该感恩才对！要不，我砍你只手，你再送我个耳朵吧！"
+            },
+            {
+                type: "text",
+                fill: "龙琪一手揪住了宗少的头发，另一手拿着的刀子就向他耳朵刺了过去。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "不……不！谢……谢御老大开恩！谢御老大开恩。"
+            },
+            {
+                type: "text",
+                fill: "宗少下意识的捂住了双耳，连忙向御傲天磕着头，龙琪才收起了匕首。"
+            },
+            {
+                type: "text",
+                fill: "的确，御傲天玩死人的手段可是多不胜数，落入他手上的人从没有好下场的。这宗少只是没了只手真的算是命大了，不过也因此证明，他并没有踩到御傲天的“线”，否则哪里会那么简单就了结呢？"
+            },
+            {
+                type: "text",
+                fill: "一直沉默的御傲天与龙琪交换了个眼神便带着手下们走出了夜店。"
+            },
+            {
+                type: "bg", //- 
+                target: 2 //- 
+            },
+            {
+                type: "text",
+                fill: "这时，所有人才回过神，不禁长吐了一口气。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "太……太可怕了。御……御傲天简直比传闻中还要狠。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "是啊。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "还有，你们不觉得砍掉宗少手的那个少年也挺可怕的么？我还没反应过来呢，宗少的手就没了。他叫什么来着，是叫龙琪吧？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "龙琪？他好像是御傲天手下的第一猛将，一个人徒手能打倒打十个？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "啊，难怪呢……"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "该死！"
+            },
+            {
+                type: "text",
+                fill: "待御傲天等人走后，宗少无力的瘫坐在了地上。细想想，他赤龙帮跟御龙社向来井水不犯河水，最主要的是这两年御傲天也很少会参与江湖的事了，可为什么今天却……"
+            },
+            {
+                type: "text",
+                fill: "疑惑的目光一闪。"
+            },
+            {
+                type: "dialogue",
+                setting: character.zongs,
+                fill: "那个女的呢？刚用酒瓶子砸了我头的那个女孩呢？！"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

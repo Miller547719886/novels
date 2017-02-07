@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第二十五章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_25">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-cover"></div>
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-24.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-26.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "痞子"
+        },
+        limy: {
+            side: "left",
+            avatar: "./img/novel-01/character/limy",
+            card: "./img/novel-01/character/card_limy",
+            name: "离美云"
+        },
+
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/car' //1
+            },
+            {
+                img: './img/novel-01/background/street_night' //2
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第25章 | 总裁最爱吃独食",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "怎么啦？难道我们的博森集团总裁动了恻隐之心要英雄救美？人家可是会吃醋的哦。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "美云。"
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "什么？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "下车。"
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "傲天，人家可是刚拍完戏回来第一时间就来找你了，你就舍得丢下人家去救美？最主要的是……我现在下车的话，一定会被记者拍到的。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "呵，你不说你不怕被记者拍到么？下车！我不想重复第三遍了。"
+            },
+            {
+                type: "text",
+                fill: "说着，御傲天的神情瞬间变得阴沉。"
+            },
+            {
+                type: "text",
+                fill: "离美云多少了解些御傲天的脾气，见他这样，她只好匆忙离开了。"
+            },
+            {
+                type: "text",
+                fill: "见此，御傲天丢下自己的座驾，向着瑶瑶的方向便追了过去……"
+            },
+            {
+                type: "bg",
+                target: 2
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "小妞，别叫了，你还是省点力气一会儿在‘叫’吧。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "放开我！放开！"
+            },
+            {
+                type: "text",
+                fill: "挣扎间，瑶瑶张开小嘴猛地咬住了其中一个人的手。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "哎哟。妈的，敢咬老子？"
+            },
+            {
+                type: "text",
+                fill: "痞子愤怒的挥起手，再度打向她的脸。"
+            },
+            {
+                type: "text",
+                fill: "可就在这一瞬间，一道黑影闪过，牢牢的抓住了他落下的手，用力一掰……"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "哎哟。"
+            },
+            {
+                type: "text",
+                fill: "又是一声惊呼，那黄毛顿时觉得自己的胳膊好像被扭断了一般。"
+            },
+            {
+                type: "text",
+                fill: "所有人下意识的向那黑影看去，定眼一瞧……"
+            },
+            {
+                type: "text",
+                fill: "月光下，男人幽不见底的眸子看起来如同死神降临般可怕，身上更若隐若现的散发着一股杀气。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "你……你是什么人？"
+            },
+            {
+                type: "text",
+                fill: "很明显，几个小痞子被御傲天强大的气场震慑的不敢妄动。"
+            },
+            {
+                type: "text",
+                fill: "可御傲天视他们如无物一般，双手插袋，冷冽的眸光被邪笑所取缔，缓缓看向惊魂未定的瑶瑶。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "你到还真是喜欢勾男人呢。"
+            },
+            {
+                type: "text",
+                fill: "他还有脸说自己？他还不是跟那群痞子一样！"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "这能怪我吗？！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "哦？一个女孩这么晚了走在人烟稀少的小路上这不就是在对坏蛋放出信号么。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "如果不是你把我留到那么晚的话，我已经坐着公交车回家了，更加不会遇见这种事了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "呵，你也可以选择打车的。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "打车？我就三块钱，你给我打个车看看！？"
+            },
+            {
+                type: "text",
+                fill: "御傲天看着她手中捧着的零钱，差点就笑出来，这年头有哪个快20岁的女孩身上只带几块钱出门的？他现在越来越怀疑这小东西是不是故意隐瞒了年龄了，尤其是她那白璧无瑕的身体哪里像是快20岁的少女呢？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "哈，原来你们两个认识？！"
+            },
+            {
+                type: "text",
+                fill: "几个黄毛听着御傲天与瑶瑶说话的口气，一下子便觉得这男人刚刚只是为了唬人才会释放出那么可怕的气场的，便也没那么怕了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "喂，小白脸，我劝你别多管闲事，小心挨顿揍。如果你也想要这小妞的话，等哥几个爽完了就给你，如何？！"
+            },
+            {
+                type: "text",
+                fill: "一群痞子加上一个帅气的大混蛋那不就等于……她掉进了狼窝了？不行！不行！绝对不能叫他们几个成为伙伴。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "我，我们怎么说也算是同事吧？帮……帮我。"
+            },
+            {
+                type: "text",
+                fill: "尽管不想向这个大混蛋求救，可瑶瑶清楚的知道，一旦自己落入那群痞子手上结果一定不堪设想。拉扯了下男人的胳膊，她露出了哀求的眼神。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，你果然还是喜欢被我一个人玩是不是？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "当然不是了！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "那，我为什么要帮你？就因为我们是同事？"
+            },
+
+            {
+                type: "text",
+                fill: "望着男人戏谑的神情，瑶瑶知道这个混蛋这是打算在这个时候趁火打劫啊。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你！"
+            }, {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "你之前不是说我是无耻混蛋么，你见过哪个无耻混蛋会帮人？"
+            },
+            {
+                type: "text",
+                fill: "明白了，原来他在为这件事耿耿于怀，还真是小气。"
+            },
+
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "那你也可以做个帮人的无耻混蛋啊。"
+            },
+            {
+                type: "text",
+                fill: "说真的，御傲天现在掐死这丫头的心都有了，她还真是伶牙俐齿的很呢。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "呀，原来你们是同事？"
+            },
+            {
+                type: "text",
+                fill: "从旁隐约听到他们对话的几个痞子在得知男人的身份后变得更加肆无忌惮了。"
+            }, {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "哥们，看你的样子应该是个白领吧？聪明的话，你应该知道怎么做了吧？我们向来讲义气，只要你当做什么都没看到，我们完事，你愿意怎么弄这小妞都行！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "哼？"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶的心顿时提到了嗓子眼，他不会……真的要答应吧？"
+            },
+
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "虽然你们的提议不错。可……我向来喜欢吃独食！"
+            },
+            {
+                type: "text",
+                fill: "说着，他一把搂住了瑶瑶的肩膀。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，听我这么说，你很‘高兴’吧？"
+            }, {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "才，才没有呢。"
+            },
+
+            {
+                type: "text",
+                fill: "她不是任何人的食物，只是此刻更加不想落入那群痞子的手里而已。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "哟，小子，听你的意思是想救这小妞了？但可别怪我们没告诉你，我们可是御龙社的人，我的老大……就是御傲天！你敢来惹我们，我看你是活腻味了！"
+            },
+            {
+                type: "text",
+                fill: "说完，几个小痞子一同从口袋里掏出了明晃晃的匕首……"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶一听这话，顿时大惊失色。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "怎……怎么办？怎么办？他……他们是御傲天的人……"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "怕什么啊？你不是御傲天的妹妹吗？告诉他们就是了。"
+            }, {
+                type: "text",
+                fill: "她是在吹牛的好不好？虽说2年前她真的与御傲天有过一面之缘，可现在连他长什么样都记不清了"
+            },
+            {
+                type: "text",
+                fill: "该告诉这个男人么？不，不行，那他以后会更加欺负自己吧？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "我，我是御傲天的妹妹，可……可我哥一直在日本，他手下众多，不可能每个手下都认识我的。而且我刚从日本回来，在中国还没朋友。你看他们一共就6个人，不如你喊几个朋友过来吓唬他们一下，怎么样？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "啊？我啊？可我认识的都是吃软饭的朋友呢。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "我知道。不过没事，我们见机行事，快！快去喊人。"
+            },
+
+            {
+                type: "text",
+                fill: "说着，瑶瑶向他挤了挤眼睛。鼓足勇气，凶巴巴的看向那几个手持刀子的痞子。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "我告诉你们哦，这个男的也是道上混的，你们别看他长得帅就以为他是吃软饭的，可他的绰号却叫死神！死神知道么？出手狠的很！"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第二十六章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_26">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-25.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-27.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "痞子"
+        },
+        n1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "小弟"
+        },
+
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/street_night' //1
+            },
+            {
+                img: './img/novel-01/background/car' //2
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第26章 | 好好惩罚她",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 
+            },
+            {
+                type: "text",
+                fill: "在不远处边打电话边听瑶瑶吹牛的御傲天无奈的摇了摇脑袋，这小东西有必要非加上吃软饭三个字么？真想好好惩罚她一下！"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "看，你们看，他现在可打电话叫人了，他随随便便就能喊来二百人，要是不想死的话，还不快跑？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，不是说6个人么？怎么又改成二百个人了？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "啊？"
+            },
+            {
+                type: "text",
+                fill: "下一秒，只听御傲天冲着电话缓缓道。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "叫二百个人过来，三分钟内必须给我到达！"
+            },
+            {
+                type: "text",
+                fill: "命令的话语落下，瑶瑶整个人呆愣的傻在了原地。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "呵，小子，你也太能吹牛逼了吧？二百个人？这年头除了我老大御傲天以外全亚洲也就不出十个人能搞出这种阵仗。别说三分钟，呵，我给你10分钟时间，要是喊不来，你就从老子我胯下钻过去。"
+            }, {
+                type: "text",
+                fill: "听着那几个小混混奚落的声音，御傲天双手插袋优雅的笑了起来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你疯了吗？喊二百人过来？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "不是你说的么？"
+            },
+            {
+                type: "text",
+                fill: "他之前不是挺聪明的么，怎么现在就跟个傻子一样？他难道听不出自己在跟那群小痞子吹牛想吓走他们啊？他怎么就上了道了，这下子麻烦了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "怎么办啊，都2分钟了，算了，一会儿找到机会你就逃跑吧。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "那你怎么办呢？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "没事，怎么说这事与你无关，我也不该拉你下水的。你就先跑吧。"
+            },
+            {
+                type: "text",
+                fill: "他才发现，原来这小家伙倒是挺讲义气的？明明怕的要死却为了不连累他人反而胆大了起来，还真是深不可测的小东西呢。抬起手，看了看时间……"
+            },
+            {
+                type: "text",
+                fill: "当指针渐渐接近3分钟时，只听，不远处无数汽车发动机的轰鸣声正在逼近，御傲天那深邃的眸子也随之暗了下来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "什么声音？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "不知道，好像是汽车的声音吧？"
+            },
+            {
+                type: "text",
+                fill: "几个小痞子似乎察觉到了什么，略带惊慌的向四周望去。"
+            }, {
+                type: "text",
+                fill: "只见，闪烁着大灯的汽车正以飞速向他们的方向驶来，数一数最少40辆。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "这……这……这……"
+            },
+            {
+                type: "text",
+                fill: "那几个手持小刀的痞子变得愈加慌乱。"
+            },
+            {
+                type: "text",
+                fill: "40辆车几乎同一时间停在了路旁，‘唰、唰、唰’无数身着笔挺西装的黑衣人从车内冲了下来。"
+            },
+            {
+                type: "text",
+                fill: "见到这种阵仗，几个小痞子完全傻了，瑶瑶也吓傻了，估计他们这辈子也没见过这么大的架势。"
+            },
+            {
+                type: "text",
+                fill: "在仔细看看黑衣人所着的衣服，左胸口处明显绣着一个‘御’字，毋庸置疑，这些人正是御龙社的人！"
+            },
+            {
+                type: "text",
+                fill: "当那些黑衣人将他们团团围住的那刻，齐刷刷的俯身行礼，口中叫出了御傲天的名字。"
+            },
+            {
+                type: "text",
+                fill: "随着这句话落下，几个小痞子跟瑶瑶一同看向了那个俊美的异常的男人。"
+            },
+            {
+                type: "text",
+                fill: "此刻，他已经褪去了身上的冷魅与玩味感，留下的仅仅是属于黑道霸者的君王之气！这，才是御傲天本该应有的统领万千之态。"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶这一刻才明白，这个男人真的没有撒谎，他之前……的的确确都是在哄自己玩罢了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "御，御老大……对不起，请恕我们有眼不识泰山，求您原谅我们。"
+            },
+            {
+                type: "text",
+                fill: "几个小混混扑通一声跪在地上磕着头。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "这几只臭虫敢冒充我御龙社的人，该怎么处理，你们看着办。"
+            },
+            {
+                type: "text",
+                fill: "跪地的几个小混混如梦初醒，原来御老大早就知道他们不是御龙社的人了，那为什么当时没有拆穿？这大概跟传闻有关吧……"
+            },
+            {
+                type: "text",
+                fill: "传闻，御傲天从不会跟自己瞧不上的人交手，更加不屑与他们多费唇舌，甚至连发脾气都不会发。"
+            },
+            {
+                type: "text",
+                fill: "就如同刚刚他只是一个劲的在与洛瑶瑶交谈一样，完全无视了这群小混混。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "御……御老大……我们只是因为太崇拜您，所以才会冒充御龙社的人，求您……求您饶了我们吧，求您了。"
+            },
+            {
+                type: "text",
+                fill: "只要是道上混的，不管有地位的还是没有地位的几乎无人不知御傲天的名讳，碰上这位黑帝下场是如何这几个小混混比谁都清楚。"
+            },
+            {
+                type: "text",
+                fill: "任由他们如何哀求，御傲天连看也不屑看他们一眼，拉着已经双腿发软的瑶瑶坐上了一直停泊在路口的跑车。"
+            },
+            {
+                type: "bg",
+                target: 2
+            },
+            {
+                type: "text",
+                fill: "车子在一路奔驰着，驾驶位置上的御傲天瞥了眼脸色发白的瑶瑶。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "不问我要带你去哪么？"
+            },
+            {
+                type: "text",
+                fill: "听不见……什么都不听，她甚至都快忘记了自己的家在哪了，只是睁着大眼看着渺茫的道路，一动不动。"
+            },
+            {
+                type: "text",
+                fill: "车子缓缓停在了风景最美的山顶。御傲天像是拉扯木偶一般的带着她走下了车，凝视着山下的风景。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "真美呢。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御……御……御老大。"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶扭动着僵硬的身体，望着御傲天的侧脸，想要说什么，可嘴巴就跟被冻住一样说不了话……"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，那些人都是我找来的临时演员罢了，你不是御傲天的妹妹么，你哥哥长什么样你还能不记得？"
+            },
+            {
+                type: "text",
+                fill: "哈、哈！对啊，自己之前还冒充了御傲天的妹妹，那几个冒充他手下的人被二百个人围攻，那她这个冒充妹妹的人……会是什么下场呢？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御老大！"
+            },
+            {
+                type: "text",
+                fill: "僵硬的身体终于变得灵活，她赶忙跪在了地上。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "您就别耍我了，2年前的事情都是我不好，是我的错。是我有眼不识泰山把您当成了牛郎，您就大人不记小人过饶了我吧，好吗？另外，我也不是有意冒充您妹妹的。求求您，饶了……我吧！"
+            },
+            {
+                type: "text",
+                fill: "2年前封存的记忆终于打开，曾经无数的噩梦终于展现在眼前，此刻，那侧对自己男人的样子在慢慢与2年前那个俊美的黑帝外貌所重合，她真的很恨自己这种健忘的记性，怎么可以忘记如此危险的男人呢？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "嗯？"
+            },
+            {
+                type: "text",
+                fill: "御傲天慢慢蹲下，邪笑的眯了眯眼睛。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，你终于记得我了呢？"
+            },
+            {
+                type: "text",
+                fill: "他多想告诉这小东西，她不止2年前把他当成了男侍；在2年后她还把他当成了男公关！"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御，御老大，您的意思是？"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶如梦初醒，才明白原来御傲天早就认出了自己。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "御老大，您认出我，为什么不早说？"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

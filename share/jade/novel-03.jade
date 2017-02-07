@@ -1,0 +1,253 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第三章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_03'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-02",
+				next: "novel-04",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		//-默认独白空两行，人物画像4行，对话4行。
+		var character = {
+			luoyy: {
+				side: 'right', //-对话出现方向
+				avatar: "./img/novel-01/character/luoyy", //-角色头像
+				card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+				name: "洛瑶瑶" //-角色名 
+			},
+			gongxm: {
+				side: "left",
+				avatar: "./img/novel-01/character/gongxm",
+				card: "./img/novel-01/character/card_gongxm",
+				name: "宫小曼"
+			},
+			yuatN: {
+				side: "left",
+				avatar: "./img/novel-01/character/yuat",
+				card: "./img/novel-01/character/card_yuat",
+				name: "？？？"
+			}
+		}
+
+		var playscript = {
+			background: [
+				{
+					color: 'black' //-普通背景图或背景色，需要定义锚点
+				},
+				{
+					img: './img/novel-01/background/nightclub_room' //-普通背景图或背景色，需要定义锚点
+				}
+			],
+			cover: './img/novel-01/cover.jpg', //-作品封面
+			chapter: "第3章 | 红酒洒了",
+			info: [ //-台本
+				{
+					type: "bg", //- 背景
+					target: 1 //- 背景图锚点，对应普通背景图或背景色
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "呀……原来是这样呢。",
+					audio: "./audio/yuat0015.mp3"
+				},
+				{
+					type: "text",
+					fill: "明显感觉到男人按住后颈的手有些收力，瑶瑶顿时觉得来了希望，看来这个男侍并不是一个彻头彻尾的大坏蛋。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "对了……呵呵……你看到，你男友跟别的女人在做哪种事呀？",
+					audio: "./audio/yuat0016.mp3"
+				},
+				{
+					type: "text",
+					fill: "呃……他真的猜不到么？"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "他们在……在、在……"
+				},
+				{
+					type: "text",
+					fill: "呃……他真的猜不到么？"
+				},
+				{
+					type: "text",
+					fill: "还是有些说不出口，瑶瑶白皙的小脸渐渐染上了一抹红霞。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "唔。"
+				},
+				{
+					type: "text",
+					fill: "男人修长的手指正顺着她的脖颈向下……"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "他们是不是在做……我们即将要做的事情呢？",
+					audio: "./audio/yuat0017.mp3"
+				},
+				{
+					type: "text",
+					fill: "即将……要？做的事？大脑一片混沌，这个男侍到底在说什么？他没有要放过自己的意思么？"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "唔……"
+				},
+				{
+					type: "text",
+					fill: "后背麻麻的，恐惧的氛围令她心脏‘砰、砰’直跳。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "大，大哥哥，你为什么还不放开我，而且还、还……"
+				},
+				{
+					type: "text",
+					fill: "明显感觉到他的手指已经快要划到害羞的地方，她小手死死抓住被单，紧张得连大气都不敢喘一口。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "你这个坏心的小东西，我是在帮你一起报复你男友呢，你该感谢我，不是么？",
+					audio: "./audio/yuat0018.mp3"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "一起报复……我男友？"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "对，他怎样对你，我们就该怎样还给他。",
+					audio: "./audio/yuat0019.mp3"
+				},
+				{
+					type: "text",
+					fill: "男人深邃的眸子一闪，缓缓放开了按住她后颈的大手，身子朝她压去……"
+				},
+				{
+					type: "text",
+					fill: "炽热的气息吹在她的耳根，有些麻痒，逼得她更是紧张万分。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "不！不！谢谢你的好意，大哥哥，我……我不想那样报复他。"
+				},
+				{
+					type: "text",
+					fill: "她一口一个腻死人的大哥哥叫着他，他的火早就已经被挑起来了，要不是看这小东西好玩，他哪里会忍耐那么久？"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "小东西，大哥哥小妹妹的游戏我已经玩腻了。",
+					audio: "./audio/yuat0020.mp3"
+				},
+				{
+					type: "text",
+					fill: "男人的脸庞一沉。"
+				},
+				{
+					type: "text",
+					fill: "还不等她反应过来……"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "啊……"
+				},
+				{
+					type: "text",
+					fill: "一堆冰冷的东西一股脑降落在她的背脊上。"
+				},
+				{
+					type: "text",
+					fill: "再看看男人手中空置的红酒杯，以及慢慢滴落的红酒，男人似乎对自己的杰作很是满意。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "嗯哼，不知道这红酒，这么品尝起来会是什么味道呢？",
+					audio: "./audio/yuat0021.mp3"
+				},
+				{
+					type: "text",
+					fill: "双眸一暗，他一把将手中的酒杯扔了出去。"
+				},
+				{
+					type: "text",
+					fill: "啪啦！随着酒杯落地，男人低下头，肆无忌惮地品起了红酒！"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "不要……唔。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "小东西，你抖得好厉害，似乎在说……快点继续呢。",
+					audio: "./audio/yuat0022.mp3"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "不，没有！不是这样的。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "哦？那你要怎么向我证明呢？",
+					audio: "./audio/yuat0023.mp3"
+				},
+				{
+					type: "text",
+					fill: "男人碰到后背的结扣处，一抹邪笑挑至嘴角。"
+				},
+				{
+					type: "text",
+					fill: "啪嗒！衣扣像是被施了魔咒似的，自己打开了。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "不！"
+				},
+				{
+					type: "text",
+					fill: "心头一紧，瑶瑶下意识地挣扎，却在无意中……"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuatN,
+					fill: "唔，小家伙，我现在真怀疑你是不是在跟我装纯情，一会儿，要是我发现你不是处，我就叫我的手下把你玩死！",
+					audio: "./audio/yuat0024.mp3"
+				},
+				{
+					type: "text",
+					fill: "没有女人可以在他面前耍心机，如果真有这么大胆的女人，最终的下场只有一个，那就是……死！"
+				}
+			]
+		};

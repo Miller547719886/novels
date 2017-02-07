@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第二十四章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_24">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-23.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-25.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "痞子"
+        },
+        limy: {
+            side: "left",
+            avatar: "./img/novel-01/character/limy",
+            card: "./img/novel-01/character/card_limy",
+            name: "离美云"
+        },
+
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/normal_office' //1
+            },
+            {
+                img: './img/novel-01/background/street_night' //2
+            },
+            {
+                img: './img/novel-01/background/car' //3
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第24章 | 好丢脸",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 
+            },
+            {
+                type: "text",
+                fill: "被束缚，她只能眼巴巴任由自己暴露在镜头之前却是无能为力。"
+            },
+            {
+                type: "text",
+                fill: "她紧张的连大气也不敢喘一声，不停的摇着脑袋。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "不要再继续了！不要再继续了！"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "嘘，宝贝，别动。你看，如果你动的话，视频里的你也在抖哦，看起来好吸引呢。"
+            },
+            {
+                type: "text",
+                fill: "御傲天指了指电脑屏幕。瑶瑶羞愧的用余光一瞥，果然，自己正一颤一颤，好丢脸啊……"
+            },
+            {
+                type: "text",
+                fill: "就在这时，男人的双手顺着她水蛇腰慢慢向上……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "不……"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶恐慌的眸子下意识闭了起来。"
+            },
+            {
+                type: "text",
+                fill: "简直不敢相信，那个双颊泛红，眼神迷离的女孩真的是自己么？好羞耻！好丢脸！一滴泪水顺着眼角慢慢滑落，可自己却愈加觉得热起来，如同绽开的花朵般妖冶。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，看着自己被玩，果然更有感觉吧？"
+            },
+            {
+                type: "text",
+                fill: "御傲天用着低沉的魔音来击溃她最后一丝丝理智，大手一寸寸向下划去。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "唔，不……"
+            },
+            {
+                type: "text",
+                fill: "逐渐混沌的大脑还是迅速反应了过来，她努力扭着，试图阻挠男人。"
+            },
+            {
+                type: "text",
+                fill: "谁知，却反而像是在跳舞一般，更加挑起男人的火焰。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你……不要！"
+            },
+            {
+                type: "text",
+                fill: "男人突如其来的举动吓得瑶瑶大惊失色，他接下来的动作更是让她心一凉。"
+            },
+            {
+                type: "text",
+                fill: "最后的防线被褪去，她绝望地闭起双眸，娇小的自己毫无遮掩地暴露在男人眼前。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "你？"
+            }, {
+                type: "text",
+                fill: "单手抓住她的手腕将她提了起来，他就如同欣赏一件艺术品似的盯着她。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "该死的小东西，说！你是不是在骗我？你到底多大了？！"
+            },
+            {
+                type: "text",
+                fill: "妖精！妖精！这小东西如果真的不到20岁的话，那她绝对是难能一见的妖精。"
+            },
+            {
+                type: "text",
+                fill: "此刻，御傲天只觉得自己快要失去控制……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "为什么……"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "嗯？"
+            },
+            {
+                type: "text",
+                fill: "抽噎声拉回了御傲天的注意力，抬起头，对上她那泪流满面的小脸，御傲天不解的歪了歪脑袋。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "你说什么呢，小东西？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你为什么要这样对我？这种事不是只有夫妻间才会做吗？你为什么要这样？明明我刚遇见你时，觉得你是那么的耀眼，可现在你的所作所为跟混蛋强盗又有什么区别？我到底是哪里惹到你了，你要三番四次的来羞辱我？！"
+            },
+            {
+                type: "text",
+                fill: "她不懂、不懂男人的这些行为是出于何种目的，她很清楚，这样优秀的男人一定不缺女人何苦要一次次来招惹自己？就因为，自己算计过他？给他打了小报告么？"
+            },
+            {
+                type: "text",
+                fill: "面对瑶瑶的质问声，御傲天脸上的表情瞬间变得阴沉。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "混蛋？强盗？呵……"
+            },
+            {
+                type: "text",
+                fill: "深邃的眸子闪过一抹冷傲的光芒，他邪凛的一笑，俯身在她耳边。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "你还真是个清纯的小东西呢，不过……我就喜欢把你这种干净的小东西弄脏！很不喜欢这样是么？没关系，总有一天，你会来求我玩你的！"
+            },
+            {
+                type: "text",
+                fill: "松开手，她重重的落在了沙发上。"
+            },
+            {
+                type: "text",
+                fill: "御傲天快速解开束缚着她的领带，转身从电脑内取出一张光盘，扔到她身上。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，回去仔细欣赏、欣赏你刚才快乐的样子吧，说不定你会从此爱上这种感觉呢！"
+            },
+            {
+                type: "text",
+                fill: "话落，他扬长而去……"
+            },
+            {
+                type: "bg",
+                target: 2
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "呜呜……"
+            },
+            {
+                type: "text",
+                fill: "离开了公司，瑶瑶边走边哭的走在路旁，月光照耀在她那娇小的身体上看起来是那样单薄。"
+            },
+            {
+                type: "text",
+                fill: "不能哭了，不能哭了！否则回家妈妈一定会发现的！"
+            },
+            {
+                type: "text",
+                fill: "刚刚的耻辱与羞耻感在心中结成了一个说不清的疙瘩，想去掩埋与遗忘却是那样困难。生怕回到家妈妈担忧，她只能不停的催眠自己叫自己快些遗忘这些可怕的梦魇，就如同2年前一样。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "咻。小妞。"
+            },
+            {
+                type: "text",
+                fill: "路边，几个痞子起哄似的向她吹着口哨。"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶就好似没听到似的，继续低头前行着。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "嘿，小妞，谁欺负你了？哥几个替你出气。"
+            },
+            {
+                type: "text",
+                fill: "他们几步拦在她面前。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "小妞，我们在跟你说话呐，你是哑巴么？哈？我说对了吧？这妞长得真不错哟。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "啧、啧、即便在哭可样子依旧很可爱哟。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "放开！"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶吞咽了所有的泪水，愤恨打开了这痞子的手。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "哟，妹妹好凶呢，我们哥几个只是关心你一下嘛，何必那么凶？走，哥几个带你去开心一下，一会儿你就不哭了。"
+            },
+            {
+                type: "text",
+                fill: "说着，两个男人一左一右的搂住了她的肩膀……"
+            },
+            {
+                type: "bg",
+                target: 3
+            },
+            {
+                type: "text",
+                fill: "清冷的街道，一辆布加迪威龙跑车行驶的声音别样刺耳。俊美的男人坐在驾驶位置上，他身旁则坐着当今最赤手可热的女神级人物离美云。"
+            },
+            {
+                type: "img", //-角色登场
+                fill: character.limy.card //-角色图片
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "傲天，我想你了，今晚住你那里好不好？"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "无所谓。"
+            },
+
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "谢谢你，傲天。"
+            },
+            {
+                type: "text",
+                fill: "离美云淡雅的一笑，轻轻地在他脸上啄了一口。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "这么明目张胆，你就不怕被狗仔拍到？"
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "你不怕，我就不怕咯。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "呵。"
+            },
+            {
+                type: "text",
+                fill: "前方几米远便是红灯，御傲天踩住了刹车。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "救命啊！救命啊！"
+            },
+            {
+                type: "text",
+                fill: "女孩呼救声若隐若现的传来，车内的御傲天微微皱起眉头，向车内的反光镜这一看……"
+            },
+            {
+                type: "text",
+                fill: "只见不远处的道路旁，洛瑶瑶正在被几个小痞子纠缠着。"
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "傲天，绿灯了。傲天……"
+            },
+
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "嗯？"
+            },
+            {
+                type: "dialogue",
+                setting: character.limy,
+                fill: "绿灯了，傲天，怎么愣住了，你可是很少会走神呢……"
+            },
+            {
+                type: "text",
+                fill: "还不等离美云把话说完，御傲天再度看向了反光镜的位置……"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

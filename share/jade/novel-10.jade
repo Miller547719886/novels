@@ -1,0 +1,332 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第十章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_10'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-09",
+				next: "",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		//-默认独白空两行，人物画像4行，对话4行。
+		var character = {
+			luoyy: {
+				side: 'right', //-对话出现方向
+				avatar: "./img/novel-01/character/luoyy", //-角色头像
+				card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+				name: "洛瑶瑶" //-角色名 
+			},
+			gongxm: {
+				side: "left",
+				avatar: "./img/novel-01/character/gongxm",
+				card: "./img/novel-01/character/card_gongxm",
+				name: "宫小曼"
+			},
+			yuatN: {
+				side: "left",
+				avatar: "./img/novel-01/character/yuat",
+				card: "./img/novel-01/character/card_yuat",
+				name: "？？？"
+			},
+			nanz: {
+				side: "left",
+				avatar: "./img/novel-01/character/nanz",
+				name: "男子"
+			},
+			nvz: {
+				side: "left",
+				avatar: "./img/novel-01/character/nvz",
+				name: "女子"
+			},
+			nvz1: {
+				side: "left",
+				avatar: "./img/novel-01/character/nvz",
+				name: "女子1"
+			},
+			nvz2: {
+				side: "left",
+				avatar: "./img/novel-01/character/nvz",
+				name: "女子2"
+			},
+			fengcy: {
+				side: "left",
+				avatar: "./img/novel-01/character/fengcy",
+				card: "./img/novel-01/character/card_fengcy",
+				name: "风辰逸"
+			},
+			nvzN: {
+				side: "left",
+				avatar: "./img/novel-01/character/nvz",
+				name: "??"
+			},
+			jiz: {
+				side: "left",
+				avatar: "./img/novel-01/character/nvz",
+				name: "记者"
+			},
+			yuat: {
+				side: "left",
+				avatar: "./img/novel-01/character/yuat",
+				name: "御傲天"
+			},
+			meinz: {
+				side: "left",
+				avatar: "./img/novel-01/character/meinz",
+				card: "./img/novel-01/character/card_meinz",
+				name: "美奈子"
+			},
+			longq: {
+				side: "left",
+				avatar: "./img/novel-01/character/longq",
+				card: "./img/novel-01/character/card_longq",
+				name: "龙琪"
+			},
+			hanls: {
+				side: "left",
+				avatar: "./img/novel-01/character/hanls",
+				card: "./img/novel-01/character/card_hanls",
+				name: "寒离殇"
+			},
+			zhangjl: {
+				side: "left",
+				avatar: "./img/novel-01/character/zhangjl",
+				card: "./img/novel-01/character/card_zhangjl",
+				name: "张经理"
+			},
+			longy: {
+				side: "left",
+				avatar: "./img/novel-01/character/longy",
+				card: "./img/novel-01/character/card_longy",
+				name: "龙烨"
+			}
+		}
+
+		var playscript = {
+			background: [
+				{
+					color: 'black' //-普通背景图或背景色，需要定义锚点
+				},
+				{
+					img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+				}
+			],
+			cover: './img/novel-01/cover.jpg', //-作品封面
+			chapter: "第10章 | 电梯事件",
+			info: [ //-台本
+				{
+					type: "bg", //- 背景
+					target: 1 //- 背景图锚点，对应普通背景图或背景色
+				},
+				{
+					type: "text", //-对话
+					fill: "水汪汪的大眼不时偷瞄着走入电梯的男人，当察觉到与他眼神交汇的那一瞬间，她赶忙埋下头，手忙脚乱地按了数字‘1’键。"
+				},
+				{
+					type: "text", //-对话
+					fill: "电梯启动了，御傲天缓缓抬起头，望向了角落里的一架监控系统……"
+				},
+				{
+					type: "text",
+					fill: "控制室里的龙琪，此刻……"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.longq,
+					fill: "啊哦，傲天还真是警觉，明明我已经关闭警示灯了，却还是被他给发现了，没意思。我关就是了，我关就是了。大哥，你别瞪人家了好不好？人家怕怕耶。",
+					audio: "./audio/longq0012.mp3"
+				},
+				{
+					type: "text",
+					fill: "电脑屏幕前，龙琪无奈的瞥了眼监视画面内一直凝望着自己的御傲天，失落地关闭了监控系统。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.longq,
+					fill: "切，不能看你的‘表演’，我看片行了吧？最起码苍老师可比你的女主角‘大’多了。",
+					audio: "./audio/longq0013.mp3"
+				},
+				{
+					type: "text",
+					fill: "坏笑着说完，他拉开抽屉拿出一张珍藏的碟片……"
+				},
+				{
+					type: "text",
+					fill: "见监控系统彻底关闭，御傲天邪邪一笑，将目光缓缓投向了背对自己的瑶瑶。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuat,
+					fill: "你叫什么名字？",
+					audio: "./audio/yuat0044.mp3"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "啊？先生，你在跟我说话么"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuat,
+					fill: "呵，电梯里还有别人么？",
+					audio: "./audio/yuat0045.mp3"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "我叫洛瑶……瑶！"
+				},
+				{
+					type: "text",
+					fill: "咣当！当她说完名字最后的一个字时，电梯猛地静止。"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "发生什么事了？"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.yuat,
+					fill: "哎呀，电梯似乎坏掉了呢。",
+					audio: "./audio/yuat0046.mp3"
+				},
+				{
+					type: "text",
+					fill: "望着男人无奈的表情，瑶瑶眉头几乎拧在了一起，不至于吧，她不过是报了下自己的名字而已电梯就坏掉了？她有那么大杀伤力么？"
+				},
+				{
+					type: "dialogue", //-对话
+					setting: character.luoyy,
+					fill: "怎么办？我们赶紧喊人来救援吧。"
+				},
+				{
+					type: "text",
+					fill: "喊人来救援？那怎么行，他怎么可以这么轻易的叫这个小东西逃跑？"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "不用喊人，估计一会儿救援人员就会过来了，我们先坐下歇会吧。",
+					audio: "./audio/yuat0047.mp3"
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "嗯，也好。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "瑶瑶是吧？你今年多大了？",
+					audio: "./audio/yuat0048.mp3"
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "19岁。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "才19岁啊，难怪看起来那么青涩呢。",
+					audio: "./audio/yuat0049.mp3"
+				},
+				{
+					type: "text",
+					fill: "当他这句话说完，眼神中那邪恶的光芒仿佛又加深了几分。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "你第一天来上班怎么就猜中我们是公关部的人呢？",
+					audio: "./audio/yuat0050.mp3"
+				},
+				{
+					type: "text",
+					fill: "汗，她可以说他们长得就像是在公关部工作的样子么？"
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "我就是碰运气、碰运气而已。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "哦，原来是这样，你运气真好呢，瑶瑶！",
+					audio: "./audio/yuat0051.mp3"
+				},
+				{
+					type: "text",
+					fill: "得到了男人的称赞，瑶瑶整个人都变得不好意思了起来，也越发觉得他既温柔、又和蔼可亲的。"
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "呵呵，这是我应该做的。"
+				},
+				{
+					type: "text",
+					fill: "只顾着开心的她全然没有注意到，向自己不断靠近的御傲天以及……他脸上那孤然孤煞的表情。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "对了，瑶瑶。",
+					audio: "./audio/yuat0052.mp3"
+				},
+				{
+					type: "text",
+					fill: "抬起头，向右看去，她这才发现男人几乎已经与自己并肩而坐了。"
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "什，什么事？"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "你试过在电梯里……做么。",
+					audio: "./audio/yuat0053.mp3"
+				},
+				{
+					type: "text",
+					fill: "啊？什么？他是不是说……"
+				},
+				{
+					type: "text",
+					fill: "不可能，这么有风度又优雅的男人怎么可能会说出那么无耻的话，一定是她听错了。"
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "你，你说什么，先生？"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "没听懂么？那我再重复一遍……",
+					audio: "./audio/yuat0054.mp3"
+				},
+				{
+					type: "text",
+					fill: "一瞬间，御傲天面色一沉，终于卸下了所有的伪装，恢复了那本该属于他的霸气以及邪凛之气。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "我要跟你在电梯里玩！",
+					audio: "./audio/yuat0055.mp3"
+				},
+			]
+		};

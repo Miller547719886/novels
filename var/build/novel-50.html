@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第五十章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_50">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-49.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-51.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "秘书"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "医生"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "大婶"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        limy: {
+            side: "left",
+            avatar: "./img/novel-01/character/limy",
+            name: "离美云"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        nanz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子1"
+        },
+        nanz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子2"
+        },
+        longy: {
+            side: "left",
+            avatar: "./img/novel-01/character/longy",
+            name: "龙烨"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/street' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/corridor1' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/nightclub_room' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/living_room' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/hall' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第50章 | 没常识的小丫头",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "你这段时间都跟谁在一起，说！"
+            },
+            {
+                type: "text",
+                fill: "愤怒的吼声吸引了更多人的注意。瑶瑶又羞又恼的扫了眼周围看热闹的群众。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "你干嘛啊，风辰逸，这是马路上。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "告诉我，洛瑶瑶，你现在到底……跟谁在一起！",
+            },
+            {
+                type: "text",
+                fill: "阴冷的质问声，如同来自寒冷的地狱，她从未见过拥有如此可怕表情的风辰逸。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "你……你管不着。",
+            },
+            {
+                type: "text",
+                fill: "甩开他的手，她飞快的消失在了人群中……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "该死！"
+            },
+            {
+                type: "text",
+                fill: "抬起脚，他愤怒的揣在了车门上。吓得一旁的Lisa赶忙过来询问。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "风总，您，您还好吧？"
+            },
+            {
+                type: "text",
+                fill: "没错的、没错的！瑶瑶当时说有未婚夫时的表情明显就是在撒谎，可那支验孕棒又是怎么回事？！手握起的拳头青筋毕露。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "Lisa，马上帮我查查洛瑶瑶近两年都跟哪些男人接触过！",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "是……"
+            },
+            {
+                type: "bg", //- 背景
+                target: 2 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz1,
+                fill: "小姑娘，你是在拿我开玩笑么？你还是处却要我检查你是否怀孕了？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "处？不可能吧？医生，您检查清楚了吗？那我最近那个没来是怎么回事？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz1,
+                fill: "原因有很多，也许是心理压力；也许是身体原因，并不是你没来例假就表示你怀孕了，小姑娘，你是否应该多去了解下女性常识了？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呃……对不起、对不起，医生。谢谢你了。",
+            },
+            {
+                type: "text",
+                fill: "走出了诊室，瑶瑶简直羞愧的无地自容。"
+            },
+            {
+                type: "text",
+                fill: "要不是她怎么都不会使用那支验孕棒也不会跑来医院检查，没想到却摆了个乌龙。坏蛋御傲天果然在耍她。不过……看来他们是真的没有那个过咯？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "太好了……",
+            },
+            {
+                type: "text",
+                fill: "长松了一口气，她缓步向着医院外走去。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz2,
+                fill: "小姑娘、小姑娘。"
+            },
+            {
+                type: "text",
+                fill: "一个中年妇女将她拦了下来。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呃，大婶，什么事？",
+            },
+            {
+                type: "text",
+                fill: "中年妇女神秘的望了眼左右，将一张名片递交了过去。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz2,
+                fill: "刚才我看到了你的检查，我们正巧需要像你这样既漂亮，又清白的女生。如果你有兴趣的话可以给我打电话，报酬是……100万。"
+            },
+            {
+                type: "text",
+                fill: "100万？到底是干什么啊？瑶瑶扫了眼那张名片，上面只有那人的电话，其余的信息就什么都没了。她在想问问那个大婶，谁知那大婶已经消失的无影无踪了，真奇怪……"
+            },
+            {
+                type: "bg", //- 背景
+                target: 3 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "市郊，一幢华丽的水晶别墅坐落于青山绿水之间，周围几百里庄园全部都划分为了私人领地。相隔几步便有手持枪械的保卫坚守。那气派程度以及私密程度简直不输美国的白宫。"
+            },
+            {
+                type: "text",
+                fill: "水晶别墅在日光的照耀下闪闪动人。房间内，一张柔软的床榻，女人半跪着，不住的摇晃，口中更是呼气连连。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "傲天……我要到了……",
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "等等，跟我一起！",
+            },
+            {
+                type: "text",
+                fill: "男人一个翻身将女人压下……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "唔……",
+            },
+            {
+                type: "text",
+                fill: "女人的大脑一片空白。双手紧紧勾住男人的脖子，昂起头，与男人深吻了起来。"
+            },
+            {
+                type: "text",
+                fill: "不一会儿，御傲天便结束了这一吻，躺在了女人的身旁。"
+            },
+            {
+                type: "text",
+                fill: "女人如同一只猫咪似的依偎在他怀中。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "傲天，我想要个孩子。",
+            },
+            {
+                type: "text",
+                fill: "眉头微皱，御傲天邪邪的笑了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "美云，你的事业不想要了么？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "无所谓了。跟了你那么久，我觉得自己已经离不开你了。",
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "呵。美云，你是在我身边呆得最久的女人了，你知道我为什么要把你留在我身边那么久么？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "我知道。",
+            },
+            {
+                type: "text",
+                fill: "离美云抬起头，对上御傲天那双邪冷的眸，无奈的笑了笑。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "因为我比你那些女人识大体、懂事、更加懂你的心。",
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "既然你都知道，就不用说下去了吧？",
+            },
+            {
+                type: "text",
+                fill: "御傲天坐起身，拿起枕边的衣服穿了起来。"
+            },
+            {
+                type: "text",
+                fill: "离美云深吸一口气，缓缓道。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "我的朋友都很羡慕我能找到你这样的男朋友，而她们却只能去当别人背后的女人，我知道你对我好，也很感激你给我的这一切。或许，我不该有更多的要求，但，女人想要的其实就是一个家庭。",
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "美云，你要是再说下去，我就生气了！",
+            },
+            {
+                type: "text",
+                fill: "御傲天的脸色明显变得阴沉了下来。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "抱歉傲天。不过我跟你道歉的原因是……我这次没有吃避孕药。对不起。",
+            },
+            {
+                type: "text",
+                fill: "正在穿衣服的手静止，御傲天那深邃的眸子划过一抹阴冷。不过片刻，他唇角微微勾起。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "没关系，有了的话，打掉就是了。",
+            },
+            {
+                type: "text",
+                fill: "话罢，他头也不回的离去了。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.limy,
+                fill: "傲……",
+            },
+            {
+                type: "text",
+                fill: "离美云似乎还有什么话要说，可她知道再说多了，只会招来御傲天的反感罢了。"
+            },
+            {
+                type: "bg", //- 背景
+                target: 4 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "傲天，车已经准备好了，我们走吧。",
+            },
+            {
+                type: "text",
+                fill: "别墅一层，龙烨、莫雪瞳等人一一聚齐。"
+            },
+            {
+                type: "text",
+                fill: "他带着那几人一同乘坐着停泊在门外的一辆悍马离开了这撞如宫殿一般的别墅……"
+            },
+            {
+                type: "bg", //- 背景
+                target: 5 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "华丽隆重的拍卖会场、庄严肃静，一个个身着笔挺西装的人三、五成群坐在一起。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz1,
+                fill: "杨总，御傲天来了。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz2,
+                fill: "刘总，御总来了。",
+            },
+            {
+                type: "text",
+                fill: "一个传一个的，大家纷纷把目光投向了会场入口。"
+            },
+            {
+                type: "text",
+                fill: "能进入这个会场的人哪个不是身家上了千万？又有几个不是总裁以上级别的？可他们一见到这国内首屈一指的集团总裁出现还是不禁黯然失色了起来。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz1,
+                fill: "呵呵，御傲天的出场永远都是那么引人注目啊。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz2,
+                fill: "当然啦，老杨，一个默默无闻的小子用了两年时间到达人尽皆知的地步，肯定去哪里都会受到关注。最主要的是，一个他一个风氏的风辰逸应该算是这两年内比较崭露头角的两颗新星吧？你猜他们俩未来谁会更拔得头筹？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz1,
+                fill: "这还真不好说，风辰逸比御傲天还小了几岁。但风辰逸本身就有背景，可御傲天也算是白手几家，各有千秋，怎么比呢？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz2,
+                fill: "这倒也是……",
+            },
+            {
+                type: "text",
+                fill: "坐在前排的两个约莫五十几岁的中年人攀谈着，当御傲天等人从他们身边路过的时候。其中一个人眼前亮了下。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz2,
+                fill: "跟在御傲天身边的那个女人是谁？",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz1,
+                fill: "哈，老刘别看你都这岁数了欣赏品位倒是从没变过，那女人是御傲天的贴身秘书叫莫雪瞳，我曾经几次想要约她，但都被拒绝了。冷艳的很。",
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nanz2,
+                fill: "贴身秘书？呵，在我看来应该是御傲天的贴身奴吧？想那御傲天早已花名在外，他身边的秘书又能干净的到哪去？不要也罢！不要也罢。",
+            },
+            {
+                type: "text",
+                fill: "这姓刘的男人明显就是吃不到葡萄说葡萄酸。但莫雪瞳的名号在商圈的确是人尽皆知的！"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

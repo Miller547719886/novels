@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第六章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_06">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-05.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-07.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/campus' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第6章 | 女人，不知死活",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "哇，辰逸，你们刚分手一天吧，你前女友竟然就穿着男装回学校咯，真够大胆的呢。"
+            },
+            {
+                type: "text",
+                fill: "漂亮的日本女孩嬉笑着，扫了眼瑶瑶，目光下意识地看向了身旁的风辰逸。"
+            },
+            {
+                type: "img", //-角色登场
+                fill: character.fengcy.card //-角色图片
+            },
+            {
+                type: "text",
+                fill: "他光洁白皙的脸庞透着棱角分明的冷俊；乌黑深邃的眼眸泛着迷人的色泽；那浓密的眉，高挺的鼻，绝美的唇形，无一不彰显着他的高贵与优雅。特别是左耳闪着炫目光亮的钻石耳钉，给他的帅气中又加入了一丝不羁………"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "嗯？亲爱的瑶瑶，你该不会是为了报复我，去找陌生男人寻开心了吧？",
+                audio: "./audio/fengcy0001.mp3"
+            },
+            {
+                type: "text",
+                fill: "呃……她可以说风辰逸猜对了么？不过，到不了那么严重的地步，差点被开心倒是真的。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.gongxm,
+                fill: "风辰逸！你这个……"
+            },
+            {
+                type: "text",
+                fill: "一旁的宫小曼刚要破口大骂，却被瑶瑶拉住。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "呵呵，辰逸你猜对了。我就是跟陌生男人……寻开心去了。怎么？你嫉妒？你吃醋？！反正，我跟谁做，就是不跟你风辰逸做！"
+            },
+            {
+                type: "text",
+                fill: "听着瑶瑶讽刺的话语，那日本女孩都听傻了，敢跟风辰逸这么说话的人，只怕全世界也找不出几个吧？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "瑶瑶，你这么说，我可以认为，我在你心里是特别的么？",
+                audio: "./audio/fengcy0002.mp3"
+            },
+            {
+                type: "text",
+                fill: "谁知，风辰逸不止没有发火，反而坏坏地地笑了起来。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "如果你能接受我拥有别的女人的话，我可以让你再度投入我的怀抱哦。",
+                audio: "./audio/fengcy0003.mp3"
+            },
+            {
+                type: "text",
+                fill: "该死的贱男人！简直不要脸！女人换了一个又一个，明明昨天跟他一起的还不是这个日本女孩呢，才一天而已，又换了新的。当初自己怎么会听信了这个花花公子的花言巧语呢？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "风辰逸，你是脑子坏掉了么？我都说得这么明白了，你还不懂？如果你不能理解，那我跟你说得再明白点，我洛瑶瑶这辈子跟谁交往，都不会再跟你风辰逸交往了，懂么？"
+            },
+            {
+                type: "text",
+                fill: "拉住了宫小曼的手，瑶瑶转身便向女生宿舍楼走去。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.gongxm,
+                fill: "哇，瑶瑶，你太帅气了。估计敢跟中国第一财团公子这么说话的只有你了，要是被媒体拍到，你一定上头条吧！"
+            },
+            {
+                type: "text",
+                fill: "呵，帅气？的确啊……总算为自己争回了一点点可怜的面子。"
+            },
+            {
+                type: "text",
+                fill: "本以为，两个人只要相爱，不用去管什么身份、地位，能平淡在一起就好，可谁知……连那份卑微的爱都是自己一厢情愿的。"
+            },
+            {
+                type: "text",
+                fill: "此刻，她不知道花心的风辰逸伤不伤心，但最起码，她的心却在痛着……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "哼，这个洛瑶瑶简直不知死活。辰逸，你甩了她是最正确的选择了。"
+            },
+            {
+                type: "text",
+                fill: "日本女孩不屑的说完，好奇地看着风辰逸递过来的一张支票，再看看他帅气的脸，阴沉得令人窒息。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "辰逸，你为什么给我……支票？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "分手费，不懂么？",
+                audio: "./audio/fengcy0004.mp3"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "分手……费？可我们才刚刚交往啊。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "呵，娜美，你似乎搞错了‘分手费’的含义。这只是结束我们之间玩伴的关系罢了！",
+                audio: "./audio/fengcy0005.mp3"
+            },
+            {
+                type: "text",
+                fill: "话罢，风辰逸冷凝地笑了笑，直接潇洒地将支票甩到了女孩脸上。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvz,
+                fill: "辰逸，你只是把我当……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvzN,
+                fill: "辰逸。"
+            },
+            {
+                type: "text",
+                fill: "这时，一个长相甜美的少女打断了他们的对话。风辰逸上前一把搂住这少女的腰。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "哈尼，你来啦。",
+                audio: "./audio/fengcy0006.mp3"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvzN,
+                fill: "辰逸，我已经开好房间了，我们走吧。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.fengcy,
+                fill: "你可真是主动呢，不过我喜欢。",
+                audio: "./audio/fengcy0007.mp3"
+            },
+            {
+                type: "text",
+                fill: "这时，甜美少女突然回过头，冲她做了个鬼脸。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.nvzN,
+                fill: "笨蛋，以为和辰逸上过一次床就是他的女朋友了么？你什么时候见辰逸对外承认过自己有女朋友？除了，洛瑶瑶……"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

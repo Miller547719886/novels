@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第十五章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_15">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-14.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-16.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        jiz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "记者"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        meinz: {
+            side: "left",
+            avatar: "./img/novel-01/character/meinz",
+            card: "./img/novel-01/character/card_meinz",
+            name: "美奈子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            card: "./img/novel-01/character/card_longq",
+            name: "龙琪"
+        },
+        hanls: {
+            side: "left",
+            avatar: "./img/novel-01/character/hanls",
+            card: "./img/novel-01/character/card_hanls",
+            name: "寒离殇"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        },
+        longy: {
+            side: "left",
+            avatar: "./img/novel-01/character/longy",
+            card: "./img/novel-01/character/card_longy",
+            name: "龙烨"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/manager_room'
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第15章 | 好，好可怕",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text", //-对话
+                fill: "服务科？不就是她的部门？"
+            },
+            {
+                type: "text", //-对话
+                fill: "为什么其他科的女职员要服务公关部的经理呢？瑶瑶着实被那二人的对话弄得一头雾水。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "服务科啊，那里面的女职员基本都在30岁左右，你明知道我只要20岁以下的女人，你这是在拿我找乐么？",
+                audio: "./audio/longy0006.mp3"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "对不起、对不起龙经理，我这就帮你找20岁以下的职员。",
+                audio: "./audio/yuat0084.mp3"
+            },
+            {
+                type: "text", //-对话
+                fill: "20岁以下的女人？服侍？他们说的该不会是……心头一抽，瑶瑶的小脸顿时有些泛起了白。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "找到了龙经理，服务科刚来个20岁以下的电梯小姐，她叫……洛瑶瑶。",
+                audio: "./audio/yuat0085.mp3"
+            },
+            {
+                type: "text", //-对话
+                fill: "不会吧？她没那么倒霉吧，才刚上班第二天就碰到了这种事？下意识地回过头……"
+            },
+            {
+                type: "text", //-对话
+                fill: "电梯内的两个男人如同饿狼猎食似的邪笑看着她。"
+            },
+            {
+                type: "text", //-对话
+                fill: "好，好可怕……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "龙，龙经理，我只是个新来的职员而已。"
+            },
+            {
+                type: "text", //-对话
+                fill: "两个男人对视了一眼，龙烨一步上前。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "呀，原来你就是洛瑶瑶啊。不错，小萝莉我喜欢。",
+                audio: "./audio/longy0007.mp3"
+            },
+            {
+                type: "text", //-对话
+                fill: "呃，这算是她自投罗网么？"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "龙经理，你考虑换个人吧。我不懂什么服务的。"
+            },
+            {
+                type: "text",
+                fill: "侧过头，她恶狠狠地瞪了一眼御傲天。"
+            },
+            {
+                type: "text", //-对话
+                fill: "他耸了耸肩，表示自己也很无辜。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "换人啊……的确，仔细看看是该换个人。完全不立体嘛，我不喜欢。",
+                audio: "./audio/longy0008.mp3"
+            },
+            {
+                type: "text",
+                fill: "呼……太好了……"
+            },
+            {
+                type: "text",
+                fill: "虽然被说平心里多少有点不爽，但也比被那什么的强。她整个人险些软在了地上。"
+            },
+            {
+                type: "text",
+                fill: "可下一秒……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "你！",
+                audio: "./audio/longy0009.mp3"
+            },
+            {
+                type: "text",
+                fill: "龙烨语锋一转，指了指不远处的御傲天。"
+            },
+            {
+                type: "text",
+                fill: "可下一秒……"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "这个叫洛瑶瑶的女职员今天就赏给你了，要是你搞不定，就证明你没有办事能力，马上给我滚出博森，懂嘛？",
+                audio: "./audio/longy0010.mp3"
+            },
+            {
+                type: "text",
+                fill: "说着，他用力推了下瑶瑶，瑶瑶整个人跌跌撞撞，投入了御傲天怀中。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "龙经理，你这样的吩咐叫我很为难呢。不过，为了工作，我会努力完成任务的。",
+                audio: "./audio/yuat0086.mp3"
+            },
+            {
+                type: "text",
+                fill: "话罢，御傲天的嘴角不禁勾起一抹邪肆的笑，大手牢牢圈住了她那正微微发抖的肩膀。"
+            },
+            {
+                type: "text",
+                fill: "天呐，她说的换人是给自己换个男人啊。"
+            },
+            {
+                type: "text",
+                fill: "博森到底是怎样的公司啊，这才刚逃虎穴怎么又入狼窝了，好想死！"
+            },
+            {
+                type: "text",
+                fill: "电梯抵达了41层，龙烨与御傲天交换了个眼神便率先走出了电梯内……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "放开我！你昨天不是答应过我，不会再骚扰我了嘛？"
+            },
+            {
+                type: "text",
+                fill: "正被御傲天强行拽出电梯的瑶瑶，不断挣扎着。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "宝贝，你刚也看到了，我也是身不由己呢。",
+                audio: "./audio/yuat0087.mp3"
+            },
+            {
+                type: "text",
+                fill: "说着，他像是抱孩子似的将她抱向了公关部经理室。"
+            },
+            {
+                type: "bg", //- 背景
+                target: 2 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "text",
+                fill: "此时，龙烨已经替他清理完战场，正站在办公室门口等待着他们的大驾光临。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.longy,
+                fill: "我很期待你的表现哦。",
+                audio: "./audio/longy0011.mp3"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "是，龙经理，我绝对不会叫你……失望的！",
+                audio: "./audio/yuat0088.mp3"
+            },
+            {
+                type: "text",
+                fill: "话落，两个男人眼神交汇的那一刻不约而同，勾起唇角。"
+            },
+            {
+                type: "text",
+                fill: "而瑶瑶就像是布娃娃一般的面无表情地望着龙烨。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "龙经理……"
+            },
+            {
+                type: "text",
+                fill: "抱着最后一丝希望，等待着他改变注意。可惜，这两个男人一唱一和了那么久，又怎么可能轻易改变计划呢？"
+            },
+            {
+                type: "text",
+                fill: "龙烨知趣离开，御傲天扫下桌上的所有东西，将瑶瑶放了上去……"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

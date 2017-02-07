@@ -1,0 +1,410 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第四十一章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_41'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-40",
+				next: "novel-42",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		var character = {
+			luoyy: {
+				side: 'right', 
+				avatar: "./img/novel-01/character/luoyy", 
+				card: "./img/novel-01/character/card_luoyy", 
+				name: "洛瑶瑶" 
+			},
+			yuat: {
+				side: "left",
+				avatar: "./img/novel-01/character/yuat",
+				card: "./img/novel-01/character/card_yuat",
+				name: "御傲天"
+			}
+		}
+
+		var playscript = {
+			background: [{ 
+					color: 'black' 
+				},
+				{
+					img: './img/novel-01/background/nightclub_room' //1
+				},
+				{
+					img: './img/novel-01/background/living_room' //2
+				}
+			],
+			cover: './img/novel-01/cover.jpg',
+		chapter: "第41章 | 小家伙，胆子不小",
+			info: [ 
+				{
+					type: "bg",
+					target: 1 
+				},		
+				{
+					type: "text",
+					fill: "不知过了多久，她混乱的思绪好像渐渐梳理清楚了。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "不对啊，我昨天不是在夜店遇见混蛋了么？怎么会一睁眼就在御傲天这了？难道……",
+				},
+				{
+					type: "text",
+					fill: "小手下意识的抚过自己的小脸，昨天的零星记忆慢慢回到了脑海中。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "嘶，那个混蛋说要扒了我衣服，之后的事情呢？",
+				},
+				{
+					type: "text",
+					fill: "【御老大，你是不是说过，我要是把你吻得有感觉了，你就放过我？】在那之后的事情，瑶瑶只想起了这一件事，但足以令她抓狂的了。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "郁闷啊，我怎么干出了那种事。而且，今天早上还错怪了御傲天。嘶……好像也不对啊，如果真是错怪他的话我为什么会什么都没穿的跟他睡在一起？",
+				},
+				{
+					type: "text",
+					fill: "相信答案只有御傲天才会知道！蹑手蹑足的打开房门，偷摸的向客厅看了一眼，她马上又收回了小脑袋。"
+				},
+				{
+					type: "bg",
+					target: 2 
+				},		
+				{
+					type: "text",
+					fill: "此时，坐在客厅的御傲天已经发现她在偷窥自己了，冷冷道。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "冷静下来了？",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "再度探出小脑袋，她就像是做错事的孩子似的露出半张脸。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "对不起，御老大。我知道，你没有打我。",
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "你以为道歉就可以了么？",
+					audio: ""
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "那你还想怎么样啊？",
+				},
+				{
+					type: "text",
+					fill: "瑶瑶愤怒的站在卧房门口。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "你是没有打过我，但你脱光我的事情是事实吧？！",
+				},
+				{
+					type: "text",
+					fill: "哟，这小家伙果然是只不折不扣的小野猫呢。御傲天翘起二郎腿，邪肆的一笑。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "做那种事，当然要脱衣服了。",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "做那种事？做那种事？他们做了？"
+				},
+				{
+					type: "text",
+					fill: "紧张的望着御傲天的脸，根本看不出他到底是开玩笑的还是认真的。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "御，御老大，我知道昨天一定是你救了我。如果要不是你的话，我可能都已经被那个坏蛋……但，你能不能告诉我，我们昨天晚上到底是不是真的……那个了？",
+				},
+				{
+					type: "text",
+					fill: "她一点印象都没有了。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "这个嘛，一个月后，你就知道了。",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "御傲天邪肆的一笑，指了指她的肚子。"
+				},
+				{
+					type: "text",
+					fill: "不是吧……到底有还是没有啊，她简直都要疯了。但，她清楚的知道这个坏心的男人就是故意折磨自己的。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "御老大，我的衣服呢？",
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "拿去洗了。一会儿送来。",
+					audio: ""
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "为什么要洗我的衣服？",
+				},
+				{
+					type: "text",
+					fill: "她可知……那上面全是呕吐物啊。御傲天真是不愿提了。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "因为脏了，所以就洗了。",
+					audio: ""
+				},
+				{
+					type: "dialogue",
+					setting: character.luoyy,
+					fill: "哦，那洗手间在哪？",
+				},
+				{
+					type: "text",
+					fill: "听着瑶瑶一个又一个问题，向来就对女人没什么耐性的御傲天不耐烦站起身。"
+				},
+				{
+					type: "dialogue",
+					setting: character.yuat,
+					fill: "这里的房间一目了然，你现在所在的是客厅、刚才是卧室，那剩下的房间不就是洗手间了吗？！你弱智啊！"
+				},
+				{
+					type: "text",
+					fill: "被这般数落，瑶瑶不高兴的向着洗手间走去，可当到达门口的时候，她回猛地回过头，大声吼："
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "你才是弱智！"
+				},
+				{
+					type: "text",
+					fill: "他？是不是听到了不该听到的东西？"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "小东西，你，刚说什么？",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "回过神，御傲天脸色一沉，飞速向着洗手间冲去。"
+				},
+				{
+					type: "text",
+					fill: "“砰”的一声，当他到达的时候，瑶瑶牢牢的锁死了洗手间的门。下一秒……"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "噗",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "站在洗手间外的御傲天竟然笑了起来？"
+				},
+				{
+					type: "text",
+					fill: "的确，面对这么调皮的小家伙，他就算想发火估计也发不起来吧？"
+				},
+				{
+					type: "text",
+					fill: "来到了客厅内的开放式厨房，他刚要打开燃气灶，只听洗手间的门“吱呀”一声打开了。一个小脑袋藏匿在门缝内静静的偷窥着他。御傲天顿时不耐烦的皱起眉头。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "你又怎么了？！",
+					audio: ""
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "御……御老大，卫生间只有一把牙刷，我……我用什么啊？",
+				},
+				{
+					type: "text",
+					fill: "“噌”的一下子，怒火直冲他的头顶，昨晚睡觉时的一幕幕不禁浮现在他脑海中。"
+				},
+				{
+					type: "text",
+					fill: "天知道，瑶瑶睡觉有多么的不老实，不是打睡梦罗汉拳、就是咬牙吧唧嘴、要么就把半骑着他，所以，他早上才会挂着黑眼圈的。好不容易熬到了早晨，他还得继续服务这个小东西？快速找出了一把全新的牙刷，他愤怒地扔给瑶瑶，恶狠狠地自言自语着。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "真特么烦！",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "呃？瑶瑶一听这，怒火也一下子被勾了起来。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "我愿意，要你管？而且，是你先说的！",
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "小东西，我今天早上是不是对你太好了，你胆子好像大了不少啊。",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "望着不远处御傲天逐渐阴沉的表情，她才想起自己面对的人是谁。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "御……御老大。我……我先去洗漱了。呵呵。”",
+				},
+				{
+					type: "text",
+					fill: "扯起一抹干笑，她扭头进入了洗手间的那一刻……"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "呼……吓死我了！吓死我了。瑶瑶，你疯了吗，他可是杀人不眨眼的御老大啊，你刚是怎么了？",
+				},
+				{
+					type: "text",
+					fill: "总之，无法用言语形容这个早上，她总觉得……此刻的御傲天并没有那么可怕了。"
+				},
+				{
+					type: "text",
+					fill: "洗漱完毕，送去干洗的衣服已经拿了回来，瑶瑶更换好后，便坐在餐桌前傻傻的望着一桌的早餐。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "御老大，这些都是你做的吗？",
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "那你认为这些食物是怎么来的？"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "真的是你做的啊？"
+				},
+				{
+					type: "text",
+					fill: "好厉害，她到现在都不会做饭，唯一做过一次叫风辰逸去品尝，还被他狠狠的损了一顿，没想到这个黑道老大那么厉害竟然会自己动手做饭？太不可思议了。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "真好吃。"
+				},
+				{
+					type: "text",
+					fill: "小女孩就是小女孩，无论之前遇见什么不开心的事情似乎一转脸就能立马忘记了，他还真是羡慕呢。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "你为什么晚上跑去夜店当服务生？",
+					audio: ""
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "因为赚钱快啊，工资日结算方便。"
+				},
+				{
+					type: "text",
+					fill: "最适合给爷爷做透析了。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "嗯？",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "御傲天放下手中的筷子，单手支撑着下颚邪邪的笑。"
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "那不如你做我的女人，工资小时结算更方便，怎么样？",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "抬起头，对上他那张半开玩笑、半认真的脸，瑶瑶脸庞一沉。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "不要！"
+				},
+				{
+					type: "text",
+					fill: "她只想要正常的爱情、正常的婚姻。"
+				},
+				{
+				type: "dialogue",
+					setting: character.luoyy,
+					fill: "况且，你都被人包了，还有闲钱养我？切。",
+				},
+				{
+				type: "dialogue",
+					setting: character.yuat,
+					fill: "你，你怎么看出我被人包了？！",
+					audio: ""
+				},
+				{
+					type: "text",
+					fill: "御傲天现在简直不知道该用什么话来形容自己的心情了，小东西怎么突然冒出这么一句话？"
+				}
+			]
+		};
+
+
+

@@ -1,0 +1,18 @@
+header.navbar {
+	position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    top: 0;
+    font-size: .9em;
+    border-top: none!important;
+    border-left: none!important;
+    border-right: none!important;
+    border-radius: 0;
+    color: #333;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-color: #eee;
+}

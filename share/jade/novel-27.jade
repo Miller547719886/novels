@@ -1,0 +1,479 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第二十七章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_27'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-26",
+				next: "novel-28",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		//-默认独白空两行，人物画像4行，对话4行。
+		var character = {
+		luoyy: {
+		side: 'right', //-对话出现方向
+		avatar: "./img/novel-01/character/luoyy", //-角色头像
+		card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+		name: "洛瑶瑶" //-角色名 
+		},
+		gongxm: {
+		side: "left",
+		avatar: "./img/novel-01/character/gongxm",
+		card: "./img/novel-01/character/card_gongxm",
+		name: "宫小曼"
+		},
+		yuatN: {
+		side: "left",
+		avatar: "./img/novel-01/character/yuat",
+		card: "./img/novel-01/character/card_yuat",
+		name: "？？？"
+		},
+		nanz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nanz",
+		name: "男子"
+		},
+		nvz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子"
+		},
+		nvz1: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子1"
+		},
+		nvz2: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子2"
+		},
+		fengcy: {
+		side: "left",
+		avatar: "./img/novel-01/character/fengcy",
+		card: "./img/novel-01/character/card_fengcy",
+		name: "风辰逸"
+		},
+		nvzN: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "??"
+		},
+		jiz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "记者"
+		},
+		yuat: {
+		side: "left",
+		avatar: "./img/novel-01/character/yuat",
+		name: "御傲天"
+		},
+		meinz: {
+		side: "left",
+		avatar: "./img/novel-01/character/meinz",
+		card: "./img/novel-01/character/card_meinz",
+		name: "美奈子"
+		},
+		longq: {
+		side: "left",
+		avatar: "./img/novel-01/character/longq",
+		card: "./img/novel-01/character/card_longq",
+		name: "龙琪"
+		},
+		hanls: {
+		side: "left",
+		avatar: "./img/novel-01/character/hanls",
+		card: "./img/novel-01/character/card_hanls",
+		name: "寒离殇"
+		},
+		zhangjl: {
+		side: "left",
+		avatar: "./img/novel-01/character/zhangjl",
+		card: "./img/novel-01/character/card_zhangjl",
+		name: "张经理"
+		},
+		longy: {
+		side: "left",
+		avatar: "./img/novel-01/character/longy",
+		card: "./img/novel-01/character/card_longy",
+		name: "龙烨"
+		}
+		}
+
+		var playscript = {
+		background: [{
+		color: 'black' //-普通背景图或背景色，需要定义锚点
+		},
+		{
+		img: './img/novel-01/background/car' //-1
+		},
+		{
+		img: './img/novel-01/background/elevator' //2
+		}
+		],
+		cover: './img/novel-01/cover.jpg', //-作品封面
+		chapter: "第27章 | 发抖，好害怕",
+		info: [ //-台本
+		{
+		type: "bg", //- 背景
+		target: 1 //- 背景图锚点，对应普通背景图或背景色
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "哼？我怕勾起你过去的不好的回忆。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "可你现在又给我增加了更多不好的回忆啊。"
+		},
+		{
+		type: "text", 
+		fill: "听着瑶瑶坦白的吐露心声，御傲天冷眯了眯眼睛，他还真是特别的想掐死这个诚实的小东西。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "哦，原来我又给你增加了不好的回忆啊，那抱歉。我会叫你快点遗忘的。"
+		},
+		{
+		type: "text", 
+		fill: "说着，他只是一只手便锁住了她的双手手腕。"
+		},
+		{
+		type: "bg", 
+		target: 0
+		},,
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "御老大，您这是？"
+		},
+		{
+		type: "text", 
+		fill: "下一秒，她双脚离地，被御傲天单手抓住手腕缓缓提到了山顶的护栏外。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "啊！"
+		},
+		{
+		type: "text", 
+		fill: "脚下便是万丈悬崖，御傲天只要一个没抓稳，她马上粉身碎骨。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "御老大，求您放过我，放过我啊。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "嘘，宝贝，别动，你要是乱动的话，我万一没抓牢你，你可就……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "好，我……我不动。我不动。"
+		},
+		{
+		type: "bg", //- 背景
+		target: 1 //- 背景图锚点，对应普通背景图或背景色
+		},
+		{
+		type: "text", 
+		fill: "瑶瑶乖乖的安分了下来，可身体却因为害怕微微颤抖着。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "嗯哼，宝贝，你还在动哟。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "人家害怕啊，肯定会抖嘛！"
+		},
+		{
+		type: "text", 
+		fill: "瑶瑶不满的吼了起来。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "呀，还顶嘴？怎么办？我快抓不住你了哦。"
+		},{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "不！"
+		},
+		{
+		type: "text", 
+		fill: "她只觉得御傲天抓着自己手腕的手一松，身体惯性的向下落去。"
+		},
+
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "啊！"
+		},
+		{
+		type: "text", 
+		fill: "可她也就下落了几公分，御傲天又重新抓住了她。"
+		},
+		{
+		type: "text", 
+		fill: "咚！咚！咚！心脏像是快要跳出嗓子眼似的，她脸白的如同一张纸，望着御傲天邪佞的笑容，她恨恨的大吼！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你到底想怎么样啊？我只是2年前把你当成了男侍，可2年后你却夺走了我的初吻，难道还不够啊，你到底怎么样才肯放过我啊？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "初吻？"
+		},
+		{
+		type: "text", 
+		fill: "也就是说，这2年内都没有人捷足先登品尝这颗青涩的果实？"
+		},
+		{
+		type: "text", 
+		fill: "的确，这枚初吻本来是她要在18岁生日时送给风辰逸的，谁知他却突然劈腿，所以她的初吻一直保留到了现在。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "你想我放过你？"
+		},
+		{
+		type: "text", 
+		fill: "回过神，她激动的点着头。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "那好。闭上眼睛，伸出你的舌头。没有我的命令不许睁开眼睛！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "为……为什么？"
+		},
+		{
+		type: "text", 
+		fill: "难道他要割掉自己的舌头？不要。下意识的捂住嘴巴，她恐慌的看着他。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "你不是想要我放过你么？那就按照我说的去做。"
+		},
+		{
+		type: "text", 
+		fill: "见御傲天的表情严肃了下来，她心一横，算了，只要这个黑道老大肯放过自己干什么都可以了！闭上眼睛，小心翼翼地伸出自己的舌头。"
+		},
+		{
+		type: "text", 
+		fill: "忽地，她只觉得有什么东西……"
+		},
+		{
+		type: "text", 
+		fill: "这种感觉有着说不出的奇妙，柔软，舒服，有一种麻麻的感觉。"
+		},
+		{
+		type: "text", 
+		fill: "似一条柔软的小蛇撬开了自己的嘴巴……"
+		},
+		{
+		type: "text", 
+		fill: "这是？"
+		},
+		{
+		type: "text", 
+		fill: "瑶瑶突然感觉到不对，猛地睁开双眼这一瞧……"
+		},
+		{
+		type: "text", 
+		fill: "赫然发现御傲天那张俊美异常的脸正贴在自己的眼前，如此靠近，那醉人的古龙水味慢慢顺着鼻腔刺激着她所有感官。"
+		},
+		{
+		type: "text", 
+		fill: "在仔细看看他那向上扬起的卷翘睫毛，真的好美……"
+		},
+		{
+		type: "text", 
+		fill: "不对！不对！她现在好像正在被强吻吧？为什么要去赞赏这个强吻自己男人的外貌啊？"
+		},
+		{
+		type: "text", 
+		fill: "可……很显然，这是瑶瑶第二次被御傲天强吻了，与第一次的惊慌相比，这次她明显有些迷恋这种感觉，难道是因为闭着眼睛的缘故么？"
+		},
+		{
+		type: "text", 
+		fill: "他强势的吻，使得那张白嫩的小脸渐渐晕染上了一层好看的红霞。"
+		},
+		{
+		type: "text", 
+		fill: "不能再继续下去了，瑶瑶知道再把这个吻继续下去的话，只怕很危险。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "唔！"
+		},
+		{
+		type: "text", 
+		fill: "双手抵在御傲天的胸口想要将她推开。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "我不是说了么？没有我的命令不许睁开双眼，你要我怎么惩罚你呢？"
+		},
+		{
+		type: "text", 
+		fill: "他不紧不慢略带玩味般的说完，又不满的讽刺。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "还有，你的接吻技术依旧差劲的可以！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你怎么可以这样说我？明明是你……"
+		},
+		{
+		type: "text", 
+		fill: "御傲天这个魔鬼简直不是人！她生怕在激怒这个黑道魔王，只好把心中的不满都吞了下来。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "不过念在别的男人没品尝过，我决定不惩罚你了。"
+		},
+		{
+		type: "text", 
+		fill: "说着，他从口袋内掏出钱包，塞了几百块到她手里。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "你什么意思？拿我当什么？！"
+		},
+		{
+		type: "text", 
+		fill: "一把将钱丢在了地上。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "呵，宝贝，如果只是接吻就能拿到钱，那你的钱来的也太容易了。"
+		},
+		{
+		type: "text", 
+		fill: "望着御傲天转身上车的背影，她死死握起个拳头，王八蛋，你简直是超级无耻大混蛋，欺负完别人还奚落别人？真不是人！以后要是等我有本事了，就叫你天天给我扫厕所！呸，坏蛋。"
+		},
+		{
+		type: "text", 
+		fill: "在御傲天刚要启动车时，忽地转头看向了她。"
+		},
+		{
+		type: "text", 
+		fill: "瞬间，挂在瑶瑶脸上那凶狠的表情立马变得温顺了下来。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "呵呵，御老大，您还有什么吩咐吗？"
+		},
+
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "那钱……是叫你打车回家的。"
+		},
+		{
+		type: "text", 
+		fill: "咯噔！心头莫名的一颤，她没想到这个被人人称为黑道的魔王竟然会……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "御老大，那我们之间的账，是不是就……一笔勾销啦？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "呵呵。想得美，等你什么时候把我吻得有感觉了，我们的账才算一笔勾销。"
+		},
+		{
+		type: "text", 
+		fill: "说着，御傲天启动车子扬长而去。"
+		},
+		{
+		type: "text", 
+		fill: "见他走远，瑶瑶终于放开了胆子。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "混蛋，王八蛋，魔鬼，恶魔！"
+		},
+		{
+		type: "text", 
+		fill: "可一想起他最后的一句话，她瞬间像是泄了气的皮球一般。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "吻得有感觉？什么叫吻的有感觉啊，他说有感觉不就是有感觉，他说没感觉不就是没感觉咯。这可怎么办是好啊……"
+		},
+		{
+		type: "bg",  
+		target: 2 
+		},
+		{
+		type: "text", 
+		fill: "一早，瑶瑶无精打采的操控着电梯。看看时间，又快到达那些公关们上班的时间了。虽说她已经习惯了御傲天进出电梯，可这毕竟是她第一天知道那个男人的真实身份。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "怎么啊，一会儿御傲天上电梯，我该不该像他的小弟那样跟他打招呼呢？啧，真麻烦。"
+		},
+		{
+		type: "text", 
+		fill: "时间准时到达10点，电梯开启，御傲天与龙琪面无表情的走入电梯内。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "早啊，太平公主。"
+		},
+		{
+		type: "text", 
+		fill: "听到这样的称呼，她只能装作没听见了，否则只怕会惹来更大的麻烦。"
+		},
+		{
+		type: "text", 
+		fill: "在接下来便是龙烨，她把头压得更低了，要是龙琪把昨天她称呼他为淫棍经理的事情说了，估计会遭到更大的报复吧？"
+		}
+		]
+		};

@@ -1,0 +1,86 @@
+footer.foot-toolbar {
+    z-index: 99;
+    position: fixed;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    top: 50%;
+    opacity: .5;
+    margin-top: -144px;
+    text-align: center;
+    transition: bottom .2s ease-in-out;
+
+    &:hover {
+    	opacity: 1;
+    }
+
+    @media (min-width: 1265px) {
+    	margin-left: 250px;
+    	left: 50%;
+    	right: auto;
+    }
+
+    @media (max-width: 1057px) and (max-width: 1265px) {
+	    left: 50%;
+	    width: 970px;
+	    margin-left: -485px;
+	    top: auto;
+	    margin-top: auto;
+	    bottom: 0;
+	    right: auto;
+    }
+
+    @media (max-width: 1057px) and (max-width: 1265px) and (max-width: 992px) {
+	    width: 750px;
+	    margin-left: -375px;
+	}
+
+	@media (max-width: 1057px) and (max-width: 1265px) and (max-width: 768px) and (max-width: 992px) {
+	    width: 100%;
+	    left: 0;
+	    margin-left: 0;
+	}
+
+	@media (max-width: 1265px)  {
+	    right: 0;
+	    margin-left: auto;
+	    left: auto;
+	}
+
+	.toolbar-btn {
+	    border: 1px solid #222;
+	    color: #999;
+	    display: block;
+	    height: 48px;
+	    background: #444;
+
+	    &.next:active, &.prev:active {
+			background-color: #222;
+	    }
+
+	    &:active {
+	    	text-decoration: none;
+	    	color: #91cf52;
+	    }
+
+	    &:hover {
+	    	text-decoration: none;
+	    }
+
+	    @media (max-width:1057px) {
+    	    float: left;
+    		width: 25%;
+	    }
+
+	    &.disabled {
+	    	background-color: #222;
+	    	cursor: default;
+	    }
+	}
+
+	@media (max-width: 1057px) {
+		.toolbar-btn+.toolbar-btn {
+		    border-left-color: transparent;
+		}
+	}
+}

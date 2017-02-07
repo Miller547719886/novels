@@ -1,0 +1,424 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第三十二章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_32'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-31",
+				next: "novel-33",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		//-默认独白空两行，人物画像4行，对话4行。
+		var character = {
+		luoyy: {
+		side: 'right', //-对话出现方向
+		avatar: "./img/novel-01/character/luoyy", //-角色头像
+		card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+		name: "洛瑶瑶" //-角色名 
+		},
+		gongxm: {
+		side: "left",
+		avatar: "./img/novel-01/character/gongxm",
+		card: "./img/novel-01/character/card_gongxm",
+		name: "宫小曼"
+		},
+		yuatN: {
+		side: "left",
+		avatar: "./img/novel-01/character/yuat",
+		card: "./img/novel-01/character/card_yuat",
+		name: "？？？"
+		},
+		nanz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nanz",
+		name: "男子"
+		},
+		nvz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "秘书"
+		},
+		nvz1: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子"
+		},
+		nvz2: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "大婶"
+		},
+		fengcy: {
+		side: "left",
+		avatar: "./img/novel-01/character/fengcy",
+		card: "./img/novel-01/character/card_fengcy",
+		name: "风辰逸"
+		},
+		nvzN: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "??"
+		},
+		longy: {
+		side: "left",
+		avatar: "./img/novel-01/character/longy",
+		name: "龙烨"
+		},
+		limy: {
+		side: "left",
+		avatar: "./img/novel-01/character/limy",
+		name: "离美云"
+		},
+		zhiy: {
+		side: "left",
+		avatar: "./img/novel-01/character/zhiy",
+		name: "职员"
+		}
+		}
+
+		var playscript = {
+		background: [{ //- 背景
+		color: 'black' //- 首屏背景图或背景色，不需要定义锚点
+		},
+		{
+		img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+		},
+		{
+		img: './img/novel-01/background/manager_room' //-普通背景图或背景色，需要定义锚点
+		},
+		{
+		img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+		}
+		],
+		cover: './img/novel-01/cover.jpg', //-作品封面
+		chapter: "第32章 | 还想耍什么花样",
+		info: [ //-台本
+		{
+		type: "bg", //- 背景
+		target: 1 //- 背景图锚点，对应普通背景图或背景色
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhiy,
+		fill: "啊？风总！风总。抱歉、抱歉，我下次一定会注意的，您还是别跟龙总经理说了。"
+		},
+		{
+		type: "text",
+		fill: "任由这位公关部经理怎么解释，风辰逸连听都没听，直奔着总经理走去了。"
+		},
+		{
+		type: "text",
+		fill: "然而……跟在他身旁的秘书Lisa却始终认为风辰逸刚才那话是说给那个没礼貌的电梯小姐的，怎么一下了电梯就变成了指责公关部经理了呢？奇怪。"
+		},
+		{
+		type: "bg", //- 背景
+		target: 2 //- 背景图锚点，对应普通背景图或背景色
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "风总，这应该算是博森与风氏的第一次正式合作，我希望会以完美结局收尾。"
+		},
+		{
+		type: "text",
+		fill: "在经过一个简短的谈判后，中国名列榜首的两个集团成功达成了合作项目。龙烨更是亲自将风辰逸送出了办公室。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "呵呵，这也是我所希望的。不管怎么样，能与龙总你认识我很高兴，如果有机会的话，我们一起吃个饭，在叫上你们御总跟寒副总，这两个人可都是我比较敬仰的人呢。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "一定、一定。我们御总也总是提起你，希望能跟你交个朋友。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "呵呵。那好，就先这样，我先走了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "好的。下次见。"
+		},
+		{
+		type: "text",
+		fill: "二人微笑的道了别，在风辰逸转身的那一刻，他俊美的脸瞬间冷了下来。"
+		},
+		{
+		type: "text",
+		fill: "通过2年的磨练，他已经渐渐适应了官场上的虚情假意，见面称兄道弟、私下却斗的你死我活。对于这样弱肉强食的世界，这是必要的一种交际手段。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.nvz,
+		fill: "风总，都传言博森的总经理龙烨是个笑面虎，您真的要与他们交朋友么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "Lisa，你跟了我那么久还不明白那些只是客套话么？不过……有一句话倒是真的。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.nvz,
+		fill: "哪句话？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "我的确……很想认识、认识御傲天！"
+		},
+		{
+		type: "text",
+		fill: "2年前，以零资本的合法手段收购了博森；又用2年时间把博森这个只是高等等级的企业迅速发展成了一个殿堂级的企业，他御傲天明明只是黑道出身，到底是用什么本事在商界越发混得风生水起的呢？"
+		},
+		{
+		type: "text",
+		fill: "不得不说，风辰逸对御傲天有着佩服亦有着与这般强大对手交战的兴奋感！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.nvz,
+		fill: "对了，风总，那个……哪里可以买到小雏菊味的香水呢？"
+		},
+		{
+		type: "text",
+		fill: "Lisa在说这话的时候，脸颊不禁朦上一层红霞。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "呵，买不到的。其实我仔细想了想，那个味道的香水并不适合你！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.nvz,
+		fill: "嗯？那风总，你觉得我适合什么味道的香水呢？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "这个应该不在我的考虑范围内吧？对了，今天晚上的饭约取消吧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.nvz,
+		fill: "啊？明白了，风总。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "你们几个乘坐另外的电梯在大门口等我。"
+		},
+		{
+		type: "text",
+		fill: "纵使这些属下不明白风辰逸的用意，可没有一个人敢去询问的，只得乖乖坐着博森的普通员工电梯下楼了……"
+		},
+		{
+		type: "text",
+		fill: "等待在洛瑶瑶所操控的电梯门前，风辰逸那冰冷的表情明显出现了些许焦急，不时看着上升的数字。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "博森那么大的企业电梯真是慢的可以！"
+		},
+		{
+		type: "bg", //- 背景
+		target: 3 //- 背景图锚点，对应普通背景图或背景色
+		},
+		{
+		type: "text",
+		fill: "电梯门终于打开。瑶瑶抬头向外这一瞧，果真又是风辰逸这个混蛋。她面色一黑，直接按了数字‘1’键……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "小姐，我有说过我要去1楼么？"
+		},
+		{
+		type: "text",
+		fill: "忍耐、忍耐……瑶瑶深吸一口气，甜笑的看向了正走入电梯的风辰逸。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "先生，那你要去几层呢？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "51层。"
+		},
+		{
+		type: "text",
+		fill: "…………………………"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "先生，到了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "我记错了，是去50层。"
+		},
+		{
+		type: "text",
+		fill: "…………………………"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "先生，到了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "我又记错了，好像是49层。"
+		},
+		{
+		type: "text",
+		fill: "忍！忍！"
+		},
+		{
+		type: "text",
+		fill: "…………………………"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "先生，49层到了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "呃……好像也不是49层。还是48吧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "先生，真的是48层吗？您这回应该不会记错了吧？要知道，电费可是很贵的呢。"
+		},
+		{
+		type: "text",
+		fill: "瑶瑶仍旧摆出一张甜美的笑脸，可上下打磨的后糟牙却隐约发出‘咯吱、咯吱’声。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "我也无法确定到底是几层，你先按吧。况且，你们博森那么有钱，还怕这点电费么？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "呵呵，我们博森当然交得起电费了。只是……我怕你没命走下这电梯！"
+		},
+		{
+		type: "text",
+		fill: "瑶瑶面色一沉，强制按下了电梯关闭键，转过头，一把揪住了他的脖领。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "风辰逸，你到底想耍什么花样？！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "呃？你们博森的员工就是这么对待客户的么？"
+		},
+		{
+		type: "text",
+		fill: "装傻！继续装傻！混蛋风辰逸。忍！忍……忍……她缓缓松开了揪住他脖领的手，轻轻打磨了下。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "呵呵，风总，因为我没素质嘛。不过……就因为我没素质，当年才会看上你这个混蛋！"
+		},
+		{
+		type: "text",
+		fill: "风辰逸终于憋不住了，双手一把圈住了她的腰，不羁地笑了笑。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "我亲爱的瑶瑶，刚刚只是我在跟你开的小小的玩笑，别生气嘛。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "开玩笑？风辰逸，我到底哪里对不起你了？2年没见了，一见面你就要这样损我？你是……有病吗？"
+		},
+		{
+		type: "text",
+		fill: "在说到最后几个字时，瑶瑶的眼圈一下子就红了。"
+		},
+		{
+		type: "text",
+		fill: "对于这个含着金钥匙的纨绔子弟来说，所有女人都是他的玩具；可是对于平凡的她来说，2年前的那段初恋却是她的一切。"
+		},
+		{
+		type: "text",
+		fill: "双手抵在他的胸口前，头慢慢垂下，她曾发过誓，不会在这个玩弄感情的男人面前流泪，可是不知为何，这毫无预感的见面还是令她没有控制好自己的情绪。"
+		},
+		{
+		type: "text",
+		fill: "安静了……电梯内陷入了一片死寂。"
+		},
+		{
+		type: "text",
+		fill: "风辰逸俊美的脸慢慢被一抹柔情所取缔，就连望着她的眸子内都噙满了温柔。"
+		},
+		{
+		type: "text",
+		fill: "谁也不会相信2年前那个不羁的公子哥、2年后的冷酷老总会露出这样的表情，可是只有他自己知道，他的温柔与柔情只会展现给谁。"
+		},
+		{
+		type: "text",
+		fill: "微扬起头，倾吐了一口气，他宠溺的抚摸了下瑶瑶的头顶。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "你怎么还是老样子，只要逗一下就会哭鼻子？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "是么？"
+		},
+		{
+		type: "text",
+		fill: "在抬起头的那刻，她吸干了所有的泪水，推开他搂着自己的身子。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "真正没变的是你吧？风总，到底要去几层，如果还想继续玩的话，我有的是时间陪你！"
+		},
+		{
+		type: "text",
+		fill: "呵，这个小野猫，他还真是不能太用以前的眼光来看她。风辰逸暗暗摇了摇脑袋，那难能一见的柔情慢慢被冰冷所取缔，一步上前，从身后一把将她抱住。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.fengcy,
+		fill: "如果瑶瑶真那么有时间的话，不如今天晚上来我家吧。"
+		}
+		]
+		};

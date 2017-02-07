@@ -1,0 +1,457 @@
+//- 互动小说1-纯情丫头火辣辣
+block variables
+	-var pageTitle = '第二十八章-纯情丫头火辣辣'; //- 记得改
+	-var pageClass = 'novel_28'; //- 记得改
+
+extends _page.base
+
+block footer
+	include _footer
+	block footer_setting
+		-
+			var item = {
+				prev: "novel-27",
+				next: "novel-29",
+				cata: "index"
+			};
+		+footer
+block spec-script
+	script.
+		//-默认独白空两行，人物画像4行，对话4行。
+		var character = {
+		luoyy: {
+		side: "right", //-对话出现方向
+		avatar: "./img/novel-01/character/luoyy", //-角色头像
+		card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+		name: "洛瑶瑶" //-角色名 
+		},
+		gongxm: {
+		side: "left",
+		avatar: "./img/novel-01/character/gongxm",
+		card: "./img/novel-01/character/card_gongxm",
+		name: "宫小曼"
+		},
+		yuatN: {
+		side: "left",
+		avatar: "./img/novel-01/character/yuat",
+		card: "./img/novel-01/character/card_yuat",
+		name: "？？？"
+		},
+		nanz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nanz",
+		name: "男子"
+		},
+		nvz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子"
+		},
+		nvz1: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子1"
+		},
+		nvz2: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "女子2"
+		},
+		fengcy: {
+		side: "left",
+		avatar: "./img/novel-01/character/fengcy",
+		card: "./img/novel-01/character/card_fengcy",
+		name: "风辰逸"
+		},
+		nvzN: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "??"
+		},
+		jiz: {
+		side: "left",
+		avatar: "./img/novel-01/character/nvz",
+		name: "记者"
+		},
+		yuat: {
+		side: "left",
+		avatar: "./img/novel-01/character/yuat",
+		name: "御傲天"
+		},
+		meinz: {
+		side: "left",
+		avatar: "./img/novel-01/character/meinz",
+		card: "./img/novel-01/character/card_meinz",
+		name: "美奈子"
+		},
+		longq: {
+		side: "left",
+		avatar: "./img/novel-01/character/longq",
+		card: "./img/novel-01/character/card_longq",
+		name: "龙琪"
+		},
+		hanls: {
+		side: "left",
+		avatar: "./img/novel-01/character/hanls",
+		card: "./img/novel-01/character/card_hanls",
+		name: "寒离殇"
+		},
+		zhangjl: {
+		side: "left",
+		avatar: "./img/novel-01/character/zhangjl",
+		card: "./img/novel-01/character/card_zhangjl",
+		name: "张经理"
+		},
+		longy: {
+		side: "left",
+		avatar: "./img/novel-01/character/longy",
+		card: "./img/novel-01/character/card_longy",
+		name: "龙烨"
+		}
+		}
+
+		var playscript = {
+		background: [{
+		color: 'black' //-普通背景图或背景色，需要定义锚点
+		},
+		{
+		img: './img/novel-01/background/elevator' //1
+		},
+		{
+		img: './img/novel-01/background/normal_office' //2
+		},
+		{
+		img: './img/novel-01/background/elevator' //3
+		},
+		{
+		img: './img/novel-01/background/normal_office' //4
+		},
+		{
+		img: './img/novel-01/background/elevator' //5
+		}
+		],
+		cover: './img/novel-01/cover.jpg', //-作品封面
+		chapter: "第28章 | 想我了吧",
+		info: [ //-台本
+		{
+		type: "bg", //- 背景
+		target: 1 //- 背景图锚点，对应普通背景图或背景色
+		},
+		{
+		type: "text", 
+		fill: "待龙烨默不作声的上了电梯，她这才长松了口气，至于最后上电梯的一男一女她连看也没看便关闭了电梯门。"
+		},
+		{
+		type: "text", 
+		fill: "随着电梯缓缓上升，里面出奇的安静，背对他们的瑶瑶反而变得不安了起来。龙烨、龙琪还有御傲天不是一伙儿的么？现在他们三个人联合在一起了怎么那么老实？难道是因为电梯里面还有另外的一男一女所以他们就收敛了？"
+		},
+		{
+		type: "text", 
+		fill: "哈，太好了！"
+		},
+		{
+		type: "text", 
+		fill: "电梯平安到达41层，她第一次觉得博森的早晨是那样美好，当电梯里面的人走的差不多了，她抓准时机……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "御……御……"
+		},
+		{
+		type: "text", 
+		fill: "是叫御老大好？还是叫……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "御先生。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "哟？太平公主？今天傲天没招惹你，你反倒送上门来了？"
+		},
+		{
+		type: "text", 
+		fill: "所有人的脚步停下，龙琪像是发现新大陆似的坏笑的看向了她。"
+		},
+		{
+		type: "text", 
+		fill: "快速冲出电梯，将什么东西猛地塞入了御傲天手中，当她快速跑回电梯的那刻，电梯正好关闭。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "呼……时间抓的刚刚好。"
+		},
+		{
+		type: "text", 
+		fill: "瑶瑶如释重负的松了一口气……"
+		},
+		{
+		type: "bg",  
+		target: 2 
+		},
+		{
+		type: "text", 
+		fill: "再看看还站在电梯外的几个人，他们的目光全部集中在了御傲天手上。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "那小萝莉搞什么？看她那紧张兮兮的样子就跟送情书一样的，傲天，被小萝莉缠上可是一件很麻烦的事情呢。"
+		},{
+		type: "text", 
+		fill: "御傲天冷眯了眯眼睛，沉默不语，他似乎已经猜到瑶瑶塞给自己的东西是什么了。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "呃，哥，好像不是情书哦……而是……钱？！傲天，就说那个太平公主把你当成吃软饭的，你也不能真的吃软饭吧，连小女孩的钱你也要？哈哈哈哈……唔。"
+		},
+		{
+		type: "text", 
+		fill: "正笑着，御傲天双眸一闪，把手里的钱快速塞入了龙琪咧开的嘴巴里。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longq,
+		fill: "咳、咳、咳。靠！傲天，这可是很危险的啊。"
+		},
+		{
+		type: "text", 
+		fill: "龙琪吐出了嘴里的钱，不满的抱怨着，在看看御傲天此刻的表情，他立马老实了下来。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "龙烨，今天你要见风氏集团代表吧？"
+		},
+		{
+		type: "text", 
+		fill: "见御傲天这认真的表情，走廊内的气氛顿时变得严肃了起来。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "嗯。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "这次风氏集团派来的这个人对我们来说可能是有利的帮手，你尽量拉拢、拉拢他吧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.longy,
+		fill: "可傲天你要知道，他毕竟是风氏的人！"
+		},
+		{
+		type: "text", 
+		fill: "风氏集团与博森集团之间的关系基本可以用亦敌亦友来形容，他们从表面上看是生意上的合作伙伴，实际则是互相较量的敌人。对于御傲天这样的提议，向来圆滑的龙烨有些无法理解。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "呵。龙烨，相信我，这次风氏派来的人更加愿意跟我们合作。"
+		},
+		{
+		type: "text", 
+		fill: "话罢，他嘴角自然勾起一抹狡黠的笑容……"
+		},
+		{
+		type: "bg",  
+		target: 3 
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "洛瑶瑶马上来服务科经理办公室。"
+		},
+		{
+		type: "text", 
+		fill: "一听到电梯内对讲机的召唤，瑶瑶赶忙向服务科跑去了。"
+		},
+		{
+		type: "text", 
+		fill: "才刚一进入科室内，所有眼睛几乎齐刷刷的投了过来。"
+		},
+		{
+		type: "text", 
+		fill: "这气氛……到底发生什么事了？瑶瑶的心一下子揪了起来，蹑手蹑足的敲开了经理室的门。"
+		},
+		{
+		type: "bg",  
+		target: 4 
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "张经理，您找我？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "关上门。"
+		},
+		{
+		type: "text", 
+		fill: "呃……脸色不太对，口气也不太对，自己不是又闯祸了吧？她这刚一关门。只听……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "洛瑶瑶，昨天上午你离岗差不多半个小时；昨天下班前你离岗也有半个小时，你到底还想不想干了！？"
+		},
+		{
+		type: "text", 
+		fill: "糟了，原来这两件事！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "张经理，您听我解释……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "你给我闭嘴！我不要什么解释，我只要效率。耍贱那是你的事情，下班随便干，上班的时间就给我跑去勾人，未免太过张狂了吧？"
+		},
+		{
+		type: "text", 
+		fill: "这个张经理到底怎么回事啊？怎么说话那么难听？"
+		},{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "张经理，我……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "洛瑶瑶，我听说现在有很多其他科的男同事都知道你的名字了？不错嘛，才上班2天就成了焦点，继续努力啊，说不定哪天总裁看上你，你就成我老板娘了呢。不过……"
+		},
+		{
+		type: "text", 
+		fill: "啪的一声，张经理愤怒的拍了下桌子。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "在此之前，你仍旧是我的下属、仍旧要听我的命令。给我滚！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.zhangjl,
+		fill: "洛瑶瑶，我在好心提醒你一句。记住，有本事的男人喜欢的都是像我这种有内涵的女人，而不是像是这种肤浅的小丫头。长得漂亮的确有勾男人的资本，但下场……往往只是当野女人的份！"
+		},
+		{
+		type: "text", 
+		fill: "对，她就是很肤浅，但好在还有自知之明。瑶瑶紧握了下拳头，勉强挤出个笑容。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "多谢张经理你的提醒。我先……走了。"
+		},
+		{
+		type: "text", 
+		fill: "她不想否认这次的确是自己失责在先，可那个张经理一次再次的辱骂明明都与工作无关。"
+		},
+		{
+		type: "text", 
+		fill: "被男同事认识也好；想勾搭人也罢，别说她没这个心思，就算有，张经理管得着么？为什么非得一而再再而三的提起这些？"
+		},
+
+		{
+		type: "text", 
+		fill: "日盼夜盼终于盼到了高中毕业可以走入社会见见世面了，她只是单纯的想利用暑期赚些外快一并开拓下视野。"
+		},
+		{
+		type: "text", 
+		fill: "面对这人生第一份工作，她很想好好的去对待，在短暂的时间留下最美好的回忆，却不想……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "不行！瑶瑶，你不能被这点难题所打败，要不以后大学毕业你将更加无法在这个社会上立足了！"
+		},
+		{
+		type: "bg",  
+		target: 5 
+		},
+		{
+		type: "text", 
+		fill: "六神无主回到工作岗位上，电梯启动了有人走了上来，她都没有注意。"
+		},
+		{
+		type: "text", 
+		fill: "铃……直到电梯的警报声响起，她这才回过神，抬头一瞧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "电梯怎么在41层？没人啊。难道是我不小心错按的？嘶……我没事按41层干什么？"
+		},
+		{
+		type: "text", 
+		fill: "正纳闷着，身后突然传来一道声音。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "或许，是你想我了呢？"
+		},
+		{
+		type: "text", 
+		fill: "下意识的回过头……"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "啊！"
+		},
+		{
+		type: "text", 
+		fill: "一张邪恶而俊美的脸此刻贴合着她如此的近，向后退了一步，才看清对方的脸。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "御……御老大，你……你什么在的？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "很久了呢。"
+		},
+		{
+		type: "text", 
+		fill: "那也就是说……她刚一直在走神？"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "对不起，对不起，御老大，已经到41层了，您请下电梯吧。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.yuat,
+		fill: "小东西，你上班也应该稍微用点心吧？我刚上来，干什么要下去？！"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "啊？"
+		},
+		{
+		type: "text", 
+		fill: "望着他逐渐阴沉下来的脸，瑶瑶去死的心都有了，真是乱中出错啊。"
+		},
+		{
+		type: "dialogue", 
+		setting: character.luoyy,
+		fill: "对不起、对不起，御老大，您要去几层？我马上送您归西……不是！我马上送您去。"
+		},
+		]
+		};

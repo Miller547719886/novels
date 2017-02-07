@@ -1,0 +1,47 @@
+body.page-list {
+	background-color: #f9f9f9;
+	.container {
+		padding: 60px 0 30px;
+
+		@media (min-width: 500px) {
+			width: 500px;
+		}
+
+		.title {
+			padding: 0 15px 15px;
+			font-size: 22px;
+			font-weight: 700;
+			color: #333;
+		}
+
+		.row {
+			padding: 0 10px;
+			margin: 0;
+		}
+
+		.href-cont {
+			text-align: center;
+			margin-bottom: 20px;
+			padding-bottom: 5px;
+			border-bottom: 1px dashed #eee;
+		}
+
+		a.n-pages {
+			display: inline-block;
+			padding: 3px 0;
+			width: 85%;
+			border-radius: 3px;
+			font-size: 14px;
+			color: #333;
+
+			&:active {
+				color: #85b357;
+				text-decoration: none;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第二十章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_20">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-cover"></div>
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-19.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-21.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "男子"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子1"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子2"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        jiz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "记者"
+        },
+        yuat: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            name: "御傲天"
+        },
+        meinz: {
+            side: "left",
+            avatar: "./img/novel-01/character/meinz",
+            card: "./img/novel-01/character/card_meinz",
+            name: "美奈子"
+        },
+        longq: {
+            side: "left",
+            avatar: "./img/novel-01/character/longq",
+            card: "./img/novel-01/character/card_longq",
+            name: "龙琪"
+        },
+        hanls: {
+            side: "left",
+            avatar: "./img/novel-01/character/hanls",
+            card: "./img/novel-01/character/card_hanls",
+            name: "寒离殇"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        },
+        longy: {
+            side: "left",
+            avatar: "./img/novel-01/character/longy",
+            card: "./img/novel-01/character/card_longy",
+            name: "龙烨"
+        }
+    }
+
+    var playscript = {
+        background: [{
+                color: 'black' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/elevator' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第20章 | 求救，可谁敢帮她",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "哼？小东西，我哄了你那么久，你竟然敢阴我？",
+                audio: "./audio/yuat0116.mp3"
+            },
+            {
+                type: "text", //-对话
+                fill: "说着，御傲天缓缓从她的腰间掏出一个正在录音的手机，在她眼前晃动着。"
+            },
+            {
+                type: "text", //-对话
+                fill: "完了，这男人的洞察力怎么会那么强？！"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "哄我？谁需要你哄！快把手机还给我。"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶意图去抢夺，可男人的身高高了自己太多，她就算蹦起来也够不到他举起的手。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "小东西，不，我现在应该叫你小狐狸才对，看来真是我低估你了呢。",
+                audio: "./audio/yuat0117.mp3"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "这都是你逼我这么干的。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "哦？那我请问你，你录完了音打算把它交给谁呢？龙经理么？",
+                audio: "./audio/yuat0118.mp3"
+            },
+            {
+                type: "text",
+                fill: "至于到底把这个录音给谁，她还真没想过，眼珠一转。"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.luoyy,
+                fill: "我要把录音交给博森的总裁，我就不信，他没办法弄你！"
+            },
+            {
+                type: "text",
+                fill: "呵，到头来还不是得把这个录音交还到他手上，又何必多此一举？可御傲天的的确确讨厌别人算计自己！"
+            },
+            {
+                type: "text",
+                fill: "就在这时，瑶瑶冷不防张开嘴一口咬在了他的胳膊上！"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "哼？还是个咬人的小狐狸呢。",
+                audio: "./audio/yuat0119.mp3"
+            },
+            {
+                type: "text",
+                fill: "话落，他冷眯了眯眼睛，猛地揪住她的长发。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "啊！"
+            },
+            {
+                type: "dialogue", //-对话
+                setting: character.yuat,
+                fill: "小东西，这是你自找的！",
+                audio: "./audio/yuat0120.mp3"
+            },
+            {
+                type: "text",
+                fill: "望着男人那挂在脸上的阴冷神情，她知道自己这回惹上了大麻烦了。"
+            },
+            {
+                type: "text",
+                fill: "大手用力一挥……咚的一声，瑶瑶整个人狠狠撞击在了电梯壁上。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "混蛋……"
+            },
+            {
+                type: "text",
+                fill: "快速擦抹了下眼角的泪花，她猛地站起身。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你简直是个粗暴的大混蛋。"
+            },
+            {
+                type: "text",
+                fill: "就在这时，电梯自然启动直奔46层。御傲天轻扫了一眼，猛地扣住她的后颈……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你放……唔！"
+            },
+            {
+                type: "text",
+                fill: "霸道的吻吞下了她那未完的话语……"
+            },
+            {
+                type: "text",
+                fill: "电梯门正好打开。"
+            },
+            {
+                type: "text",
+                fill: "映入所有人眼帘的是男女亲吻的画面，他们先是一愣，可看到男主角是谁时，所有人的表情顿时变得无比惊慌。"
+            },
+            {
+                type: "text",
+                fill: "御……御总？"
+            },
+            {
+                type: "text",
+                fill: "在看看御傲天望着他们眼神中的那抹阴冷，所有人吓得全身不停的发着抖……"
+            },
+            {
+                type: "text",
+                fill: "被强吻的瑶瑶并没有注意到，那些人对这个强吻自己男人有多恐惧，反而以为来了希望，不停的向站在电梯外的人投以求救的眼神。"
+            },
+            {
+                type: "text",
+                fill: "可那些人就跟没看到似的，尴尬的笑了笑，赶忙转身离开。"
+            },
+            {
+                type: "text",
+                fill: "没搞错吧，他们都是瞎子吗，看不到自己这是在被强吻吗？那些人越走越远，电梯门也渐渐关闭了。瑶瑶彻底没了希望。"
+            },
+            {
+                type: "text",
+                fill: "与此同时，御傲天也结束了这一霸道性的吻。可下一秒，他强制按下了电梯关闭键。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "你，你要干什么？。"
+            },
+            {
+                type: "text",
+                fill: "戛然而止的电梯宛若瑶瑶此刻的心情。"
+            },
+            {
+                type: "text",
+                fill: "御傲天冷冽的笑了笑，缓步向她逼近着。"
+            },
+            {
+                type: "dialogue",
+                setting: character.yuat,
+                fill: "恭喜你小东西，你现在已经……成功激怒我了呢！",
+                audio: "./audio/yuat0121.mp3"
+            },
+            {
+                type: "text",
+                fill: "她不知道这个男人到底有多危险、也不知道激怒他的下场会有多惨，但……她却清楚的知道接下来面对自己的将会是什么……"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "不要，求求你放过我……"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>

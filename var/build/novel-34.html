@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>第三十四章-纯情丫头火辣辣</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="novel.min.css">
+</head>
+<body class="novel_34">
+    <div class="mainFrame">
+        <div class="n-bg-wrp">
+            <div class="n-bg-outer"></div>
+            <div class="n-bg-inner container blur"></div>
+        </div>
+        <div class="n-wrp">
+            <div class="n-container">
+                <div class="n-chapter"></div>
+                <div class="n-playscript"></div>
+                <div class="n-audio-box">
+                    <div class="n-audio-mute"></div>
+                    <audio></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot-toolbar">
+        <a href="novel-33.html" class="toolbar-btn">
+            <i class="icons icon-arrowLeft"></i>
+        </a>
+        <a href="javascript:;" class="toolbar-btn back-to-top">顶部</a>
+        <a href="index.html" class="toolbar-btn">目录</a>
+        <a href="novel-35.html" class="toolbar-btn">
+            <i class="icons icon-arrowRight"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    //-默认独白空两行，人物画像4行，对话4行。
+    var character = {
+        luoyy: {
+            side: 'right', //-对话出现方向
+            avatar: "./img/novel-01/character/luoyy", //-角色头像
+            card: "./img/novel-01/character/card_luoyy", //- 角色肖像
+            name: "洛瑶瑶" //-角色名 
+        },
+        gongxm: {
+            side: "left",
+            avatar: "./img/novel-01/character/gongxm",
+            card: "./img/novel-01/character/card_gongxm",
+            name: "宫小曼"
+        },
+        yuatN: {
+            side: "left",
+            avatar: "./img/novel-01/character/yuat",
+            card: "./img/novel-01/character/card_yuat",
+            name: "？？？"
+        },
+        nanz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nanz",
+            name: "李文峰"
+        },
+        nvz: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "白玲"
+        },
+        nvz1: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "女子"
+        },
+        nvz2: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "大婶"
+        },
+        fengcy: {
+            side: "left",
+            avatar: "./img/novel-01/character/fengcy",
+            card: "./img/novel-01/character/card_fengcy",
+            name: "风辰逸"
+        },
+        zhangjl: {
+            side: "left",
+            avatar: "./img/novel-01/character/zhangjl",
+            card: "./img/novel-01/character/card_zhangjl",
+            name: "张经理"
+        },
+        nvzN: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "??"
+        },
+        limy: {
+            side: "left",
+            avatar: "./img/novel-01/character/limy",
+            name: "离美云"
+        },
+        fuwy: {
+            side: "left",
+            avatar: "./img/novel-01/character/nvz",
+            name: "服务员"
+        }
+    }
+
+    var playscript = {
+        background: [{ //- 背景
+                color: 'black' //- 首屏背景图或背景色，不需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/mall' //-普通背景图或背景色，需要定义锚点
+            },
+            {
+                img: './img/novel-01/background/normal_office' //-普通背景图或背景色，需要定义锚点
+            }
+        ],
+        cover: './img/novel-01/cover.jpg', //-作品封面
+        chapter: "第34章 | 她是我的女人",
+        info: [ //-台本
+            {
+                type: "bg", //- 背景
+                target: 1 //- 背景图锚点，对应普通背景图或背景色
+            },
+            {
+                type: "dialogue",
+                setting: character.fuwy,
+                fill: "好的，先生。"
+            },
+            {
+                type: "text",
+                fill: "面对风辰逸这直截了当的挑衅，李文峰就算再不舍为了面子也得撑下去。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "服务员，这双鞋多少钱？"
+            },
+            {
+                type: "dialogue",
+                setting: character.fuwy,
+                fill: "先生，13000。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "拿一双适合这位小姐的。给我包起来。"
+            },
+            {
+                type: "text",
+                fill: "话落，李文峰挑衅的凝视着风辰逸。"
+            },
+            {
+                type: "text",
+                fill: "可风辰逸就跟没看到似的，继续指了指柜台展览的一个镶钻的手包。"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "服务员，那款包我要了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.fuwy,
+                fill: "哇，先生，您真是太有眼光了，那款包全球只有10个，是全水钻镶嵌的。谢谢，15万3000。"
+            },
+            {
+                type: "text",
+                fill: "风辰逸微笑的摆了摆手，站在不远处几个身着西装的助手便跑去柜台结账去了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "呵，小子，你非要跟我拼下去是么？服务员，这里所有的东西，我全部要了！"
+            },
+            {
+                type: "text",
+                fill: "瑶瑶见事情越玩越大，刚要阻拦。却被风辰逸悄悄拦了下来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "呵呵，一个拿着普通卡结账的人，却要包下这里所有的东西，先生，我奉劝你在结账前还是先看看卡里的余额是否够付款的吧，以免出糗哦。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "小子，这不用你操心，你不是要跟我比钱多么？要知道，这整家百货公司都是我叔叔开的，我想要什么东西没有？！"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "嗯？原来李文博是你叔叔？"
+            },
+            {
+                type: "text",
+                fill: "风辰逸边说着，边无奈的摇着脑袋。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "怎么样？怕了吧？"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "怕？呵，我只是觉得你有件事可能搞错了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "什么？搞错了？"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "这间百货公司的确是李文博开的，不过……从这一秒开始就是我开的了！Veblen，马上给李文博打电话，说我风辰逸同意收购这间百货公司了！"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "风辰逸？难道你……你就是……风氏集团的二公子风辰逸？！"
+            },
+            {
+                type: "text",
+                fill: "在中国，除了博森集团的御傲天能和风氏集团的风辰逸比比资产，还有几个敢叫板的？他李文峰就算在修炼个一千年也不及人家资产的一个零头啊。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "风……风总，我跟你无冤无仇的，你何苦要来针对我呢？"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "想知道答案么？"
+            },
+            {
+                type: "text",
+                fill: "幽深的眸子一暗，他单手插袋，另一只手霸道地将瑶瑶搂入怀中。"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "你以为我风辰逸的前女友什么没见识过？就凭你那点钱也想得到她？！愚蠢！"
+            },
+            {
+                type: "dialogue",
+                setting: character.nanz,
+                fill: "她……她是你的前女友？！"
+            },
+            {
+                type: "text",
+                fill: "这回李文峰算是彻底傻了，他一直以为洛瑶瑶是那种没见过世面的女孩子，没想到她的前男友竟然会是不折不扣的豪门公子哥？握起拳头，他转身灰溜溜的离开了。"
+            },
+            {
+                type: "text",
+                fill: "对于风辰逸这样的举动，瑶瑶已经非常习惯了，2年前的他就是这般霸道，只要是惹恼他的人基本都不会有什么好下场。当然，她也着实有些受不了风辰逸这般霸道的性格，但今天……"
+            },
+            {
+                type: "text",
+                fill: "不得不说，风辰逸干的漂亮。她不管他是出于什么目的这么做的，反正相信以后李文峰都不会再骚扰她了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "风……"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "亲爱的瑶瑶，你可别跟我说他就是你的未婚夫，那我只会觉得你现在的欣赏品位越来越低了，连那种没有档次的男人也要？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "是，我承认我的品位向来也不高，否则怎么会在2年前看上你呢？"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "你拿我跟那种男人比？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "那怎么了？很奇怪么？你觉得这个世界上还有比你档次更低的男人么？！"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "洛瑶瑶！"
+            },
+            {
+                type: "text",
+                fill: "风辰逸拿开了搭在她肩膀上的手，死死握起个拳头。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "呵，风总，你别生气。我说的都是大实话啊，不过不瞒你说，刚才那个男人还真不是我未婚夫。"
+            },
+            {
+                type: "text",
+                fill: "他当然知道那个男人不可能是她的未婚夫了，可问题……"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "不是你未婚夫，你干什么单独跟人家出去？！"
+            },
+            {
+                type: "text",
+                fill: "眼眸一转，他不羁地笑了起来。"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "该不会你未婚夫不要你了吧？没关系，瑶瑶，怎么说你也是我前女友，我可以随时接收你哦。"
+            },
+            {
+                type: "text",
+                fill: "他风辰逸这话是什么意思？当她是垃圾么？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "哈！哈！哈！很遗憾，我未婚夫跟我感情很要好，最主要的是，我愿意跟谁单独出去那是我的自由，你只是我的前！男友！罢了，关你屁事？"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "洛瑶瑶，你！"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "风总，恭喜你，又成功买下了一个公司，不过……我相信我这辈子都不会再来这间百货公司了，因为进来都觉得恶心！再见！"
+            },
+            {
+                type: "text",
+                fill: "转身，瑶瑶愤怒的离开，风辰逸更是被气的脸色都青了……"
+            },
+            {
+                type: "dialogue",
+                setting: character.fengcy,
+                fill: "该死！"
+            },
+            {
+                type: "text",
+                fill: "……………………"
+            },
+            {
+                type: "bg",
+                target: 2
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "王八蛋！王八蛋！风辰逸简直是这个世界上最混蛋的男人了，就是不该对他有任何感激，最好连见都不见一面才对！"
+            },
+            {
+                type: "text",
+                fill: "那件事都过去2天了，直到到了周一早上上班时，瑶瑶还是很生气。明明她当时想对他说声谢谢的，可他却……他却突然说出那种话？为什么别人分手后还能当朋友，他们分手了却跟仇人见面一样呢？真是烦躁！"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvz,
+                fill: "瑶瑶，你周六那天怎么突然走了？"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "额……不好意思啊，白玲，我周六……有点不舒服就提前离开了，你玩的还开心吧？"
+            },
+            {
+                type: "text",
+                fill: "都是风辰逸，要不是被他气糊涂了，她怎么会忘记通知白玲一声？"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvz,
+                fill: "还好吧，不知道为什么李文峰也突然走了。唉，我总感觉他好像对我没什么意思。"
+            },
+            {
+                type: "text",
+                fill: "其实像白玲那么好的女孩，李文峰那个贱胚子根本就配不上她的。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "没关系，白玲，缘分这种东西以后就会遇见了，你还是考虑、考虑别人吧。"
+            },
+            {
+                type: "dialogue",
+                setting: character.nvz,
+                fill: "算了，再说吧。我先工作去了。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "好，我也去。"
+            },
+            {
+                type: "text",
+                fill: "更换好了工作制服，瑶瑶刚一走出更衣室……"
+            },
+            {
+                type: "dialogue",
+                setting: character.zhangjl,
+                fill: "洛瑶瑶，跟我来一趟。"
+            },
+            {
+                type: "text",
+                fill: "张经理将一个信封仍到了她的面前。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "辞职信？"
+            },
+            {
+                type: "dialogue",
+                setting: character.zhangjl,
+                fill: "洛瑶瑶，我知道你厉害的很，有大人物给你撑腰。但，周五你两次强制关闭电梯、在加上辱骂风氏二公子的事情，我足以可以开除你了。"
+            },
+            {
+                type: "text",
+                fill: "有大人物给她撑腰？谁给她撑腰啊。"
+            },
+            {
+                type: "dialogue",
+                setting: character.luoyy,
+                fill: "是，张经理，周五那天我承认是我不对，请您再给我一次机会吧。"
+            },
+        ]
+    };
+</script>
+<script src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js"></script>
+<script src="./dependance/novel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    ! function(a, b) {
+        var c = a.getElementsByTagName(b)[0],
+            d = c.parentNode,
+            e = a.createElement(b),
+            f = a.createElement(b);
+        e.src = "//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433", f.src = "//push.zhanzhang.baidu.com/push.js", d.insertBefore(e, c), d.insertBefore(f, c)
+    }(document, "script");
+</script>
+</html>
