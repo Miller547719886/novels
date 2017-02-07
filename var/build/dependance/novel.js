@@ -1,6 +1,7 @@
 // 变量
 //- 选择器 
 var windowH = $(window).height(),
+windowW = $(window).width();
 scroll_timeout = 100,
 soundState = true,
 $out_bg = $('.n-bg-wrp').find('.n-bg-outer'),
@@ -13,17 +14,24 @@ $cover = $content.find('.n-cover'), //- 封面
 $title = $content.find('.n-chapter'), //- 章节
 $audio_mute = $content.find('.n-audio-mute'),
 $audio = $('<audio></audio>'),
-$audio_anchor = $('<div class="n-audio-anchor"></div>')
-$h1 = $('<div class="h1 n-text n-align-center"></div>'),
-$anchor = $('<div class="n-bg-anchor"></div>'),//- 锚点
 anchor_last = '<div class="n-bg-anchor-last"></div>',//- 最后一个锚点
 br = '<p class="n-text-line"><br></p>',
 $br = $(br),//- 空行
 $txt = $('<div class="n-text"></div>'),
 $img = $('<img class="n-image" src="">'),
 $btn_top = $('footer.foot-toolbar').find('.back-to-top'),
-$dialogueL = $('<div class="n-dialogue n-dialogue-align-left"><img class="n-dialogue-avatar" src=""><div class="n-dialogue-name"></div><div class="n-dialogue-container clearfix"><div class="n-dialogue-box"><div class="n-dialogue-box-balloon-center"></div></div></div></div>'),
-$dialogueR = $('<div class="n-dialogue n-dialogue-align-right"><img class="n-dialogue-avatar" src=""><div class="n-dialogue-name"></div><div class="n-dialogue-container clearfix"><div class="n-dialogue-box"><div class="n-dialogue-box-balloon-center"></div></div></div></div>');
+$chapter = $content.find('.n-chapter'),
+$title = $chapter.find('h1'),
+$bg_anchor = $playscript.children('b'),
+$aside = $playscript.children('p'),
+$illustration = $playscript.children('img'),
+$dialogue = $playscript.children('dl'),
+$avatar = $('<img class="n-dialogue-avatar" src="">'),
+$audio_anchor = $('<div class="n-audio-anchor"></div>'),
+$dd_wrapper = $('<div class="n-dialogue-container clearfix"><div class="n-dialogue-box"></div></div>'),
+src_bg = './img/novel-01/background/',
+src_it = './img/novel-01/illustration/',
+src_ad = './audio/';
 
 // 滚动到顶部
 $(function() {
@@ -37,123 +45,185 @@ $(function() {
 // 数据填充
 function fillBase() {
 	//- 封面
-	var _coverImg = $img.clone();
-	_coverImg.attr('src', playscript.cover);
-	$cover.append(_coverImg); //- 页面渲染
+		// var _coverImg = $img.clone();
+		// _coverImg.attr('src', playscript.cover);
+		// $cover.append(_coverImg); //- 页面渲染
 	//- 章节
-	var _h1 = $h1.clone();
-	_h1.html(playscript.chapter);
-	$title.append(_h1);
-	//- 首个背景锚点
-	var _f_anchor = $anchor.clone();
-	_f_anchor.attr('data-target',0);
-	$content.prepend(_f_anchor);
-}
-
-function fillBG() {
-	var bgs = '', //- 用于存储背景div字符串
-	windowW = $(window).width();
-	for (var item in playscript.background) {
-		var _bg_item = $bg_item.clone(),
-			_item = playscript.background[item];
-		if (_item.img) {
+		$title.addClass('h1 n-text n-align-center');
+	//- 背景锚点
+		var bgs = '';
+		$bg_anchor.each(function(i, e) {
+			var _this = $(this),
+				src = _this.attr('tu'),
+				_bg_item = $bg_item.clone();
 			_bg_item.css({
 				'backgroundColor': 'transparent',
-				'backgroundImage': 'url(' + _item.img + '.jpg)'
+				'backgroundImage': 'url(' + src_bg + src + ')'
 			});
-		}
-		if (_item.color) {
-			_bg_item.css({
-				'backgroundColor': _item.color,
-				'backgroundImage': 'none'
-			});
-		}
-		_bg_item.attr('data-index',item);
-		if (item == 0) {
-			_bg_item.addClass('active');
+			_this.attr('data-target', src_bg + src);
+			bgs += _bg_item[0].outerHTML;
+		});
+		if (windowW > 500) {
+			$out_bg.append(bgs);
+			$in_bg.append(bgs);
 		} else {
-			_bg_item.removeClass('active');
+			$out_bg.append(bgs);
 		}
-		bgs += _bg_item[0].outerHTML;
-	}
-	if (windowW > 500) {
-		$out_bg.append(bgs);
-		$in_bg.append(bgs);
-	} else {
-		$out_bg.append(bgs);
-	}
+
+		//- 首个背景及锚点
+		var _bg_item = $bg_item.clone(),
+			_f_anchor = $('<b class="n-bg-anchor f-bg-anchor"></b>');
+		_bg_item.css({
+			'backgroundColor': 'black',
+			'backgroundImage': 'none'
+		});
+		$out_bg.prepend(_bg_item.clone());
+		$in_bg.prepend(_bg_item.clone());
+		_f_anchor.attr('data-target', 'black');
+		$content.prepend(_f_anchor);
+	//- 旁白
+		$aside.each(function(i, e) {
+			var _this = $(this);
+			_this.addClass('n-text');
+			_this.after($(br + br));
+		});
+	//- 插图
+		$illustration.each(function(i, e) {
+			var _this = $(this),
+				src = _this.attr('tu');
+			_this.addClass('n-image');
+			_this.attr('src', src_it + src);
+			_this.after($(br + br + br + br));
+		});
+	//- 对话
+		$dialogue.each(function(i, e) {
+			var _this = $(this),
+				_dt = _this.children('dt'),
+				_dd = _this.children('dd'),
+				src_img = _dt.attr('tu'),
+				src_audio = _dd.attr('yin'),
+				isRight = _this.attr('y') == undefined ? false : true,
+				hasAudio = _dd.attr('yin') == undefined ? false : true,
+				_avatar = $avatar.clone(),
+				_audio_anchor = $audio_anchor.clone();
+			if (isRight) {
+				_this.addClass('n-dialogue n-dialogue-align-right');
+			} else {
+				_this.addClass('n-dialogue n-dialogue-align-left');
+			}
+			_dt.addClass('n-dialogue-name');
+			_avatar.attr('src', src_it + src_img);
+			_dt.before(_avatar);
+			if (hasAudio) {
+				_audio_anchor.attr('data-target', src_ad + src_audio);
+				_audio_anchor.attr('data-firstplay', true);
+				_dt.after(_audio_anchor);
+			}
+			_dd.addClass('n-dialogue-box-balloon-center').wrap($dd_wrapper);
+			_this.after($(br + br + br + br));
+		});
 }
 
-function fillPlayscript() {
-	//- 台本
-	var _playscript = '';
-	for (var item in playscript.info) {
-		var _item = playscript.info[item];
-		switch (_item.type) {
-			case 'text':
-				{
-					var _txt = $txt.clone(),
-						_edge_txt = 2;
-					_txt.html(_item.fill);
-					_playscript += _txt[0].outerHTML;
-					for (var i = 0; i < _edge_txt; i++) {
-						_playscript += br;
-					}
-				}
-				break;
+// function fillBG() {
+// 	for (var item in playscript.background) {
+// 		var _bg_item = $bg_item.clone(),
+// 			_item = playscript.background[item];
+// 		if (_item.img) {
+// 			_bg_item.css({
+// 				'backgroundColor': 'transparent',
+// 				'backgroundImage': 'url(' + _item.img + '.jpg)'
+// 			});
+// 		}
+// 		if (_item.color) {
+// 			_bg_item.css({
+// 				'backgroundColor': _item.color,
+// 				'backgroundImage': 'none'
+// 			});
+// 		}
+// 		_bg_item.attr('data-index',item);
+// 		if (item == 0) {
+// 			_bg_item.addClass('active');
+// 		} else {
+// 			_bg_item.removeClass('active');
+// 		}
+// 		bgs += _bg_item[0].outerHTML;
+// 	}
+// 	if (windowW > 500) {
+// 		$out_bg.append(bgs);
+// 		$in_bg.append(bgs);
+// 	} else {
+// 		$out_bg.append(bgs);
+// 	}
+// }
 
-			case 'img':
-				{
-					var _img = $img.clone(),
-						_edge_img = 4;
-					_img.attr('src', _item.fill + '.png');
-					_playscript += _img[0].outerHTML;
-					for (var i = 0; i < _edge_img; i++) {
-						_playscript += br;
-					}
-				}
-				break;
+// function fillPlayscript() {
+// 	//- 台本
+// 	var _playscript = '';
+// 	for (var item in playscript.info) {
+// 		var _item = playscript.info[item];
+// 		switch (_item.type) {
+// 			case 'text':
+// 				{
+// 					var _txt = $txt.clone(),
+// 						_edge_txt = 2;
+// 					_txt.html(_item.fill);
+// 					_playscript += _txt[0].outerHTML;
+// 					for (var i = 0; i < _edge_txt; i++) {
+// 						_playscript += br;
+// 					}
+// 				}
+// 				break;
 
-			case 'dialogue':
-				{
-					var _dialogue = _item.setting.side === 'left' ? $dialogueL.clone() : $dialogueR.clone(),
-						_edge_dialogue = 4;
-					_dialogue.find('.n-dialogue-avatar').attr('src', _item.setting.avatar + '.png');
-					_dialogue.find('.n-dialogue-name').html(_item.setting.name);
-					_dialogue.find('.n-dialogue-box-balloon-center').html(_item.fill);
-					if (_item.audio) {
-						var _audio_anchor = $audio_anchor.clone();
-						_audio_anchor.attr('data-target', _item.audio);
-						_audio_anchor.attr('data-firstplay', true);
-						_dialogue.append(_audio_anchor);
-					}
-					_playscript += _dialogue[0].outerHTML;
-					for (var i = 0; i < _edge_dialogue; i++) {
-						_playscript += br;
-					}
-				}
-				break;
+// 			case 'img':
+// 				{
+// 					var _img = $img.clone(),
+// 						_edge_img = 4;
+// 					_img.attr('src', _item.fill + '.png');
+// 					_playscript += _img[0].outerHTML;
+// 					for (var i = 0; i < _edge_img; i++) {
+// 						_playscript += br;
+// 					}
+// 				}
+// 				break;
 
-			case 'bg':
-				{
-					var _anchor = $anchor.clone();
-					_anchor.attr('data-target', _item.target);
-					_playscript += _anchor[0].outerHTML;
-				}
-				break;
+// 			case 'dialogue':
+// 				{
+// 					var _dialogue = _item.setting.side === 'left' ? $dialogueL.clone() : $dialogueR.clone(),
+// 						_edge_dialogue = 4;
+// 					_dialogue.find('.n-dialogue-avatar').attr('src', _item.setting.avatar + '.png');
+// 					_dialogue.find('.n-dialogue-name').html(_item.setting.name);
+// 					_dialogue.find('.n-dialogue-box-balloon-center').html(_item.fill);
+// 					if (_item.audio) {
+// 						var _audio_anchor = $audio_anchor.clone();
+// 						_audio_anchor.attr('data-target', _item.audio);
+// 						_audio_anchor.attr('data-firstplay', true);
+// 						_dialogue.append(_audio_anchor);
+// 					}
+// 					_playscript += _dialogue[0].outerHTML;
+// 					for (var i = 0; i < _edge_dialogue; i++) {
+// 						_playscript += br;
+// 					}
+// 				}
+// 				break;
 
-			default:
-			console.log('check your config!', _item);
-		}
-	}
-	_playscript += anchor_last;
-	$playscript.append(_playscript); //- 页面渲染
-}
+// 			case 'bg':
+// 				{
+// 					var _anchor = $anchor.clone();
+// 					_anchor.attr('data-target', _item.target);
+// 					_playscript += _anchor[0].outerHTML;
+// 				}
+// 				break;
+
+// 			default:
+// 			console.log('check your config!', _item);
+// 		}
+// 	}
+// 	_playscript += anchor_last;
+// 	$playscript.append(_playscript); //- 页面渲染
+// }
 
 $(function() {
 	fillBase();
-	fillBG();
-	fillPlayscript();
 });
 
 // 音频播放
@@ -288,7 +358,7 @@ $(function() {
 				if (st == 0) {
 					$('.n-bg-item').filter(function() {
 						return $(this).data('index') == 0;
-					}).addClass('active').siblings().removeClass('active');	
+					}).addClass('active').siblings().removeClass('active');
 				} else {
 					if (data_target != 0) {
 						var n_ot = _this.nextAll('.n-bg-anchor').length ? _this.nextAll('.n-bg-anchor').eq(0).offset().top : $('.n-bg-anchor-last').offset().top;

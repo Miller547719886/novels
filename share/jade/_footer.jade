@@ -1,11 +1,19 @@
 //- 公用页脚
 mixin footer
-	//- -
-	//- 	var item = {
-	//- 		prev: "",
-	//- 		next: "",
-	//- 		cata: ""
-	//- 	};
+	//-只有第一章和最后一章需要在页面中定义item，其余不用
+	- if (item)//-第一章和最后一章使用页面中定义的item
+		item = item
+	- else//-其他章节使用下面的item
+		- var pagePNum = pageNum - 1
+		- var pageP = pagePNum >= 10 ? pagePNum : '0' + pagePNum
+		- var pageNNum = pageNum + 1
+		- var pageN = pageNNum >= 10 ? pageNNum : '0' + pageNNum
+		-
+			var item = {
+				prev: "novel-" + (pageP),
+				next: "novel-" + (pageN),
+				cata: "index"
+			};
 	footer.foot-toolbar
 		a.toolbar-btn(href=(item.prev == "") ? "javascript:;" : (item.prev + '.html'), class=item.prev ? "" : "disabled")
 			i.icons.icon-arrowLeft

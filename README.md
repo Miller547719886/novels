@@ -6,14 +6,14 @@
 ###背景锚点
 如果你在某个位置需要切换背景：
     b(tu="img/background/nightclub.jpg")
-###独白
+###旁白
 如果你在某个位置需要独白：
     p 纸醉金迷的日本，处处歌舞升平、熙熙攘攘。
-###图片
+###插图
 如果你在某个位置需要人物肖像或者是其他类似图片：
     img(tu="img/background/card_luoyy.png")
 ###对白
 如果你在某个位置需要对白：
-    dl(l)
+    dl(y)
         dt(tu="gongxm.jpg") 宫小曼
         dd(yin="") 对不起啦，不过你也喝太多了……

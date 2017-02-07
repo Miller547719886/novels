@@ -1,10 +1,29 @@
 //- 互动小说1-纯情丫头火辣辣
 block variables
-	-var pageTitle = '第一章-纯情丫头火辣辣'; //- 记得改
-	-var pageClass = 'novel_01'; //- 记得改
+	-var pageNum = 1;
 
 extends _page.base
 
+block chapter
+	h1 第1章 | 小心玩火自焚
+block playscript
+	b(tu="nightclub.png")
+	p 纸醉金迷的日本，处处歌舞升平、熙熙攘攘。
+	p 女性会所一楼大厅角落，喝得醉醺醺的洛瑶瑶扫了眼陪伴在自己身旁的两个大帅哥，非常不满。
+	dl(y)
+		dt(tu="luoyy.png") 洛瑶瑶
+		dd 小，小曼，你还说这里的男人是……是最帅的，好，好叫人失望喔。
+	img(tu="card_luoyy.png")
+	dl
+		dt(tu="gongxm.png") 宫小曼
+		dd 对不起啦，不过你也喝太多了……
+	img(tu="card_gongxm.png")
+	dl(y)
+		dt(tu="luoyy.png") 洛瑶瑶
+		dd 呃……
+	dl(y)
+		dt(tu="luoyy.png") 洛瑶瑶
+		dd(yin="") 呃……
 block footer
 	include _footer
 	block footer_setting
@@ -16,219 +35,3 @@ block footer
 			};
 		+footer
 block spec-script
-	script.
-		//-默认独白空两行，人物画像4行，对话4行。
-		var character = {
-			luoyy: {
-				side: 'right', //-对话出现方向
-				avatar: "./img/novel-01/character/luoyy", //-角色头像
-				card: "./img/novel-01/character/card_luoyy", //- 角色肖像
-				name: "洛瑶瑶" //-角色名 
-			},
-			gongxm: {
-				side: "left",
-				avatar: "./img/novel-01/character/gongxm",
-				card: "./img/novel-01/character/card_gongxm",
-				name: "宫小曼"
-			},
-			yuatN: {
-				side: "left",
-				avatar: "./img/novel-01/character/yuat",
-				card: "./img/novel-01/character/card_yuat",
-				name: "？？？"
-			}
-		}
-
-		var playscript = {
-			background: [{ //- 背景
-					color: 'black' //- 首屏背景图或背景色，不需要定义锚点
-				},
-				{
-					img: './img/novel-01/background/nightclub' //-普通背景图或背景色，需要定义锚点
-				}
-			],
-			cover: './img/novel-01/cover.jpg', //-作品封面
-			chapter: "第1章 | 小心玩火自焚",
-			info: [ //-台本
-				{
-					type: "bg", //- 背景
-					target: 1 //- 背景图锚点，对应普通背景图或背景色
-				},
-				{
-					type: "text",
-					fill: "纸醉金迷的日本，处处歌舞升平、熙熙攘攘。"
-				},
-				{
-					type: "text",
-					fill: "女性会所一楼大厅角落，喝得醉醺醺的洛瑶瑶扫了眼陪伴在自己身旁的两个大帅哥，非常不满。"
-				},
-				{
-					type: "dialogue", //-对话
-					setting: character.luoyy,
-					fill: "小，小曼，你还说这里的男人是……是最帅的，好，好叫人失望喔。"
-				},
-				{
-					type: "img", //-角色登场
-					fill: character.luoyy.card //-角色图片
-				},
-				{
-					type: "dialogue",
-					setting: character.gongxm,
-					fill: "对不起啦，不过你也喝太多了……"
-				},
-				{
-					type: "img",
-					fill: character.gongxm.card
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "呃……"
-				},
-				{
-					type: "text",
-					fill: "洛瑶瑶的目光最终定格在会所的入口处……只见，一身着西装的男人正缓步走入，他的出现顿时吸引了店内所有女客人的瞩目。"
-				},
-				{
-					type: "img",
-					fill: character.yuatN.card
-				},
-				{
-					type: "text",
-					fill: "黑亮垂直的发，斜飞的英挺剑眉，细长蕴藏着锐利的黑眸点缀着魅惑的光泽，削薄轻抿的唇，棱角分明的轮廓，修长高大却不粗犷的身材，宛若黑夜中的鹰，冷魅勾人却又盛气逼人，孑然独立间散发的是傲视天地的强势。"
-				},
-				{
-					type: "text",
-					fill: "就连紧跟在他身后那几个外貌不俗的手下在他的强大气场下都显是那样无光，不！应该说会所里所有男侍与他的外貌及气场相比都变得暗淡了下来。就是他了！瑶瑶突然站起身，起手指向不远处的男人！"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "你给我站住！"
-				},
-				{
-					type: "text",
-					fill: "随着她的惊呼，现场仿佛一下子变得安静了起来……"
-				},
-				{
-					type: "dialogue",
-					setting: character.gongxm,
-					fill: "不……不会吧？瑶瑶，你疯了吗？竟然敢……敢招惹那个男人？！"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "很正常啊，他那么帅，我当然想去招惹、招惹呢……"
-				},
-				{
-					type: "dialogue",
-					setting: character.gongxm,
-					fill: "哎呀，瑶瑶你不知道，他是……"
-				},
-				{
-					type: "dialogue",
-					setting: character.yuatN,
-					fill: "妹妹，在叫我么？",
-					audio: "./audio/yuat0001.mp3"
-				},
-				{
-					type: "text",
-					fill: "男人低沉的开了口，逐渐看向洛瑶瑶的双眸释放着一抹冷魅的光泽。"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "对。"
-				},
-				{
-					type: "text",
-					fill: "跌跌撞撞的走到了他面前，洛瑶瑶赞赏地点了点头。"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "嗯，不错，你、你的长相还算有个男侍的样子。来、来，我要你陪我。"
-				},
-				{
-					type: "text",
-					fill: "她的小手一把拽着男人脖间的领带，强硬地拉扯着他向着自己的座位走去。男人的几个手下见此，眉头几乎要竖起来了。可那男人却悄悄手示意不许他们轻举妄动，那几个手下这才放松了下来……"
-				},
-				{
-					type: "text",
-					fill: "随着男人一入座，另外两个男侍赶忙站起身，双腿不停的发着抖。"
-				},
-				{
-					type: "dialogue",
-					setting: character.yuatN,
-					fill: "咳。",
-					audio: "./audio/yuat0002.mp3"
-				},
-				{
-					type: "text",
-					fill: "男人轻咳一声，摆了摆手。两个男侍像是收到了命令，悄无声息地押走了宫小曼。"
-				},
-				{
-					type: "text",
-					fill: "沉溺于酒精中的洛瑶瑶不知朋友已经不在了，拿起桌上的酒杯。"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "给，帅哥，陪……陪我喝酒……"
-				},
-				{
-					type: "text",
-					fill: "男人邪笑，瞄了一眼她递过来的杯子，悠然自得地翘起了二郎腿。这幅景象就好似她是陪酒的女侍者，他是客人一般滑稽。"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "喂，帅哥，现在客人叫你喝酒，你为什么不喝酒？快点！喝！"
-				},
-				{
-					type: "dialogue",
-					setting: character.yuatN,
-					fill: "哼？",
-					audio: "./audio/yuat0003.mp3"
-				},
-				{
-					type: "text",
-					fill: "听着她的命令声，男人双眸一闪，一把捏住了她的下颚。"
-				},
-				{
-					type: "dialogue",
-					setting: character.yuatN,
-					fill: "妹妹，未成年就来这里疯，小心，玩火自焚呢！",
-					audio: "./audio/yuat0004.mp3"
-				},
-				{
-					type: "text",
-					fill: "此刻，洋溢在男人脸上那阴森霸道的神情令在场的人有种莫名窒息感，可已深陷迷醉的瑶瑶哪里注意到这些细节？"
-				},
-				{
-					type: "dialogue",
-					setting: character.luoyy,
-					fill: "喂，你弄疼我了！实……实话告诉你，我今天就是来疯的，要你管？！"
-				},
-				{
-					type: "dialogue",
-					setting: character.yuatN,
-					fill: "呵，有意思……",
-					audio: "./audio/yuat0005.mp3"
-				},
-				{
-					type: "text",
-					fill: "松开手，男人站起了身，缓步走到一个手下旁。"
-				},
-				{
-					type: "dialogue",
-					setting: character.yuatN,
-					fill: "带她来我房间。",
-					audio: "./audio/yuat0006.mp3"
-				},
-				{
-					type: "text",
-					fill: "深邃的眸闪过一抹幽暗，他快步消失在了一楼大厅内……"
-				}
-			]
-		};

@@ -1,24 +1,24 @@
 block variables
-	-var pageTitle;
-	-var pageClass;
-
+	- var pageNum = ""
+block vari
+	- var page = pageNum >= 10 ? pageNum : ('0' + pageNum)
 doctype html
 html
 	head
-		title= pageTitle
+		title= '第' + page + '章-纯情丫头火辣辣'
 		meta(http-equiv="Content-Type",content="charset=utf-8")
 		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
 		block css-js
-			link(rel="stylesheet", type="text/css", href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css")
-			//- link(rel="stylesheet", type="text/css", href="./dependance/bootstrap/bootstrap.min.css")
+			//- link(rel="stylesheet", type="text/css", href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css")
+			link(rel="stylesheet", type="text/css", href="./dependance/bootstrap/bootstrap.min.css")
 			link(rel="stylesheet", type="text/css",href="novel.min.css")
 			block spec-css-js
 
 	//- 导入mixin集合
 	include @mixins-components
 
-	body(class=pageClass)
+	body(class='novel_' + page)
 		block header
 		block main
 			.mainFrame
@@ -44,8 +44,8 @@ html
 	block script
 		block spec-script
 		//- include _function
-		script(src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js")
-		//- script(src="./dependance/jquery/jquery.min.js")
+		//- script(src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js")
+		script(src="./dependance/jquery/jquery.min.js")
 		script(src="./dependance/novel.js")
 		script.
 			var _hmt=_hmt||[];!function(a,b){var c=a.getElementsByTagName(b)[0],d=c.parentNode,e=a.createElement(b),f=a.createElement(b);e.src="//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433",f.src="//push.zhanzhang.baidu.com/push.js",d.insertBefore(e,c),d.insertBefore(f,c)}(document,"script");
