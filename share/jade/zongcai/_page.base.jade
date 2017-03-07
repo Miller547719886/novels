@@ -1,0 +1,14 @@
+block variables
+	-var pageNum = 1
+	-var lastPage = false
+
+extends ../_page.base
+block var 
+	-var novelName = "霸道总裁是男二"
+	-var vip = 3
+block data
+block footer_setting
+		+footer
+block spec-script
+	script(src="./_res/character.js")
+	script(src="../_common/novel.js")

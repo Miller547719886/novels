@@ -1,24 +1,32 @@
 block variables
-	- var pageNum = ""
+	- var pageNum = "" //- 章节序号
+	- var lastPage = false //- 是否最后一章
+	- var novelName = "" //-小说名
+	//- - var pageName = "目录-霸道总裁"
+	//- - var pageClass = "page-list"
 block vari
-	- var page = pageNum >= 10 ? pageNum : ('0' + pageNum)
+	- if (page)
+		- var page = page
+	- else
+		- var page = pageNum
+block var
 doctype html
 html
 	head
-		title= '第' + page + '章-纯情丫头火辣辣'
+		title=(typeof pageName === "undefined" ? ('第' + page + '章-' + novelName) : pageName)
 		meta(http-equiv="Content-Type",content="charset=utf-8")
 		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
 		block css-js
 			//- link(rel="stylesheet", type="text/css", href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css")
-			link(rel="stylesheet", type="text/css", href="./dependance/bootstrap/bootstrap.min.css")
-			link(rel="stylesheet", type="text/css",href="novel.min.css")
+			link(rel="stylesheet", type="text/css", href="../_common/bootstrap/bootstrap.min.css")
+			link(rel="stylesheet", type="text/css",href="../novel.min.css")
 			block spec-css-js
 
 	//- 导入mixin集合
 	include @mixins-components
 
-	body(class='novel_' + page)
+	body(class=(typeof pageClass === "undefined" ? ('novel-' + page) : pageClass), data-order = pageNum, data-title = novelName)
 		block header
 		block main
 			.mainFrame
@@ -29,23 +37,17 @@ html
 					.n-container
 						//- .n-cover
 						//- 	block cover
-						.n-chapter
-							block chapter
-						.n-playscript
-							block playscript
+						block data
 						.n-audio-box
 							.n-audio-mute
 							audio
-
 		block footer
 			include _footer
 			block footer_setting
 
 	block script
-		block spec-script
-		//- include _function
 		//- script(src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js")
-		script(src="./dependance/jquery/jquery.min.js")
-		script(src="./dependance/novel.js")
+		script(src="../_common/jquery/jquery.min.js")
 		script.
 			var _hmt=_hmt||[];!function(a,b){var c=a.getElementsByTagName(b)[0],d=c.parentNode,e=a.createElement(b),f=a.createElement(b);e.src="//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433",f.src="//push.zhanzhang.baidu.com/push.js",d.insertBefore(e,c),d.insertBefore(f,c)}(document,"script");
+		block spec-script

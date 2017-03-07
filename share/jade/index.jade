@@ -1,116 +1,23 @@
-//- 互动小说1-纯情丫头火辣辣
 block variables
-	-var pageTitle = '目录-纯情丫头火辣辣'; //- 记得改
-	-var pageClass = 'page-list'; //- 记得改
+	- var page = ""
+	- var pageName = "小说书架"
+	- var pageClass = "bookshelf"
 
-extends _page.base
+extends ./_page.base
+block css-js
+	//- link(rel="stylesheet", type="text/css", href="//s.dahao.de/lib/bootstrap-3.3.5/css/bootstrap.min.css")
+	link(rel="stylesheet", type="text/css", href="./_common/bootstrap/bootstrap.min.css")
+	link(rel="stylesheet", type="text/css",href="./novel.min.css")
+
 block main
 	.container
-		.title 目录
-		.row
-			.href-cont
-				a.n-pages(href="novel-01.html") 第一章
-			.href-cont
-				a.n-pages(href="novel-02.html") 第二章
-			.href-cont
-				a.n-pages(href="novel-03.html") 第三章
-			.href-cont
-				a.n-pages(href="novel-04.html") 第四章
-			.href-cont
-				a.n-pages(href="novel-05.html") 第五章
-			.href-cont
-				a.n-pages(href="novel-06.html") 第六章
-			.href-cont
-				a.n-pages(href="novel-07.html") 第七章
-			.href-cont
-				a.n-pages(href="novel-08.html") 第八章
-			.href-cont
-				a.n-pages(href="novel-09.html") 第九章
-			.href-cont
-				a.n-pages(href="novel-10.html") 第十章
-			.href-cont
-				a.n-pages(href="novel-11.html") 第十一章
-			.href-cont
-				a.n-pages(href="novel-12.html") 第十二章
-			.href-cont
-				a.n-pages(href="novel-13.html") 第十三章
-			.href-cont
-				a.n-pages(href="novel-14.html") 第十四章
-			.href-cont
-				a.n-pages(href="novel-15.html") 第十五章
-			.href-cont
-				a.n-pages(href="novel-16.html") 第十六章
-			.href-cont
-				a.n-pages(href="novel-17.html") 第十七章
-			.href-cont
-				a.n-pages(href="novel-18.html") 第十八章
-			.href-cont
-				a.n-pages(href="novel-19.html") 第十九章
-			.href-cont
-				a.n-pages(href="novel-20.html") 第二十章
-			.href-cont
-				a.n-pages(href="novel-21.html") 第二十一章
-			.href-cont
-				a.n-pages(href="novel-22.html") 第二十二章
-			.href-cont
-				a.n-pages(href="novel-23.html") 第二十三章
-			.href-cont
-				a.n-pages(href="novel-24.html") 第二十四章
-			.href-cont
-				a.n-pages(href="novel-25.html") 第二十五章
-			.href-cont
-				a.n-pages(href="novel-26.html") 第二十六章
-			.href-cont
-				a.n-pages(href="novel-27.html") 第二十七章
-			.href-cont
-				a.n-pages(href="novel-28.html") 第二十八章
-			.href-cont
-				a.n-pages(href="novel-29.html") 第二十九章
-			.href-cont
-				a.n-pages(href="novel-30.html") 第三十章
-			.href-cont
-				a.n-pages(href="novel-31.html") 第三十一章
-			.href-cont
-				a.n-pages(href="novel-32.html") 第三十二章
-			.href-cont
-				a.n-pages(href="novel-33.html") 第三十三章
-			.href-cont
-				a.n-pages(href="novel-34.html") 第三十四章
-			.href-cont
-				a.n-pages(href="novel-35.html") 第三十五章
-			.href-cont
-				a.n-pages(href="novel-36.html") 第三十六章
-			.href-cont
-				a.n-pages(href="novel-37.html") 第三十七章
-			.href-cont
-				a.n-pages(href="novel-38.html") 第三十八章
-			.href-cont
-				a.n-pages(href="novel-39.html") 第三十九章
-			.href-cont
-				a.n-pages(href="novel-40.html") 第四十章
-			.href-cont
-				a.n-pages(href="novel-41.html") 第四十一章
-			.href-cont
-				a.n-pages(href="novel-42.html") 第四十二章
-			.href-cont
-				a.n-pages(href="novel-43.html") 第四十三章
-			.href-cont
-				a.n-pages(href="novel-44.html") 第四十四章
-			.href-cont
-				a.n-pages(href="novel-45.html") 第四十五章
-			.href-cont
-				a.n-pages(href="novel-46.html") 第四十六章
-			.href-cont
-				a.n-pages(href="novel-47.html") 第四十七章
-			.href-cont
-				a.n-pages(href="novel-48.html") 第四十八章
-			.href-cont
-				a.n-pages(href="novel-49.html") 第四十九章
-			.href-cont
-				a.n-pages(href="novel-50.html") 第五十章
-			.href-cont
-				a.n-pages(href="novel-51.html") 第五十一章
-			.href-cont
-				span.n-pages 敬请期待
+
 block footer
+block script
+	//- script(src="//s.dahao.de/lib/jquery-2.1.1/jquery.min.js")
+	script(src="./_common/jquery/jquery.min.js")
+	script(src="./_common/bookshelf.js")
+	script.
+		var _hmt=_hmt||[];!function(a,b){var c=a.getElementsByTagName(b)[0],d=c.parentNode,e=a.createElement(b),f=a.createElement(b);e.src="//hm.baidu.com/hm.js?b4b0640817859e337b676bc9dfe2b433",f.src="//push.zhanzhang.baidu.com/push.js",d.insertBefore(e,c),d.insertBefore(f,c)}(document,"script");
+	block spec-script
 

@@ -1,0 +1,12 @@
+block variables
+	- var page = ""
+	- var pageName = "继续阅读"
+	- var pageClass = "page-list"
+
+extends ./_page.base
+block main
+block footer
+block spec-script
+	script.
+		var local = localstorage.getItem('xiaoshuo');
+		console.log(local);

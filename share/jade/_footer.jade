@@ -1,23 +1,23 @@
 //- 公用页脚
 mixin footer
-	//-只有第一章和最后一章需要在页面中定义item，其余不用
-	- if (item)//-第一章和最后一章使用页面中定义的item
-		item = item
-	- else//-其他章节使用下面的item
-		- var pagePNum = pageNum - 1
-		- var pageP = pagePNum >= 10 ? pagePNum : '0' + pagePNum
-		- var pageNNum = pageNum + 1
-		- var pageN = pageNNum >= 10 ? pageNNum : '0' + pageNNum
-		-
-			var item = {
-				prev: "novel-" + (pageP),
-				next: "novel-" + (pageN),
-				cata: "index"
-			};
+	- var pagePNum = pageNum - 1
+	- var pageP = pagePNum
+	- var pageNNum = pageNum + 1
+	- var pageN = pageNNum
+	- var hrefP = pagePNum < vip ? '.html' : '.vip'
+	- var hrefN = pageNNum < vip ? '.html' : '.vip'
+	-
+		var item = {
+			prev: pageNum == 1 ? "" : "novel-" + (pageP),
+			next: lastPage == false ? "novel-" + (pageN) : "",
+			cata: "index",
+			shelf: "../index"
+		};
 	footer.foot-toolbar
-		a.toolbar-btn(href=(item.prev == "") ? "javascript:;" : (item.prev + '.html'), class=item.prev ? "" : "disabled")
+		a.toolbar-btn(href=(item.prev == "") ? "javascript:;" : (item.prev + hrefP), class=item.prev ? "" : "disabled")
 			i.icons.icon-arrowLeft
-		a.toolbar-btn.back-to-top(href="javascript:;") 顶部
+		//- a.toolbar-btn.back-to-top(href="javascript:;") 顶部
 		a.toolbar-btn(href=item.cata + '.html') 目录
-		a.toolbar-btn(href=(item.next == "") ? "javascript:;" : (item.next + '.html'), class=item.next ? "" : "disabled")
+		a.toolbar-btn(href=(item.next == "") ? "javascript:;" : (item.next + hrefN), class=item.next ? "" : "disabled")
 			i.icons.icon-arrowRight
+		a.toolbar-btn(href=item.shelf + '.html') 书架

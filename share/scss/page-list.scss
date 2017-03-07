@@ -1,5 +1,6 @@
 body.page-list {
 	background-color: #f9f9f9;
+
 	.container {
 		padding: 60px 0 30px;
 
@@ -41,6 +42,16 @@ body.page-list {
 
 			&:hover {
 				text-decoration: none;
+			}
+		}
+	}
+	
+	.cata-container {
+		i.locked {
+			background: red;
+
+			&:after {
+				content: "locked";
 			}
 		}
 	}
