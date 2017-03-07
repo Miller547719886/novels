@@ -45,8 +45,9 @@
     	}
 	
 ##Host
-（windows系统下）命令行输入ipconfig找到Ipv4地址，
-找到C:\Windows\System32\Drivers\Etc目录下的host文件，打开并添加一行
+（windows系统下）命令行输入 ipconfig 找到Ipv4地址，
+找到 C:\Windows\System32\Drivers\Etc 目录下的host文件，打开并添加一行
+
 	192.168.1.111 dahao.de //此处输入刚才找到的Ipv4地址
 
 ##启动
