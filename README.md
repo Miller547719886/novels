@@ -51,5 +51,7 @@
 
 ##启动
 在cmd中cd到nginx目录下输入
+
 	start nginx
+	
 启动nginx服务，访问dahao.de就可以了。
