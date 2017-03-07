@@ -50,4 +50,6 @@
 	192.168.1.111 dahao.de //此处输入刚才找到的Ipv4地址
 
 ##启动
+在cmd中cd到nginx目录下输入
+	start nginx
 启动nginx服务，访问dahao.de就可以了。
