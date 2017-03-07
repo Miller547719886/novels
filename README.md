@@ -32,6 +32,7 @@
 #本地服务器搭建方式（以nginx为例）
 ##配置
 在nginx服务器的配置文件（nginx.conf）中添加一段：
+
 	server {
 		listen       80;
 		listen       dahao.de;
@@ -41,7 +42,8 @@
 		    root   D:\html;//这里填写你的目录路径
 		    index  index.html index.htm;
 		}
-	    }
+    	}
+	
 ##Host
 （windows系统下）命令行输入ipconfig找到Ipv4地址，
 找到C:\Windows\System32\Drivers\Etc目录下的host文件，打开并添加一行
