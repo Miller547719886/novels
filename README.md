@@ -1,5 +1,5 @@
 #线上预览
-[有声小说](http://dahao.de/xiaoshuo/)
+[有声小说（多终端设备）](http://dahao.de/xiaoshuo/)
 #小说内容填充格式
 ##章节
 如果你需要在小说章节中添加章节名称：
